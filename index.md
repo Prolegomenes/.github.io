@@ -2,6 +2,6 @@
 
 Ce site est dédié entièrement à ... TiddlyWiki.
 
-Page dédiée à la découverte et à l'apprentissage de TiddlyWiki: [Learn](Learn215116.html)
+Découvrir et apprendre TiddlyWiki: [Learn](Learn215116.html)
 
 Le téléchargement peut prendre un peu de temps ...
