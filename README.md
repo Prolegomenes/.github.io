@@ -1,6 +1,6 @@
 # learn
 
-Apprendre TiddlyWiki et ses plugins
+Apprendre TiddlyWiki et ses plugins en français.
 
 * Apprendre, étudier, tester  [TiddlyWiki](https://tiddlywiki.com/)
 
