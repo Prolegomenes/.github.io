@@ -1,6 +1,6 @@
 ## Bonjour et bienvenue sur le site Prolégomènes
 
-Ce site est dédié entièrement à ... TiddlyWiki.
+Ce site est dédié entièrement à ... TiddlyWiki, en français.
 
 Découvrir et apprendre TiddlyWiki: [Learn](Learn215116.html)
 
