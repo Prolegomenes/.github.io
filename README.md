@@ -1,9 +1,12 @@
 # learn
 
-Apprendre TiddlyWiki et ses plugins en français.
+Apprendre TiddlyWiki et ses plugins en français :
 
 * Apprendre, étudier, tester  [TiddlyWiki](https://tiddlywiki.com/)
 
-* Version en ligne: 5.1.16
+!Versions en ligne: 
 
-* Adresse: https://prolegomenes.github.io/learn/
+*Page Accueil -> https://prolegomenes.github.io/learn/
+*Learn Release 215116 -> https://prolegomenes.github.io/learn/Learn215116.html
+*Learn Release 225117 -> https://prolegomenes.github.io/learn/Learn225117.html
+*Bars Release 225117 Version Empty -> https://prolegomenes.github.io/learn/Bars.html
