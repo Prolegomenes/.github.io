@@ -7,7 +7,7 @@ Ce site est dédié entièrement à ... TiddlyWiki, en français.
 - [Learn Release 215116](Learn215116.html)
 - [Learn Release 225117](Learn225117.html)
 
-## Les premiers éléments du Wiki TiddlyBars en développement
+## Les premiers éléments du Wiki TiddlyFrame (Frame it as you like !) en développement
 
 - [Bars Release 225117](Bars.html)
 
