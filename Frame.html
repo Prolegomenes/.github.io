@@ -167,12 +167,6 @@ Error message and password prompt
 
 <li>$:/Assistants</li>
 
-<li>$:/BarsBouton</li>
-
-<li>$:/BarsMenuCréation</li>
-
-<li>$:/BarsTemplate</li>
-
 <li>$:/ButtonNewMenu</li>
 
 <li>$:/centralisation/css</li>
@@ -303,6 +297,10 @@ Error message and password prompt
 
 <li>$:/doc-user-017</li>
 
+<li>$:/doc-user-019</li>
+
+<li>$:/doc-user-020</li>
+
 <li>$:/doc-user-021</li>
 
 <li>$:/doc-user-022</li>
@@ -359,10 +357,6 @@ Error message and password prompt
 
 <li>$:/Frame</li>
 
-<li>$:/Gérer un menu classique</li>
-
-<li>$:/Gérer un menu personnalisé</li>
-
 <li>$:/Import</li>
 
 <li>$:/Importer ce TiddlyWiki</li>
@@ -370,10 +364,6 @@ Error message and password prompt
 <li>$:/Interface</li>
 
 <li>$:/isEncrypted</li>
-
-<li>$:/Le Générateur de Template</li>
-
-<li>$:/Le menu récupère ses données</li>
 
 <li>$:/LeftBar</li>
 
@@ -385,11 +375,7 @@ Error message and password prompt
 
 <li>$:/LeftBarMenu</li>
 
-<li>$:/LeftBarSource</li>
-
 <li>$:/LoginUser</li>
-
-<li>$:/MenuBars</li>
 
 <li>$:/Menus</li>
 
@@ -413,13 +399,13 @@ Error message and password prompt
 
 <li>$:/NewMenu</li>
 
+<li>$:/Outils</li>
+
 <li>$:/PageFooter</li>
 
 <li>$:/palette</li>
 
 <li>$:/PanneauControle</li>
-
-<li>$:/Peuplement</li>
 
 <li>$:/plugins/bj/calendar/sidbar</li>
 
@@ -459,11 +445,7 @@ Error message and password prompt
 
 <li>$:/state/LeftBar</li>
 
-<li>$:/state/sidebar</li>
-
-<li>$:/state/tab/moresidebar-401116514</li>
-
-<li>$:/state/tab/sidebar--1835078512</li>
+<li>$:/state/tab-1749438307</li>
 
 <li>$:/StoryList</li>
 
@@ -496,8 +478,6 @@ Error message and password prompt
 <li>$:/TemplateNavBar</li>
 
 <li>$:/TemplateSideBar</li>
-
-<li>$:/TemplateSideBar-user</li>
 
 <li>$:/TemplateTiddler</li>
 
@@ -998,83 +978,6 @@ border: 1px solid #ccc;
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-expandable &quot;$:/Assistants&quot; &quot;sort[sub.num]&quot;&gt;&gt;
 &lt;/div&gt;</pre>
-</div>
-<div caption="Bouton de création du menu" created="20180726081802459" modified="20180728125749656" sub.num="08.01.02" tags="$:/MenuBars" title="$:/BarsBouton">
-<pre>!Le code :
-{{$:/ButtonNewMenu||$:/code}}
-
-Le bouton $:/ButtonNewMenu a pour seule fonction d'appeler le tiddler de création $:/NewMenu
-
-Il est placé en standard dans l'onglet [[Menu|$:/core/ui/SideBar/TableOfContents]] de la ~SideBar mais peut être déplacé en changeant son tag.
-</pre>
-</div>
-<div caption="Processus de création" created="20180726090103274" modified="20180728125822757" sub.num="08.01.04" tags="$:/MenuBars" title="$:/BarsMenuCréation">
-<pre>!Le code :
-
-Tiddler attaché : $:/NewMenu
-
-{{$:/NewMenu||$:/code}}
-
-
-!Processus
-
-
-
-```
-\define menuTitle()
-$(menu)$
-\end
-```
-Une macro comence toujours par la fonction define. Ici on définis la forme que prendra le titre du tiddler menu : [nom donné au menu].
-
-```
-Nom du menu :&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/template/NewMenu' field='menu-title' placeholder='e.g. Home'/&gt;
-```
-
-&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/template/NewMenu' field='menu-title' placeholder='e.g. Home'/&gt;
-
-La valeur (nom du menu) indiquée dans la zone de saisie est stockée dans le champ `menu-title` du Tiddler Template `$:/template/NewMenu`. On y vois aussi l'utilité du placeholder
-
-ET
-
-Le champ `menu-title` du Tiddler `$:/template/NewMenu` est simultanément transclut  dans le champ texte du tiddler via le code   `{{!!menu-title}}`
-
-```
-Rang: &lt;$edit-text class='tc-edit-texteditor' tiddler='$:/template/NewMenu' field='rank' placeholder='Ordre dans le menu (e.g. 1,2...)'/&gt;
-```
-
-Positionnera chacun de vos menus suivant l'ordre indiqué..
-
-```
-&lt;$set name=menu value={{$:/template/NewMenu!!menu-title}}&gt;
-```
-La variable `&lt;$set&gt;` assigne une valeur à une variable spécifiée, en l’occurrence  la variable `$(menu)$` spécifiée en tête du tiddler `$:/NewMenu`
-
-
-</pre>
-</div>
-<div caption="Template de création" created="20180726090322895" modified="20180728125851736" sub.num="08.01.03" tags="$:/MenuBars" title="$:/BarsTemplate">
-<pre>Le template de création du menu fait la jointure entre le tiddler de création lui-même et ce qui sera votre menu au final.
-
-Tiddler associé : $:/template/NewMenu
-
-!Le code :
-
-{{$:/template/NewMenu||$:/code}}
-
-|Champs|Value|h
-|contenu|{{$:/template/NewMenu!!contenu}}|
-|menu-title|{{$:/template/NewMenu!!menu-title}}|
-|rank|{{$:/template/NewMenu!!rank}}|
-
-
-Contient les paramètres transmis du Tiddler $:/NewMenu sur ce tiddler de transition. Les lignes `&lt;$details summary={{!!menu-title}} class=&quot;&quot;&gt;` et `&lt;/$details&gt;` vont contenir le titre de votre menu.
-
-La ligne `{{!!contenu}}` se verra attribuer le contenu de votre menu tel que vous l'aurez vous-même défini à la ligne &quot;Contenu du menu&quot; du tiddler de création $:/NewMenu
-
-Sitôt le menu crée, les valeurs des champs de ce tiddler sont vidées, toujours via le tiddler $:/NewMenu,  laissant ainsi ici la place à la création du menu suivant.
-
-La totalité du contenu de ce tiddler sera récupéré avec ses valeurs (avant leur destruction) par le tiddler de menu $:/NavBarMenu</pre>
 </div>
 <div created="20180726020625056" list="" modified="20180808092529389" tags="$:/NavBarMenu $:/Detail" title="$:/ButtonNewMenu">
 <pre>&lt;$button class=&quot;bttn-fill bttn-sm bttn-primary&quot; to='$:/NewMenu' tooltip=&quot;Nouvelle entrée de menu dans la Barre de Navigation (NavBar)&quot;&gt;
@@ -10365,6 +10268,133 @@ Si vous souhaitez ôter l'onglet &quot;Contrôles&quot; du panneau de contrôle 
 La suppression du menu est définitive. Ces paramètres restent néanmoins disponibles dans l'onglet Contrôles du panneau de contrôle.
 </pre>
 </div>
+<div caption="Supprimer le menu Frame" created="20180813080052029" modified="20180813080117068" tags="$:/documentation" title="$:/doc-user-019">
+<pre>!{{!!caption}}
+&lt;div class=&quot;att&quot;&gt;
+[[Modifier l'assistant $:/doc-user-019|$:/doc-user-019]]
+&lt;/div&gt;
+
+
+👉 Supprime le menu d'exemple &quot;Outils&quot; de la NavBar et de tout emplacement où il pourrait se trouver.
+
+La suppression du menu est définitive. 
+</pre>
+</div>
+<div caption="Créer un nouveau menu" created="20180813061036185" modified="20180813080341110" tags="$:/documentation" title="$:/doc-user-020">
+<pre>!{{!!caption}}
+&lt;div class=&quot;att&quot;&gt;
+[[Modifier l'assistant $:/doc-user-020|$:/doc-user-020]]
+&lt;/div&gt;
+
+
+&lt;$details summary=&quot;Créer un menu : étape 1&quot;&gt;
+
+!Le code :
+{{$:/ButtonNewMenu||$:/code}}
+
+Le bouton $:/ButtonNewMenu a pour seule fonction d'appeler le tiddler de création $:/NewMenu
+
+Il est placé en standard dans l'onglet [[Menu|$:/core/ui/SideBar/TableOfContents]] de la ~SideBar mais peut être déplacé en changeant son tag.
+
+&lt;/$details&gt;
+
+
+&lt;$details summary=&quot;Créer un menu : étape 2&quot;&gt;
+
+Le template de création du menu fait la jointure entre le tiddler de création lui-même et ce qui sera votre menu au final.
+
+Tiddler associé : $:/template/NewMenu
+
+!Le code :
+
+{{$:/template/NewMenu||$:/code}}
+
+|Champs|Value|h
+|contenu|{{$:/template/NewMenu!!contenu}}|
+|menu-title|{{$:/template/NewMenu!!menu-title}}|
+|rank|{{$:/template/NewMenu!!rank}}|
+
+
+Contient les paramètres transmis du Tiddler $:/NewMenu sur ce tiddler de transition. Les lignes `&lt;$details summary={{!!menu-title}} class=&quot;&quot;&gt;` et `&lt;/$details&gt;` vont contenir le titre de votre menu.
+
+La ligne `{{!!contenu}}` se verra attribuer le contenu de votre menu tel que vous l'aurez vous-même défini à la ligne &quot;Contenu du menu&quot; du tiddler de création $:/NewMenu
+
+Sitôt le menu crée, les valeurs des champs de ce tiddler sont vidées, toujours via le tiddler $:/NewMenu,  laissant ainsi ici la place à la création du menu suivant.
+
+La totalité du contenu de ce tiddler sera récupéré avec ses valeurs (avant leur destruction) par le tiddler de menu $:/NavBarMenu
+
+&lt;/$details&gt;
+
+
+&lt;$details summary=&quot;Créer un menu : étape 3&quot;&gt;
+
+!Le code :
+
+Tiddler attaché : $:/NewMenu
+
+{{$:/NewMenu||$:/code}}
+
+!Processus
+
+```
+\define menuTitle()
+$(menu)$
+\end
+```
+Une macro commence toujours par la fonction &quot;define&quot;. Ici on définis la forme que prendra le titre du tiddler menu : [nom donné au menu].
+
+```
+Nom du menu :&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/template/NewMenu' field='menu-title' placeholder='e.g. Home'/&gt;
+```
+
+&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/template/NewMenu' field='menu-title' placeholder='e.g. Home'/&gt;
+
+La valeur (nom du menu) indiquée dans la zone de saisie est stockée dans le champ `menu-title` du Tiddler Template `$:/template/NewMenu`. On y vois aussi l'utilité du placeholder
+
+ET
+
+Le champ `menu-title` du Tiddler `$:/template/NewMenu` est simultanément transclut  dans le champ texte du tiddler via le code   `{{!!menu-title}}`
+
+```
+Rang: &lt;$edit-text class='tc-edit-texteditor' tiddler='$:/template/NewMenu' field='rank' placeholder='Ordre dans le menu (e.g. 1,2...)'/&gt;
+```
+
+Positionnera chacun de vos menus suivant l'ordre indiqué..
+
+```
+&lt;$set name=menu value={{$:/template/NewMenu!!menu-title}}&gt;
+```
+La variable `&lt;$set&gt;` assigne une valeur à une variable spécifiée, en l’occurrence  la variable `$(menu)$` spécifiée en tête du tiddler `$:/NewMenu`
+
+&lt;/$details&gt;
+
+
+&lt;$details summary=&quot;Créer un menu : étape 4&quot;&gt;
+
+Tiddler lié $:/NavBarMenu
+
+!Le code :
+
+{{$:/NavBarMenu||$:/code}}
+
+!!Première partie :
+
+```
+&lt;div class='btn'&gt;&lt;$list filter=&quot;[has[rank]] +[sort[rank]]&quot;&gt;
+```
+Récupération de la valeur de classement du menu
+
+!!Seconde partie :
+
+```
+&lt;nav&gt;&lt;ul&gt;&lt;li&gt;{{!!text}}&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;&lt;/$list&gt;&lt;/div&gt;
+```
+Récupération du champ texte du tiddler $:/BarsTemplate
+
+&lt;/$details&gt;
+
+</pre>
+</div>
 <div caption="Position de la ~SideBar" created="20180812055750803" modified="20180812060558886" tags="$:/documentation" title="$:/doc-user-021">
 <pre>!{{!!caption}}
 &lt;div class=&quot;att&quot;&gt;
@@ -10384,14 +10414,14 @@ Deux positions concernant la ~SideBar sont prévues en standard dans ~TiddlyWiki
 La présence de la barre latérale gauche réduit logiquement l’extension de la ~SideBar si cette dernière est fixée en position Fixed Story / Fluid ~SideBar
 </pre>
 </div>
-<div caption="Gestion de l'Utilisateur" created="20180812021504357" modified="20180812021558106" tags="$:/documentation" title="$:/doc-user-022">
+<div caption="Gestion de l'Utilisateur" created="20180812021504357" modified="20180813021102120" tags="$:/documentation" title="$:/doc-user-022">
 <pre>!{{!!caption}}
 &lt;div class=&quot;att&quot;&gt;
 [[Modifier l'assistant $:/doc-user-022|$:/doc-user-022]]
 &lt;/div&gt;
 
 
-</pre>
+En l'état, ce wiki ne gère qu'un seul utilisateur : l'Administrateur du site. Il est prévu ultérieurement de pouvoir également gérer les droits des rédacteurs.</pre>
 </div>
 <div caption="Démarrer en mode admin ou en mode web" created="20180812010352824" modified="20180812074407078" tags="$:/documentation" title="$:/doc-user-023">
 <pre>!{{!!caption}}
@@ -13294,55 +13324,10 @@ src: url(data:application/font-woff;base64,d09GRgABAAAAAX7oAA0AAAAChqwABAAHAAAAA
 
 </pre>
 </div>
-<div caption="Gérer un menu classique" created="20180421005012756" modified="20180728050723965" sub.num="08.08" tags="$:/Menus" title="$:/Gérer un menu classique">
-<pre>La gestion de la table des matières est pilotée par le Tiddler $:/core/ui/SideBar/TableOfContents
-
-Deux méthodes peuvent être utilisées:
-
-!Classement simple de la table par ordre alphabétique.
-
-
-```
-&lt;div class=&quot;tc-table-of-contents&quot;&gt;
-&lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
-&lt;/div&gt;
-```
-Chaque ligne de menu peut comporter des sous-menus sans limitation, mais ils resteront classés par ordre alphabétique.
-
-Pource faire les tiddlers de chaque ligne de menu de premier rang (racine) doivent être tagué &quot;''~TableOfContents''&quot;. C'est ce tag qui permet de choisir cette option de paramétrage.
-
-!Ordre d'apparition des titres contrôlé
-
-
-```
-&lt;div class=&quot;tc-table-of-contents&quot;&gt;
-&lt;&lt;toc-expandable &quot;Menu&quot; &quot;sort[sub.num]&quot;&gt;&gt;
-&lt;/div&gt;
-```
-Chaque ligne de menu peut comporter des sous-menus sans limitation. Le premier niveau c'est à dire le niveau racine affiche ce que vous voyez à l'écran à l'ouverture du wiki. Vous pouvez les afficher dans l'ordre qui vous convient, et donc pas forcément dans l'ordre alphabétique.
-
-Pour ce faire les tiddlers de chaque ligne de menu de premier rang (racine) doivent être tagué &quot;''Menu''&quot; (avec un M majuscule). C'est ce tag qui permet de choisir cette option de paramétrage.
-
-De plus, chaque Tiddler se verra attribuer un ordre d’apparition qui peut être établi de deux manières différentes:
-
-*Soit dans le Tiddler lui même en affichant le numéro d'ordre dans le champ sub.num
-*Soit via le menu [[Index Menu]] situé dans le menu Administration de la barre de menu haute. Cette seconde méthode étant la plus simple à mettre en œuvre.
-
-Il faut noter enfin que le [[plugin Appear|$:/plugins/tobibeer/appear]] doit être présent sur votre wiki pour que cette méthode de classement fonctionne.
-
-Menu en liste via les tags
-
-{{Documentation||$:/core/ui/TagTemplate}}
-
-On distinguera une table des matières d'un menu.</pre>
-</div>
-<div caption="Gérer un menu personnalisé" created="20180708093929182" modified="20180717034506580" sub.num="08.09" tags="$:/Menus" title="$:/Gérer un menu personnalisé">
-<pre>On étudie ici comment fabriquer un menu et comment le placer</pre>
-</div>
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/user/config/Logo]]</pre>
+# [[$:/plugins/wikilabs/remove-states]]</pre>
 </div>
 <div created="20170910022838162" data="Yes" modified="20180812064958316" title="$:/Importer ce TiddlyWiki">
 <pre>En copiant le code suivant dans le wiki que vous voulez télécharger (et dans le cas ou ce bouton de téléchargement n'est pas déjà proposé)
@@ -13394,142 +13379,54 @@ Il y a encore un point à régler : la couleur du bouton de retour en haut de pa
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div caption="Les Tiddlers du Générateur de Template" created="20180725034843405" modified="20180811054524217" sub.num="01.03" tags="$:/Introduction" title="$:/Le Générateur de Template">
-<pre>#Importez d'abord les deux plugins [[LeftBar|$:/plugins/TWaddle/LeftBar]] et [[Details|$:/plugins/telmiger/details]]
-
-#Importez en suite tous les Tiddlers ci-dessous
-
-Note: Ne pas oublier d'importer aussi les numéros de référence qui se trouvent sur la colonne de droite de ce tableau : (01, 02, 03, 04, 04.01, 04.02, 04.03, 05, 05.01, 05.02, 06, 07, 08 et 09)
-
-| RUBRIQUE | DESCRIPTION | RÉFÉRENCE |h
-|&gt;|''Introduction''|[[01|$:/Introduction]]|
-|[[$:/À Propos de ce Wiki]]|À Propos de ce wiki|01.01|
-|[[$:/documentation]]|Contenu documentaire de ce wiki|01.02|
-|[[$:/Le Générateur de Template]]|Liste complète des tiddlers|01.03|
-|$:/standard-full.png|Image d'illustration|01.04|
-|$:/core/ui/SideBar/TableOfContents|Ce qui permet de gérer la table des matières|01.05|
-|&gt;|''Panneau de contrôle''|[[02|$:/PanneauControle]]|
-|$:/Template|Contrôle Général (panneau de contrôle)|02.01|
-|&gt;|''Pugins externes''|[[03|$:/Plugins]]|
-|[[$:/Plugin LeftBar]]|Documentation|03.01|
-|[[$:/Le plugin Details Widget]]|Documentation|03.02|
-|[[$:/Plugins externes]]|Principe de non interférence|03.03|
-|$:/fonts/FontAwesome|Tiddler des icônes Font-Awsome|03.04|
-|&gt;| ''Interface''|[[04|$:/Interface]]|
-|$:/interface-system-help|Assistant Interface|04.00|
-|&gt;|''Pied de Page''|[[04.01|$:/Footer]]|
-|[[$:/Pied de page]]|Documentation|04.01.01|
-|$:/user/config/Logo|Logo Prolégomènes|04.01.02|
-|$:/cssFooter|CSS de configuration du pied de page|04.01.03|
-|$:/PageFooter|Le Tiddler de pied de page. Nécessite l'installation de $:/fonts/FontAwesome|04.01.04|
-|&gt;|''Titre, Sous-Titre du wiki''|[[04.02|$:/Title]]|
-|&gt;|''Centralisation''|[[04.03|$:/Centralisation]]|
-|$:/centralisation/css|CSS de configuration Titre, Sous-Titre|04.03.01|
-|$:/TemplateInterface|Contrôle Interface|04.03.02|
-|$:/centraliser|Paramètres du non recouvrement des barres latérales|04.03.03|
-|&gt;| ''Barres latérales''|[[05|$:/Bars]]|
-|[[$:/Positionnement des Barres Latérales]]|Documentation : Concept - Fonctionnement|05.00|
-|&gt;|''~LeftBar''|[[05.01|$:/LeftBar]]|
-| - |Transféré|05.01.01|
-|$:/LeftBarCode|Documentation : Analyse du code|05.01.02|
-|$:/LeftBarTemplate|Des paramètres de contrôle supplémentaires|05.01.03|
-|$:/css/LeftBar|Code css supplémentaire relatif|05.01.04|
-|$:/TemplateLeftBar|Contrôle ~LeftBar|05.01.05|
-|$:/state/LeftBar|''Ce Tiddler de position est créé par le plugin source lors de son installation mais ne se voit pas. Il ne doit pas être recopié''. ''Surtout ne pas le modifier ou le supprimer''|05.01.06|
-|&gt;|''~SideBar''|[[05.02|$:/SideBar]]|
-|[[$:/Cacher la SideBar au démarrage]]|Assistant Cacher la SideBar au démarrage|05.02.01|
-|[[$:/TemplateSideBar]]|Contrôle ~SideBar|05.02.02|
-|$:/.tb/modules/startup/hide-sidebar.js|[[Cacher démarrage : JS|$:/Cacher la SideBar au démarrage]]|05.02.03|
-|$:/config/HideSidebarOnStartup|[[Cacher au démarrage : Valeur attribuée.|$:/Cacher la SideBar au démarrage]]|05.02.04|
-|$:/plugins/TWaddle/tw-admin/icon|Icon emplacement libre de configuration|05.02.05|
-|$:/plugins/TWaddle/tw-admin/button|Ouverture emplacement libre en popup|05.02.06|
-|$:/plugins/TWaddle/tw-admin/content|Emplacement physique libre|05.02.07|
-|$:/sidebar-settings-help|Assistant Paramétrage ~SideBar|05.02.08|
-|[[$:/Panneau de Contrôle en PopUp pour l'Administrateur]]|Contrôle de l'Administrateur|05.02.09|
-|&gt;|''~NavBar''|[[06|$:/NavBar]]|
-|$:/NavBarCode|Afficher/Supprimer la NavBar|06.01|
-|$:/NavBarContenu|Documentation : Fonctionnement|06.02|
-|$:/lnavbar-system-help|Assistant Barre de navigation|06.03|
-|$:/navbar/button|Afficher ou supprimer la barre de navigation|06.04|
-|$:/navbar/menu|Afficher ou supprimer le menu de la barre de navigation|06.05|
-|$:/state/navbar|''Le state tiddler de position. Ne pas l'importer''|06.06|
-|$:/navbar/css|CSS de configuration générale|06.07|
-|$:/navbar/css/user|Configuration utilisateur|06.08|
-|$:/TemplateNavBar|Contrôle ~NavBar|06.09|
-|&gt;|''Surface occupée''|[[07|$:/Surface]]|
-|$:/width-settings-help|Assistant surface occupée|07.01|
-|[[$:/Gestion des espaces]]|Documentation : Concept - Fonctionnement|07.02|
-|$:/width/css|CSS de configuration générale|07.03|
-|$:/width/css/user|Configuration utilisateur|07.04|
-|$:/TemplateWidth|Contrôle Espace|07.05|
-|$:/600px-4.png|Image de documentation|07.06|
-|$:/600px-3.png|Image de documentation|07.07|
-|$:/600px-2.png|Image de documentation|07.08|
-|$:/600px-1.png|Image de documentation|07.09|
-|&gt;| ''Menus''|[[08|$:/Menus]]|
-|&gt;|''Création d'un menu''|[[08.01|$:/MenuBars]]|
-|[[$:/Créer un nouveau menu]]|Création|08.01.01|
-|$:/leftbar-system-help|Assistance Gestion des Menus|08.01|
-|$:/detail/css|CSS de remplacement du plugin Detail|08.02|
-|$:/LeftBarMenu|Le contenu actif de la barre latérale gauche..|08.03|
-|$:/NavBarMenu|Réceptacle du contenu de la barre de navigation. Taguer `$:/tags/TopLeftBar` (ne pas laisser vide)|08.04|
-|$:/TemplateMenu|Contrôle Menu|08.05|
-|$:/menu/navbar/css/horizontal|CSS DIV horizontal du menu|08.06|
-|$:/Peuplement|Documentation : Principes|08.07|
-|[[$:/Gérer un menu classique]]|Documentation|08.08|
-|[[$:/Gérer un menu personnalisé]]|Documentation|08.09|
-|$:/Menu1|Tiddler menu d'exemple|08.10|
-|$:/Menu2|Tiddler menu d'exemple|08.11|
-|$:/Menu3|Tiddler menu d'exemple|08.12|
-|[[$:/Créer un nouveau menu]]|Procédure de création|08.13|
-|&gt;|''Tiddlers''|[[09|$:/Tiddlers]]|
-|[[$:/Accès au menu depuis un Tiddler]]|Documentation : Fonctionnement|09.01|
-|$:/TemplateTiddler|Contrôle Tiddlers|09.02|
-|$:/core/ui/ViewTemplate/blackline|Template d'ajout du trait de séparation|09.03|
-|[[$:/Le Template Black Line]]|Documentation|09.04|
-|$:/core/ui/Buttons/Menu|Bouton acces au menu|09.05|
-|&gt;|''Les Tiddlers divers''|
-|$:/core/ui/ViewTemplate/Ref.Art|Temporaire supprimé lors de la mise en production|
-|$:/More|Temporaire supprimé lors de la mise en production|
-|[[$:/Ajout de liens sur les tables]]|Temporaire supprimé lors de la mise en production|
-|[[$:/Ajout de la table 'System tags]]'|Temporaire supprimé lors de la mise en production|
-|[[$:/System images tab]]|Temporaire supprimé lors de la mise en production |
-|$:/palettes/telmiger/bricks1|Temporaire supprimé lors de la mise en production|
-|$:/palettes/telmiger/bricks2|Temporaire supprimé lors de la mise en production|
-|$:/palettes/telmiger/bricks3|Temporaire supprimé lors de la mise en production|
-
-</pre>
-</div>
-<div created="20180728101446682" modified="20180728130051759" sub.num="08.01.05" tags="$:/MenuBars" title="$:/Le menu récupère ses données">
-<pre>Tiddler lié $:/NavBarMenu
-
-!Le code :
-
-{{$:/NavBarMenu||$:/code}}
-
-!!Première partie :
-
-```
-&lt;div class='btn'&gt;&lt;$list filter=&quot;[has[rank]] +[sort[rank]]&quot;&gt;
-```
-Récupération de la valeur de classement du menu
-
-!!Seconde partie :
-
-```
-&lt;nav&gt;&lt;ul&gt;&lt;li&gt;{{!!text}}&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;&lt;/$list&gt;&lt;/div&gt;
-```
-Récupération du champtexte du tiddler $:/BarsTemplate</pre>
-</div>
-<div created="20180703004838109" modified="20180812060251846" tags="$:/documentation $:/LeftBar $:/Paramétrages" title="$:/LeftBar" url="$:/plugins/TWaddle/LeftBar/Toggle">
+<div caption="Contrôle Barre Latérale Gauche" created="20180703004838109" modified="20180813020328448" tags="$:/documentation $:/LeftBar $:/Paramétrages" title="$:/LeftBar" url="$:/plugins/TWaddle/LeftBar/Toggle">
 <pre>&lt;div class=&quot;att&quot;&gt;
 &lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt; Sujet tagué &quot;&lt;&lt;tag $:/LeftBar&gt;&gt;&quot; comprenant {{{[tag[$:/LeftBar]count[]]}}}  articles (tiddlers)
 &lt;/div&gt;
 
 
-![[Le Plugin Source LeftBar|$:/LeftBarSource]]
+&lt;$details summary=&quot;À propos du plugin source LeftBar&quot;&gt;
 
-{{$:/LeftBarSource}}
+D'autres plugins proposent l'ajout d'une barre latérale gauche :
+
+*👉 [ext[LeftMenu|http://ooktech.com/iconmenus/]] de inmysocks
+*👉 http://tw5topleft.tiddlyspot.com/ de TonGerner
+
+Cette barre latérale gauche est conçue pour présenter un cadre dans lequel on peut y mettre ce que l'on veut. L'objet de ce plugin est donc d'offrir une barre latérale vierge (Tout comme la barre de navigation). 
+
+Son contenu est totalement libre.
+
+!Descriptif :
+
+&lt;div class=&quot;tw-admin-content&quot;&gt;
+
+|$:/plugins/TWaddle/LeftBar/Menu|Le contenu visuel de la barre de menu gauche. Éditez ce tiddler!|
+|$:/plugins/TWaddle/LeftBar/Toggle|Le bouton Hamburger {{$:/core/images/menu-button}} apparaissant si la barre est fermée ou le bouton chevron gauche {{$:/core/images/chevron-left}}si la barre est ouverte. Inclus le code toogle qui va avec.|
+|$:/plugins/TWaddle/LeftBar/Stylesheet|La feuille de style et //paramètres des champs// positionnement des boutons, largeur etc|
+|$:/plugins/TWaddle/LeftBar/settings|Tiddler des choix possibles de l'utilisateur tel qu'il apparaît dans le panneau de contrôle &gt; Settings|
+|$:/plugins/TWaddle/LeftBar/readme|Assistant de paramétrages|
+|$:/plugins/TWaddle/LeftBar/icon|L'icone Bouton Hamburger.|
+|$:/state/LeftBar|Tiddler temporaire indiquant show si la barre est ouverte et hide si la barre est fermée (cachée). Présent à l'installation du plugin.|
+|$:/plugins/TWaddle/LeftBar/temp|Tiddler temporaire. ''Créé'' à l'ouverture de la barre (montrée) et ''supprimé'' à la fermeture de la barre (cachée). Ce n'est pas un state tiddler à proprement parler. Présent à l'installation du plugin. Ne supprimez pas ce tiddler!|
+
+&lt;/div&gt;
+
+&lt;style&gt;
+.tw-admin-content {
+  /*margin:0 auto;*/
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+body.tc-body .tw-admin-content svg {
+ width: 1em;
+ margin: auto .4em -.7em .5em;
+ fill:crimson;
+}
+&lt;/style&gt;
+
+&lt;/$details&gt;
+
 
 
 
@@ -13632,45 +13529,6 @@ Le bouton &quot;[[Nouveau Menu|$:/ButtonNewMenu]]&quot; vous permet :
 <div created="20180809001547781" modified="20180809001735625" tags="$:/LeftBarMenu" title="$:/LeftBarMenu">
 <pre>Gestion d'un menu dans la LeftBar</pre>
 </div>
-<div caption="Les Tiddlers du source" created="20180425030002868" modified="20180812053111709" sub.num="05.01.01" tags="$:/LeftBar" title="$:/LeftBarSource" url="http://leftbar.tiddlyspot.com/">
-<pre>D'autres plugins proposent l'ajout d'une barre latérale gauche :
-
-*👉 [ext[LeftMenu|http://ooktech.com/iconmenus/]] de inmysocks
-*👉 http://tw5topleft.tiddlyspot.com/ de TonGerner
-
-Cette barre latérale gauche est conçue pour présenter un cadre dans lequel on peut y mettre ce que l'on veut. L'objet de ce plugin est donc d'offrir une barre latérale vierge (Tout comme la barre de navigation). 
-
-Son contenu est totalement libre.
-
-!Descriptif :
-
-&lt;div class=&quot;tw-admin-content&quot;&gt;
-
-|$:/plugins/TWaddle/LeftBar/Menu|Le contenu visuel de la barre de menu gauche. Éditez ce tiddler!|
-|$:/plugins/TWaddle/LeftBar/Toggle|Le bouton Hamburger {{$:/core/images/menu-button}} apparaissant si la barre est fermée ou le bouton chevron gauche {{$:/core/images/chevron-left}}si la barre est ouverte. Inclus le code toogle qui va avec.|
-|$:/plugins/TWaddle/LeftBar/Stylesheet|La feuille de style et //paramètres des champs// positionnement des boutons, largeur etc|
-|$:/plugins/TWaddle/LeftBar/settings|Tiddler des choix possibles de l'utilisateur tel qu'il apparaît dans le panneau de contrôle &gt; Settings|
-|$:/plugins/TWaddle/LeftBar/readme|Assistant de paramétrages|
-|$:/plugins/TWaddle/LeftBar/icon|L'icone Bouton Hamburger.|
-|$:/state/LeftBar|Tiddler temporaire indiquant show si la barre est ouverte et hide si la barre est fermée (cachée). Présent à l'installation du plugin.|
-|$:/plugins/TWaddle/LeftBar/temp|Tiddler temporaire. ''Créé'' à l'ouverture de la barre (montrée) et ''supprimé'' à la fermeture de la barre (cachée). Ce n'est pas un state tiddler à proprement parler. Présent à l'installation du plugin. Ne supprimez pas ce tiddler!|
-
-&lt;/div&gt;
-
-&lt;style&gt;
-.tw-admin-content {
-  /*margin:0 auto;*/
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-body.tc-body .tw-admin-content svg {
- width: 1em;
- margin: auto .4em -.7em .5em;
- fill:crimson;
-}
-&lt;/style&gt;</pre>
-</div>
 <div created="20180730035559785" modified="20180812025548058" tags="$:/documentation" title="$:/LoginUser">
 <pre>Ce module permet uniquement de changer le login et le mot de passe de l'administrateur du wiki. Un Administrateur et Un mot de passe.
 
@@ -13689,15 +13547,97 @@ Sujet tagué &quot;&lt;&lt;tag User&gt;&gt;&quot; comprenant {{{[tag[User]count[
 
 </pre>
 </div>
-<div caption="&lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;  Création d'un menu" created="20180727075311128" modified="20180727102453680" sub.num="08.01" tags="$:/Menus" title="$:/MenuBars">
-<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
-&lt;&lt;toc-expandable &quot;$:/MenuBars&quot; &quot;sort[sub.num]&quot;&gt;&gt;
-&lt;/div&gt;</pre>
-</div>
-<div caption="Contrôle Menus" controle="08" created="20180710070716057" modified="20180811041006817" sub.num="08.05" tags="$:/Menus" title="$:/Menus">
+<div caption="Contrôle Menus" controle="08" created="20180710070716057" modified="20180813080400120" sub.num="08.05" tags="$:/Menus" title="$:/Menus">
 <pre>&lt;div class=&quot;att&quot;&gt;
 &lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt; Sujet tagué &quot;&lt;&lt;tag $:/Menus&gt;&gt;&quot; comprenant {{{[tag[$:/Menus]count[]]}}}  articles (tiddlers)
 &lt;/div&gt;
+
+&lt;$details summary=&quot;À propos des Plugins LeftBar et Details&quot;&gt;
+
+Points devant attirer votre attention
+
+Le plugin [[LeftBar|$:/plugins/TWaddle/LeftBar]] et le widget [[Details|$:/plugins/telmiger/details]] font partie intégrante de ~TyddlyFrame qui ne peut ne peut fonctionner sans eux. J'ai  cependant pris le parti de ne rien modifier des sources de ces deux programmes. Ce faisant,  ''leur conception impose de modifier deux tiddlers'' :
+
+*Dans LeftBar -&gt; le Tiddler [[$:/LeftBarMenu]] dont le contenu initial doit être remplacé par le votre ([[Voir Reset|$:/TemplateLeftBar]])
+*Dans Details, le Tiddler [[$:/plugins/telmiger/details/details.css]] certaines règles CSS doivent être modifiées ([[Voir Reset|$:/TemplateMenu]])
+
+&lt;/$details&gt;
+
+
+
+&lt;$details summary=&quot;Gérer un menu Classique (Table des Matières)&quot;&gt;
+
+La gestion de la table des matières est pilotée par le Tiddler $:/core/ui/SideBar/TableOfContents
+
+Deux méthodes peuvent être utilisées:
+
+!!Classement simple de la table par ordre alphabétique.
+
+
+```
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
+&lt;/div&gt;
+```
+Chaque ligne de menu peut comporter des sous-menus sans limitation, mais ils resteront classés par ordre alphabétique.
+
+Pource faire les tiddlers de chaque ligne de menu de premier rang (racine) doivent être tagué &quot;''~TableOfContents''&quot;. C'est ce tag qui permet de choisir cette option de paramétrage.
+
+!!Classement des titres contrôlé
+
+```
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;&lt;toc-expandable &quot;Menu&quot; &quot;sort[sub.num]&quot;&gt;&gt;
+&lt;/div&gt;
+```
+Chaque ligne de menu peut comporter des sous-menus sans limitation. Le premier niveau c'est à dire le niveau racine affiche ce que vous voyez à l'écran à l'ouverture du wiki. Vous pouvez les afficher dans l'ordre qui vous convient,
+
+Pour ce faire les tiddlers de chaque ligne de menu de premier rang (racine) doivent être tagué &quot;''Menu''&quot; (avec un M majuscule). C'est ce tag qui permet de choisir cette option de paramétrage.
+
+De plus, chaque Tiddler se verra attribuer un ordre d’apparition via le champ `sub.num` des tiddlers concernés.
+
+
+!!Menu en liste via les tags
+
+C'est encore une solution possible. Par exemple `&lt;&lt;tag $:/documentation&gt;&gt;`
+
+&lt;&lt;tag $:/documentation&gt;&gt;
+
+Me donnera la liste de tous les tiddlers de la documentation. Ils peuvent faire l'objet d'un menu spécifique.
+
+&lt;/$details&gt;
+
+
+&lt;$details summary=&quot;Gérer un menu Personnalisé (Via Details)&quot;&gt;
+
+Dans trois emplacements différents :
+
+*&amp;#x27A1; Barre de menu gauche (~LeftBar)
+*&amp;#x27A1;Barre de menu Droite (~SideBar)
+*&amp;#x27A1;Barre de menu haute (navigation)
+
+Chaque menu créé est indépendant de l'emplacement qui lui sera attribué  (Haut, gauche ou droite)
+
+*👉 Le nombre de menu n'est pas limité
+*👉 Vous mettez ce que vous voulez dans vos menus
+
+Le principe de placement d'un menu personnalisé est donc le suivant:
+
+*👉 Un menu personnalisé créé sous quelque forme que ce soit sera tout entier contenu dans un tiddler. Ce tiddler prendra le nom qui lui a été attribué dans le tiddler de création.
+*👉 Prenons pour exemple le menu $:/Administration
+*👉 Si je veux mettre mon tiddler [[$:/Administration]] dans la barre de navigation, je n'ai rien à faire puisqu'il y est automatiquement placé.
+*👉 Si je veux mettre mon tiddler [[$:/Administration]] dans la barre latérale gauche, je vais le transclure dans le tiddler [[$:/LeftBarMenu]] (1)
+*👉 Si je veux mettre mon tiddler [[$:/Administration]] dans la SideBar, je vais le taguer [[$:/tags/SideBar]] (1)
+
+(1) ces deux dernières opérations seront automatisées dans la prochaine version de ~TiddltFrame
+
+&lt;/$details&gt;
+
+
+
+
+
+
 
 
 
@@ -13705,8 +13645,10 @@ Sujet tagué &quot;&lt;&lt;tag User&gt;&gt;&quot; comprenant {{{[tag[User]count[
 &lt;&lt;toc-expandable &quot;$:/Menus&quot; &quot;sort[sub.num]&quot;&gt;&gt;
 &lt;/div&gt;
 
-
-
+!À propos de details
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;&lt;toc-expandable &quot;$:/Detail&quot; &quot;sort[sub.num]&quot;&gt;&gt;
+&lt;/div&gt;
 
 
 &lt;div class=&quot;note&quot;&gt;
@@ -13716,14 +13658,16 @@ Modifier cet assistant $:/Menus
 <div created="20180708101142986" modified="20180715122630421" title="$:/myTempState">
 <pre></pre>
 </div>
-<div caption="Contenu" created="20180702035239287" modified="20180811042219958" sub.num="06.02" tags="$:/documentation $:/NavBar" title="$:/NavBar">
+<div caption="Contenu" created="20180702035239287" modified="20180813013955157" sub.num="06.02" tags="$:/documentation $:/NavBar" title="$:/NavBar">
 <pre>!Barre de Navigation :
 
 &lt;div class=&quot;att&quot;&gt;
 &lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt; Sujet tagué &quot;&lt;&lt;tag $:/NavBar&gt;&gt;&quot; comprenant {{{[tag[$:/NavBar]count[]]}}}  articles (tiddlers)
 &lt;/div&gt;
 
+👉 Cet écran concerne le paramétrage de la barre de menu (~NavBar) et permet de faire apparaître ou non son contenu.
 
+👉 Pour la gestion du menu lui-même, voir [[Contrôle Menu|$:/TemplateMenu]]
 
 
 | Éléments | Description |h
@@ -13760,7 +13704,7 @@ Modifier cet assistant $:/Menus
 [[ Afficher/Supprimer la barre de navigation|$:/navbar/button]]
 &lt;/$reveal&gt;</pre>
 </div>
-<div created="20161026162820170" modified="20180812022834202" sub.num="05.02.07" tags="$:/NavBar $:/tags/Stylesheet" title="$:/navbar/css" type="text/vnd.tiddlywiki">
+<div created="20161026162820170" modified="20180813013330405" sub.num="05.02.07" tags="$:/NavBar $:/tags/Stylesheet" title="$:/navbar/css" type="text/vnd.tiddlywiki">
 <pre>.tc-topbar-left {
 
 top: 0; 
@@ -13809,7 +13753,7 @@ Espace entre les menus: {{!!navbar-menuspace}}
 <div created="20180709082820833" modified="20180808094817692" sub.num="06.05" tags="$:/NavBar" title="$:/navbar/menu">
 <pre>&lt;$checkbox tiddler='$:/NavBarContent' tag='$:/tags/TopLeftBar' checked='$:/tags/SideBar' unchecked=none/&gt; [[Afficher/Supprimer le menu de la barre de navigation|$:/NavBarMenu]]</pre>
 </div>
-<div caption="$:/NavBarMenu" created="20180726064842984" list="" modified="20180812022834203" tags="$:/NavBarMenu $:/Detail $:/tags/TopLeftBar" title="$:/NavBarContent">
+<div caption="$:/NavBarMenu" created="20180726064842984" list="" modified="20180813013446030" tags="$:/NavBarMenu $:/Detail $:/tags/TopLeftBar" title="$:/NavBarContent">
 <pre>&lt;div class='btn'&gt;&lt;$list filter=&quot;[has[rank]] +[sort[rank]]&quot;&gt;&lt;nav&gt;&lt;ul&gt;&lt;li&gt;{{!!text}}&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;&lt;/$list&gt;&lt;/div&gt;
 </pre>
 </div>
@@ -13845,6 +13789,17 @@ Contenu du menu :&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/template/
 &lt;/$button&gt;
 
 &lt;/$set&gt;</pre>
+</div>
+<div contenu="&lt;small&gt;{{$:/core/ui/PageTemplate/pagecontrols}}&lt;/small&gt;" created="20180727043704106" menu-title="Outils" modified="20180813060443737" rank="3" tags="Bars" title="$:/Outils" tooltip="">
+<pre>&lt;$details summary={{!!menu-title}} class=&quot;&quot;&gt;
+
+{{!!contenu}}
+
+&lt;/$details&gt;
+
+&lt;$button class=&quot;tc-btn-invisible&quot; tooltip={{!!tooltip}} set=&quot;$:/StoryList!!list&quot; setTo={{!!list-tiddlers}}&gt;&lt;/$button&gt;
+
+</pre>
 </div>
 <div background-color="transparent" caption="Tiddler du bas de page" created="20160916184714058" modified="20180812094232175" sub.num="04.01.04" tags="$:/Interface $:/Footer $:/tags/BelowStory" title="$:/PageFooter" type="">
 <pre>&lt;div align=&quot;center&quot;&gt;
@@ -13904,42 +13859,6 @@ La &lt;mark class=&quot;roundedmark&quot;&gt;[[Gestion des droits|Droits]]&lt;/m
 Les paramétrages sont localisés dans Control Panel &lt;i class=&quot;fa fa-arrow-right&quot;&gt;&lt;/i&gt; Settings &lt;i class=&quot;fa fa-arrow-right&quot;&gt;&lt;/i&gt; [[Contrôles|$:/Template]]. 
 
 La documentation complète de ce wiki est accessible sous le menu Documentation ou [[directement ici|$:/documentation]]
-</pre>
-</div>
-<div caption="Peuplement" created="20180708081302275" modified="20180728050353231" sub.num="08.07" tags="$:/Menus" title="$:/Peuplement">
-<pre>Il est possible d'intégrer deux types de menus ::
-
-*Menu classique
-**Classés par ordre alphabétique
-**Classé dans l'ordre que vous choisissez
-*Menu personnalisé
-
-Dans trois emplacements différents :
-
-*&amp;#x27A1; Barre de menu gauche (~LeftBar)
-*&amp;#x27A1;Barre de menu Droite (~SideBar)
-*&amp;#x27A1;Barre de menu haute (navigation)
-
-Chaque menu créé est indépendant de l'emplacements qui lui sera attribué  (Haut, gauche ou droite)
-
-*Le nombre de menu n'est pas limité
-*Vous mettez ce que vous voulez dans vos menus
-
-Le principe est donc le suivant:
-
-*Si je veux mettre mon tiddler [[Menu1]] dans la barre de navigation, je vais le transclure dans le tiddler [[$:/NavBarMenu]]
-*Si je veux mettre mon tiddler [[Menu1]] dans la barre latérale gauche, je vais le transclure dans le tiddler [[$:/LeftBarMenu]]
-*Si je veux mettre mon tiddler [[Menu1]] dans la SideBar, je vais le taguer [[$:/tags/SideBar]]
-
-Points devant attirer votre attention
-
-Le plugin [[LeftBar|$:/plugins/TWaddle/LeftBar]] et le widget [[Details|$:/plugins/telmiger/details]] font partie intégrante de ce wiki dont le plugin &quot;Bars&quot; ne peut fonctionner sans leur présence. Nous avons cependant pris le parti de ne rien modifier des sources de ces deux programmes. Cependant, ''leur conception impose de modifier deux tiddlers'' :
-
-*Dans LeftBar -&gt; le Tiddler [[$:/LeftBarMenu]] dont le comtemu initial doit être remplacé par le votre.
-*Dans Details, le Tiddler [[$:/plugins/telmiger/details/details.css]] certaines règles CSS doivent être modifiées.
-
-Voir paramétrages a effectuer en cas de [[problèmes avec les Plugins|Plugins externes - Problèmes et solutions]]. 
-
 </pre>
 </div>
 <div created="20180709092750395" modified="20180709102029166" tags="" title="$:/plugins/bj/calendar/sidbar">
@@ -14301,22 +14220,16 @@ Modifier cet assistant $:/SideBar
 <div created="20180810084920310" modified="20180810091304375" title="$:/SiteTitle">
 <pre>~TiddlyFrame</pre>
 </div>
-<div created="20180706030000501" modified="20180812130109937" sub.num="05.01.06" tags="$:/LeftBar" title="$:/state/LeftBar">
+<div created="20180706030000501" modified="20180813092601917" sub.num="05.01.06" tags="$:/LeftBar" title="$:/state/LeftBar">
 <pre>hide</pre>
 </div>
-<div created="20180812094042999" modified="20180812125839013" title="$:/state/sidebar">
-<pre>yes</pre>
-</div>
-<div created="20180812130030524" modified="20180812130030524" title="$:/state/tab/moresidebar-401116514">
-<pre>$:/core/ui/MoreSideBar/System</pre>
-</div>
-<div created="20180812125842725" modified="20180812125844333" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20180813081045228" modified="20180813081045228" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Plugins</pre>
 </div>
 <div list="" title="$:/StoryList">
 <pre></pre>
 </div>
-<div caption="Assistant Surface occupée" created="20180417043744046" icone="&lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;" modified="20180811064551547" sub.num="07.01" tags="$:/Surface" title="$:/Surface">
+<div caption="Assistant Surface occupée" created="20180417043744046" icone="&lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;" modified="20180813011554679" sub.num="07.01" tags="$:/Surface" title="$:/Surface">
 <pre>!Contrôle ocupation espace
 &lt;div class=&quot;att&quot;&gt;
 Pour modifier le contenu de ce Tiddler, voir  $:/Surface
@@ -14357,11 +14270,6 @@ Exemple en image :
 [img[$:/600px-1.png]]
 
 
-&lt;&lt;image-center &quot;$:/600px-4.png&quot; caption:&quot;&quot; width:&quot;50%&quot;&gt;&gt;
-&lt;&lt;image-center &quot;$:/600px-3.png&quot; caption:&quot;&quot; width:&quot;50%&quot;&gt;&gt;
-&lt;&lt;image-center &quot;$:/600px-2.png&quot; caption:&quot;&quot; width:&quot;50%&quot;&gt;&gt;
-&lt;&lt;image-center &quot;$:/600px-1.png&quot; caption:&quot;&quot; width:&quot;50%&quot;&gt;&gt;
-
 Les césures de passage à la ligne restent identiques dans les quatre positions.
 
 ---
@@ -14372,8 +14280,8 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 
 Ã vos réglages !</pre>
 </div>
-<div created="20180706030259776" modified="20180812094211373" title="$:/temp/advancedsearch">
-<pre>footer</pre>
+<div created="20180706030259776" modified="20180813072918712" title="$:/temp/advancedsearch">
+<pre>$:/doc-user</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -14432,7 +14340,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 <div created="20180729015820084" modified="20180812031746162" password="admin" tags="$:/User" title="$:/temp/profile" user-name="">
 <pre></pre>
 </div>
-<div created="20180706030257840" modified="20180812094211373" title="$:/temp/search">
+<div created="20180706030257840" modified="20180813072918713" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20180729023451942" modified="20180812022804037" title="$:/temp/verlauf">
@@ -14500,14 +14408,15 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 &lt;$button class=&quot;bttn-fill bttn-sm bttn-primary&quot; message=&quot;tm-open-window&quot; param=&quot;$:/Interface&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Documentation&lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="Contrôle ~LeftBar" controle="02" created="20180703033414160" modified="20180812031152020" sub.num="05.01.05" tags="$:/LeftBar $:/tags/ControlPanel/Template" title="$:/TemplateLeftBar">
+<div caption="Contrôle ~LeftBar" controle="02" created="20180703033414160" modified="20180813040253594" sub.num="05.01.05" tags="$:/LeftBar $:/tags/ControlPanel/Template" title="$:/TemplateLeftBar">
 <pre>!{{$:/TemplateLeftBar!!caption}}
 
+
 | Description | Paramètres | Statut | Aide |h
-|[[Afficher/Cacher le menu gauche|$:/plugins/TWaddle/LeftBar/Menu]]| &lt;$checkbox tiddler='$:/plugins/TWaddle/LeftBar/Toggle' tag='$:/tags/PageTemplate' checked='$:/tags/PageTemplate' unchecked=none/&gt; |{{$:/plugins/TWaddle/LeftBar/Toggle!!tags}}|&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-006&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
-|[[Afficher/cacher le bouton|$:/plugins/TWaddle/LeftBar/Stylesheet]]| &lt;$checkbox tiddler=&quot;$:/plugins/TWaddle/LeftBar/Stylesheet&quot; field=&quot;display&quot; checked=&quot;block&quot; unchecked=&quot;none&quot; default=&quot;block&quot;&gt;&lt;/$checkbox&gt; |{{$:/plugins/TWaddle/LeftBar/Stylesheet!!display}}|&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-007&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
-|[[Déroulant/Fixe|$:/plugins/TWaddle/LeftBar/Stylesheet]]| &lt;$checkbox tiddler=&quot;$:/plugins/TWaddle/LeftBar/Stylesheet&quot; field=&quot;position&quot; checked=&quot;fixed&quot; unchecked=&quot;absolute&quot; default=&quot;fixed&quot;&gt;&lt;/$checkbox&gt; |{{$:/plugins/TWaddle/LeftBar/Stylesheet!!position}}|&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-008&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
-|[[Dans/Hors Control Panel|$:/core/ui/ControlPanel/Settings]]| &lt;$checkbox tiddler='$:/plugins/TWaddle/LeftBar/settings' tag='$:/tags/ControlPanel/Settings' checked='$:/tags/ControlPanel/Settings' unchecked=none/&gt; |{{$:/plugins/TWaddle/LeftBar/settings!!tags}}|&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-009&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
+|[[Afficher/Cacher le menu gauche|$:/plugins/TWaddle/LeftBar/Menu]]| &lt;$checkbox tiddler='$:/plugins/TWaddle/LeftBar/Toggle' tag='$:/tags/PageTemplate' checked='$:/tags/PageTemplate' unchecked=none/&gt; |{{$:/plugins/TWaddle/LeftBar/Toggle!!tags}}| &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-006&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+|[[Afficher/cacher le bouton|$:/plugins/TWaddle/LeftBar/Stylesheet]]| &lt;$checkbox tiddler=&quot;$:/plugins/TWaddle/LeftBar/Stylesheet&quot; field=&quot;display&quot; checked=&quot;block&quot; unchecked=&quot;none&quot; default=&quot;block&quot;&gt;&lt;/$checkbox&gt; |{{$:/plugins/TWaddle/LeftBar/Stylesheet!!display}}| &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-007&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+|[[Déroulant/Fixe|$:/plugins/TWaddle/LeftBar/Stylesheet]]| &lt;$checkbox tiddler=&quot;$:/plugins/TWaddle/LeftBar/Stylesheet&quot; field=&quot;position&quot; checked=&quot;fixed&quot; unchecked=&quot;absolute&quot; default=&quot;fixed&quot;&gt;&lt;/$checkbox&gt; |{{$:/plugins/TWaddle/LeftBar/Stylesheet!!position}}| &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-008&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+|[[Dans/Hors Control Panel|$:/core/ui/ControlPanel/Settings]]| &lt;$checkbox tiddler='$:/plugins/TWaddle/LeftBar/settings' tag='$:/tags/ControlPanel/Settings' checked='$:/tags/ControlPanel/Settings' unchecked=none/&gt; |{{$:/plugins/TWaddle/LeftBar/settings!!tags}}| &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-009&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
 |[[Afficher vos contenus|$:/LeftBarContent]]| &lt;$button&gt;&lt;$action-setfield $tiddler=&quot;$:/plugins/TWaddle/LeftBar/Menu&quot; text=&quot;{{$:/LeftBarContent}}&quot;/&gt;Reset&lt;/$button&gt; |  | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-029&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
 
 
@@ -14521,19 +14430,24 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/LeftBar&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Documentation&lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="Contrôle Menu" controle="08" created="20180710070716057" modified="20180812030732651" sub.num="08.05" tags="$:/Menus $:/tags/ControlPanel/Template" title="$:/TemplateMenu">
+<div caption="Contrôle Menu" controle="08" created="20180710070716057" modified="20180813075928780" sub.num="08.05" tags="$:/Menus $:/tags/ControlPanel/Template" title="$:/TemplateMenu">
 <pre>!{{$:/TemplateMenu!!caption}}
+
+À propos du Plugin Widget Details
 
 | Paramètres | Statut | Aide |h
 |[[Couleur de lfond des menus Detail|$:/detail/css]]|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/detail/css' field='background' type=&quot;color&quot; tag=&quot;input&quot;/&gt;|  &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-028&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
-|&lt;$button&gt;&lt;$action-setfield $tiddler=&quot;$:/plugins/telmiger/details/details.css&quot; text=&quot;{{$:/detail/css}}&quot;/&gt;Afficher vos paramètres CSS&lt;/$button&gt;|  | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-030&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+|&lt;$button&gt;&lt;$action-setfield $tiddler=&quot;$:/plugins/telmiger/details/details.css&quot; text=&quot;{{$:/detail/css}}&quot;/&gt;Reset CSS&lt;/$button&gt;|  | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-030&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
 |&lt;$button&gt;&lt;$action-deletetiddler $tiddler=&quot;$:/Frame&quot;/&gt;Supprimer le menu Frame&lt;/$button&gt;|  | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-017&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+|&lt;$button&gt;&lt;$action-deletetiddler $tiddler=&quot;$:/Outils&quot;/&gt;Supprimer le menu Outils&lt;/$button&gt;|  | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-020&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+|{{$:/ButtonNewMenu}}|   | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-020&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+
 
 &lt;div align=&quot;right&quot;&gt;
 &lt;$button class=&quot;bttn-fill bttn-sm bttn-primary&quot; message=&quot;tm-open-window&quot; param=&quot;$:/Menus&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Documentation&lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="Contrôle ~NavBar" controle="01" created="20180124041832507" modified="20180812030652159" tags="$:/NavBar $:/tags/ControlPanel/Template $:/tags/ParamSideBar" title="$:/TemplateNavBar">
+<div caption="Contrôle ~NavBar" controle="01" created="20180124041832507" modified="20180813040049820" tags="$:/NavBar $:/tags/ControlPanel/Template $:/tags/ParamSideBar" title="$:/TemplateNavBar">
 <pre>!{{$:/TemplateNavBar!!caption}}
 
 {{$:/navbar/button}} &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-001&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;
@@ -14541,10 +14455,10 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 {{$:/navbar/menu}} &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-002&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;
 
 @@.no-border
-|[[Couleur de la barre|$:/navbar/css/user]]|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/navbar/css/user' field='background-color' type=&quot;color&quot; tag=&quot;input&quot;/&gt;|&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-003&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
-|[[Hauteur de la barre|$:/navbar/css/user]]|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/navbar/css/user' field='navbar-hauteur' tag=&quot;input&quot;/&gt;|&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-004&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
+|[[Couleur de la barre|$:/navbar/css/user]]|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/navbar/css/user' field='background-color' type=&quot;color&quot; tag=&quot;input&quot;/&gt;| &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-003&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+|[[Hauteur de la barre|$:/navbar/css/user]]|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/navbar/css/user' field='navbar-hauteur' tag=&quot;input&quot;/&gt;| &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-004&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
 |[[Story top position|$:/themes/tiddlywiki/vanilla/metrics/storytop]]|&lt;$edit-text tiddler=&quot;$:/themes/tiddlywiki/vanilla/metrics/storytop&quot; default=&quot;&quot; tag=&quot;input&quot;/&gt; |~|
-|[[Afficher la bordure|$:/navbar/css/user]]|&lt;$checkbox tiddler='$:/navbar/css/user' field='navbar-border' checked=solid unchecked=none/&gt;|&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-005&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
+|[[Afficher la bordure|$:/navbar/css/user]]|&lt;$checkbox tiddler='$:/navbar/css/user' field='navbar-border' checked=solid unchecked=none/&gt;| &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-005&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
 |[[Couleur de la bordure|$:/navbar/css/user]]|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/navbar/css/user' field='navbar-bordercolor' type=&quot;color&quot; tag=&quot;input&quot;/&gt;|~|
 |[[Taille de la bordure|$:/navbar/css/user]]|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/navbar/css/user' field='navbar-borderheight' tag=&quot;input&quot;/&gt;|~|
 @@
@@ -14553,28 +14467,28 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/NavBar&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Documentation&lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="Contrôle ~SideBar" controle="03" created="20180124041424375" modified="20180812060426820" tags="$:/SideBar $:/tags/ControlPanel/Template $:/tags/ParamSideBar" title="$:/TemplateSideBar">
+<div caption="Contrôle ~SideBar" controle="03" created="20180124041424375" modified="20180813040946265" tags="$:/SideBar $:/tags/ControlPanel/Template $:/tags/ParamSideBar" title="$:/TemplateSideBar">
 <pre>\define lingo-base() $:/language/ThemeTweaks/
 
 &lt;div class=&quot;tw-admin-content&quot;&gt;
 
 !{{$:/TemplateSideBar!!caption}}
 
-
-|&lt;$link to=&quot;$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth&quot;&gt;Largeur de la barre latérale&lt;/$link&gt;|^&lt;$edit-text class='tc-edit-texteditor' tiddler=&quot;$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth&quot; default=&quot;&quot; tag=&quot;input&quot;/&gt; |&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-013&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
-|&lt;$link to=&quot;$:/config/HideSidebarOnStartup&quot;&gt;Cacher la sidebar au démarrage&lt;/$link&gt;|^&lt;$edit-text tiddler=&quot;$:/config/HideSidebarOnStartup&quot; default=&quot;&quot; tag=&quot;input&quot;/&gt;|&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-014&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
-|&lt;$link to=&quot;$:/themes/tiddlywiki/vanilla/options/sidebarlayout&quot;&gt;&lt;&lt;lingo Options/SidebarLayout&gt;&gt;&lt;/$link&gt; |&lt;$select tiddler=&quot;$:/themes/tiddlywiki/vanilla/options/sidebarlayout&quot;&gt;&lt;option value=&quot;fixed-fluid&quot;&gt;&lt;&lt;lingo Options/SidebarLayout/Fixed-Fluid&gt;&gt;&lt;/option&gt;&lt;option value=&quot;fluid-fixed&quot;&gt;&lt;&lt;lingo Options/SidebarLayout/Fluid-Fixed&gt;&gt;&lt;/option&gt;&lt;/$select&gt; |&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-021&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
-|[[Afficher l'onglet Contrôles (dans la SideBar)|$:/core/ui/Sidebar/Paramètres]] | &lt;$checkbox tiddler='$:/core/ui/Sidebar/Paramètres' tag='$:/tags/SideBar' checked='$:/tags/SideBar' unchecked=none /&gt; |&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-015&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
+| Description | Paramètres | Aide |h
+|&lt;$link to=&quot;$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth&quot;&gt;Largeur de la barre latérale&lt;/$link&gt;|^&lt;$edit-text class='tc-edit-texteditor' tiddler=&quot;$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth&quot; default=&quot;&quot; tag=&quot;input&quot;/&gt; | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-013&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+|&lt;$link to=&quot;$:/config/HideSidebarOnStartup&quot;&gt;Cacher la sidebar au démarrage&lt;/$link&gt;|^&lt;$edit-text tiddler=&quot;$:/config/HideSidebarOnStartup&quot; default=&quot;&quot; tag=&quot;input&quot;/&gt;| &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-014&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+|&lt;$link to=&quot;$:/themes/tiddlywiki/vanilla/options/sidebarlayout&quot;&gt;&lt;&lt;lingo Options/SidebarLayout&gt;&gt;&lt;/$link&gt; |&lt;$select tiddler=&quot;$:/themes/tiddlywiki/vanilla/options/sidebarlayout&quot;&gt;&lt;option value=&quot;fixed-fluid&quot;&gt;&lt;&lt;lingo Options/SidebarLayout/Fixed-Fluid&gt;&gt;&lt;/option&gt;&lt;option value=&quot;fluid-fixed&quot;&gt;&lt;&lt;lingo Options/SidebarLayout/Fluid-Fixed&gt;&gt;&lt;/option&gt;&lt;/$select&gt; | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-021&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+|[[Afficher l'onglet Contrôles (dans la SideBar)|$:/core/ui/Sidebar/Paramètres]] | &lt;$checkbox tiddler='$:/core/ui/Sidebar/Paramètres' tag='$:/tags/SideBar' checked='$:/tags/SideBar' unchecked=none /&gt; | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-015&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
 |👉[[Souhaitez-vous aussi Afficher/Supprimer l'onglet Contrôles du panneau de contrôle ?|$:/Template]] | &lt;$checkbox tiddler='$:/Template' tag='$:/tags/ControlPanel' checked='$:/tags/ControlPanel' unchecked=none/&gt; |~|
-|[[Afficher l'onglet menu|$:/core/ui/SideBar/TableOfContents]]| &lt;$checkbox tiddler='$:/core/ui/SideBar/TableOfContents' tag='$:/tags/SideBar' checked='$:/tags/SideBar' unchecked=none/&gt; |&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-016&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
-|[[Afficher l'onglet More|$:/core/ui/SideBar/More]]| &lt;$checkbox tiddler='$:/core/ui/SideBar/More' tag='$:/tags/SideBar' checked='$:/tags/SideBar' unchecked=none/&gt; |
-|[[Afficher l'onglet open|$:/core/ui/SideBar/Open]]| &lt;$checkbox tiddler='$:/core/ui/SideBar/Open' tag='$:/tags/SideBar' checked='$:/tags/SideBar' unchecked=none/&gt; |
-|[[Afficher l'onglet Recent|$:/core/ui/SideBar/Recent]]| &lt;$checkbox tiddler='$:/core/ui/SideBar/Recent' tag='$:/tags/SideBar' checked='$:/tags/SideBar' unchecked=none/&gt; |
-|[[Afficher l'onglet Tools|$:/core/ui/SideBar/Tools]] | &lt;$checkbox tiddler='$:/core/ui/SideBar/Tools' tag='$:/tags/SideBar' checked='$:/tags/SideBar' unchecked=none/&gt; |
-|Voir/Cacher {{$:/core/images/chevron-right}} le chevron sidebar| &lt;$checkbox tiddler='$:/core/ui/TopBar/menu' tag='$:/tags/TopRightBar' checked='$:/tags/TopRightBar' unchecked=none/&gt; |
-|Afficher le bouton Sauver {{$:/core/images/save-button}} | &lt;$checkbox tiddler='$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki' field='text' checked='show' unchecked=hide/&gt; |
-|Afficher le bouton de contrôle {{$:/core/images/options-button}} | &lt;$checkbox tiddler='$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel' field='text' checked='show' unchecked=hide/&gt; |
-|Voir/Cacher la sidebar| &lt;$checkbox tiddler='$:/state/sidebar' field='text' checked='yes' unchecked=no/&gt; |
+|[[Afficher l'onglet menu|$:/core/ui/SideBar/TableOfContents]]| &lt;$checkbox tiddler='$:/core/ui/SideBar/TableOfContents' tag='$:/tags/SideBar' checked='$:/tags/SideBar' unchecked=none/&gt; | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-016&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+|[[Afficher l'onglet More|$:/core/ui/SideBar/More]]| &lt;$checkbox tiddler='$:/core/ui/SideBar/More' tag='$:/tags/SideBar' checked='$:/tags/SideBar' unchecked=none/&gt; | - |
+|[[Afficher l'onglet open|$:/core/ui/SideBar/Open]]| &lt;$checkbox tiddler='$:/core/ui/SideBar/Open' tag='$:/tags/SideBar' checked='$:/tags/SideBar' unchecked=none/&gt; | - |
+|[[Afficher l'onglet Recent|$:/core/ui/SideBar/Recent]]| &lt;$checkbox tiddler='$:/core/ui/SideBar/Recent' tag='$:/tags/SideBar' checked='$:/tags/SideBar' unchecked=none/&gt; | - |
+|[[Afficher l'onglet Tools|$:/core/ui/SideBar/Tools]] | &lt;$checkbox tiddler='$:/core/ui/SideBar/Tools' tag='$:/tags/SideBar' checked='$:/tags/SideBar' unchecked=none/&gt; | - |
+|Voir/Cacher {{$:/core/images/chevron-right}} le chevron sidebar| &lt;$checkbox tiddler='$:/core/ui/TopBar/menu' tag='$:/tags/TopRightBar' checked='$:/tags/TopRightBar' unchecked=none/&gt; | - |
+|Afficher le bouton Sauver {{$:/core/images/save-button}} | &lt;$checkbox tiddler='$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki' field='text' checked='show' unchecked=hide/&gt; | - |
+|Afficher le bouton de contrôle {{$:/core/images/options-button}} | &lt;$checkbox tiddler='$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel' field='text' checked='show' unchecked=hide/&gt; | - |
+|Voir/Cacher la sidebar| &lt;$checkbox tiddler='$:/state/sidebar' field='text' checked='yes' unchecked=no/&gt; | - |
 |Voir/Cacher vos paramètres {{$:/plugins/TWaddle/tw-admin/icon}} dans la sidebar |  &lt;$checkbox tiddler='$:/plugins/TWaddle/tw-admin/button' tag='$:/tags/PageControls' checked='$:/tags/PageControls' unchecked=none/&gt; |&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-025&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
 |Voir/Cacher vos paramètres {{$:/plugins/TWaddle/tw-admin/icon}} dans ~ControlPannel | &lt;$checkbox tiddler='$:/plugins/TWaddle/tw-admin/content' tag='$:/tags/ControlPanel/Settings' checked='$:/tags/ControlPanel/Settings' unchecked=none/&gt; |~|
 |Afficher la ~SideBar si déconnecté | &lt;$checkbox tiddler='$:/user/config' field='show-sidebar' checked='yes' unchecked=no/&gt; |&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-026&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
@@ -14609,17 +14523,6 @@ body.tc-body .tw-admin-content svg {
  fill:crimson;
 }
 &lt;/style&gt;</pre>
-</div>
-<div bag="default" caption="Assistant Cacher la SideBar au démarrage" created="20151007170453626" creator="Tobias Beer" modified="20180803050652307" modifier="Tobias Beer" revision="0" sub.num="05.02.01" tags="$:/documentation" title="$:/TemplateSideBar-user" type="text/vnd.tiddlywiki">
-<pre>!Contrôle ~SideBar
-&lt;div class=&quot;att&quot;&gt;
-Pour modifier le contenu de ce Tiddler, voir  $:/TemplateSideBar-user
-&lt;/div&gt;
-
-
-{{$:/TemplateLeftBar-user}}
-
-</pre>
 </div>
 <div caption="Contrôle Tiddlers" controle="05" created="20180319024141158" description="Actions et choix concernant les tiddlers" modified="20180812031024588" sub.num="09.02" tags="$:/Tiddlers $:/tags/ControlPanel/Template $:/tags/ParamSideBar" tiddler-title="none" title="$:/TemplateTiddler">
 <pre>&lt;div class=&quot;tw-admin-content&quot;&gt;
@@ -14914,10 +14817,10 @@ body .tc-tiddler-preview-preview {
     }
 }</pre>
 </div>
-<div created="20180706030000500" modified="20180812130109934" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
+<div created="20180706030000500" modified="20180813092601914" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
 <pre>0px</pre>
 </div>
-<div created="20180706030000501" modified="20180812130109935" title="$:/themes/tiddlywiki/vanilla/metrics/storyright">
+<div created="20180706030000501" modified="20180813092601915" title="$:/themes/tiddlywiki/vanilla/metrics/storyright">
 <pre>770px</pre>
 </div>
 <div created="20180706024915494" modified="20180802063908192" title="$:/themes/tiddlywiki/vanilla/metrics/storytop">
@@ -15014,7 +14917,7 @@ body.tc-body .tc-tiddler-frame .tc-tiddler-body ul, body.tc-body .tc-tiddler-fra
 
 </pre>
 </div>
-<div caption="CSS Surface Tiddlers Utilisateur" created="20171230060416899" modified="20180811111734436" sub.num="07.04" tags="$:/Surface $:/tags/Stylesheet" title="$:/width/css/user" width_option="600px">
+<div caption="CSS Surface Tiddlers Utilisateur" created="20171230060416899" modified="20180813041122039" sub.num="07.04" tags="$:/Surface $:/tags/Stylesheet" title="$:/width/css/user" width_option="600px">
 <pre></pre>
 </div>
 <div background-color="transparent" caption="Connexion" created="20161002182751298" modified="20180812002521415" title="admin">
