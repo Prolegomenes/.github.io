@@ -455,6 +455,8 @@ Error message and password prompt
 
 <li>$:/state/sidebar</li>
 
+<li>$:/state/tab--1498284803</li>
+
 <li>$:/state/tab--1963855381</li>
 
 <li>$:/state/tab-1749438307</li>
@@ -10886,7 +10888,7 @@ A partir du moment où le Tiddler ne possède plus ce Tag, il n'apparaîtra plus
 
 </pre>
 </div>
-<div caption="Documentation" created="20180707021031182" list-after="$:/core/ui/MoreSideBar/All" modified="20180814060427958" sub.num="01" title="$:/documentation">
+<div caption="Documentation" created="20180707021031182" list-after="$:/core/ui/MoreSideBar/All" modified="20180814102615221" sub.num="01" title="$:/documentation">
 <pre>&lt;div class=&quot;att&quot;&gt;
 &lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt; Sujet tagué &quot;&lt;&lt;tag $:/documentation&gt;&gt;&quot; comprenant {{{[tag[$:/documentation]count[]]}}}  articles (tiddlers)
 &lt;/div&gt;
@@ -13533,11 +13535,11 @@ En standard, les barres latérales sont couvertes par la Story River, c'est à d
 Modifier cet assistant $:/LeftBar
 &lt;/div&gt;</pre>
 </div>
-<div caption="Assistant Menu LeftBar" created="20180418014128598" modified="20180811011102707" sub.num="08.13" tags="$:/Menus" title="$:/leftbar-system-help">
+<div caption="Assistant Menu LeftBar" created="20180418014128598" modified="20180814102558781" sub.num="08.13" tags="$:/Menus" title="$:/leftbar-system-help">
 <pre>!~LeftBar et Contenu
 
 &lt;div class=&quot;att&quot;&gt;
-[[Modifier cet Assistant|$:/leftbar-system-help]]
+[[Modifier cet Assistant $:/leftbar-system-help|$:/leftbar-system-help]]
 &lt;/div&gt;
 
 
@@ -14247,7 +14249,7 @@ There are 2 fields, which are used by [[$:/plugins/wikilabs/link-to-tabs/styles]
 * show-single-link: {{!!show-single-link}}
 </pre>
 </div>
-<div caption="Contrôle H1...H5" controle="06" created="20180124041723053" modified="20180814071709330" sub.num="25" tags="$:/documentation $:/tags/ControlPanel/Template" title="$:/Polices-Alignements">
+<div caption="Contrôle H1...H5" controle="06" created="20180124041723053" modified="20180815002730262" tags="$:/TiddlyFrame $:/tags/ControlPanel/Template" title="$:/Polices-Alignements">
 <pre>&lt;$set name=&quot;currentTiddler&quot; value={{$:/fonts}}&gt;
 
 !{{$:/Polices-Alignements!!caption}}
@@ -14349,7 +14351,7 @@ Modifier cet assistant $:/SideBar
 <div created="20180810084920310" modified="20180810091304375" title="$:/SiteTitle">
 <pre>~TiddlyFrame</pre>
 </div>
-<div created="20180706030000501" modified="20180814093302946" sub.num="05.01.06" tags="$:/LeftBar" title="$:/state/LeftBar">
+<div created="20180706030000501" modified="20180814110741795" sub.num="05.01.06" tags="$:/LeftBar" title="$:/state/LeftBar">
 <pre>hide</pre>
 </div>
 <div created="20180814010556576" modified="20180814010600135" title="$:/state/navbar">
@@ -14358,8 +14360,11 @@ Modifier cet assistant $:/SideBar
 <div created="20180814013436498" modified="20180814014002640" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20180814005753984" modified="20180814091221745" title="$:/state/sidebar">
+<div created="20180814005753984" modified="20180815002339339" title="$:/state/sidebar">
 <pre>yes</pre>
+</div>
+<div created="20180814111315096" modified="20180814111319608" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20180814013433355" modified="20180814013433355" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Palette</pre>
@@ -14370,17 +14375,17 @@ Modifier cet assistant $:/SideBar
 <div created="20180814022423911" modified="20180814025310963" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20180814022421935" modified="20180814093149361" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20180814022421935" modified="20180814095854855" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div created="20180814012946332" modified="20180814085925727" title="$:/state/tab1-146947848">
-<pre>$:/TemplateAdmin</pre>
+<div created="20180814012946332" modified="20180814104656110" title="$:/state/tab1-146947848">
+<pre>$:/TemplateNavBar</pre>
 </div>
 <div created="20180814010325439" modified="20180814010325439" title="$:/state/tab1-339259501">
 <pre>$:/TemplateNavBar</pre>
 </div>
-<div created="20180814090630660" modified="20180814093253225" title="$:/state/tab1-948663005">
-<pre>$:/TemplateNavBar</pre>
+<div created="20180814090630660" modified="20180814110329004" title="$:/state/tab1-948663005">
+<pre>$:/TemplateMenu</pre>
 </div>
 <div created="20180814024034354" modified="20180814024255370" title="$:/state/toc/Menu-$:/documentation-1340183292">
 <pre>close</pre>
@@ -14394,7 +14399,7 @@ Modifier cet assistant $:/SideBar
 <div created="20180814025444925" modified="20180814025444925" title="$:/state/toc/Menu-$:/Index Documentation-334395172">
 <pre>open</pre>
 </div>
-<div list="TiddlyFrame" title="$:/StoryList">
+<div list="TiddlyFrame [[$:/Index Documentation]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div caption="Read Me Contrôle Surface occupée" created="20180417043744046" icone="&lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;" modified="20180814085630339" sub.num="260" tags="$:/documentation $:/Surface" title="$:/Surface">
@@ -14448,8 +14453,8 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 
 Ã vos réglages !</pre>
 </div>
-<div created="20180706030259776" modified="20180814065908503" title="$:/temp/advancedsearch">
-<pre>$:/Administration</pre>
+<div created="20180706030259776" modified="20180815003002773" title="$:/temp/advancedsearch">
+<pre>$:/documentation</pre>
 </div>
 <div created="20180814062450687" modified="20180814062458717" title="$:/temp/appear/$:/doc-user-001363622161/block//tiddler-slider">
 <pre></pre>
@@ -14478,7 +14483,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 <div created="20180814090051574" modified="20180814090103654" title="$:/temp/appear/$:/PanneauControle363622161/block//tiddler-slider">
 <pre></pre>
 </div>
-<div created="20180814033150326" modified="20180814061355236" title="$:/temp/appear/$:/Template363622161/block//tiddler-slider">
+<div created="20180814033150326" modified="20180815002354288" title="$:/temp/appear/$:/Template363622161/block//tiddler-slider">
 <pre></pre>
 </div>
 <div created="20180814092304245" modified="20180814092307501" title="$:/temp/appear/$:/TemplateLeftBar363622161/block//tiddler-slider">
@@ -14490,7 +14495,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 <div created="20180814092310797" modified="20180814092314917" title="$:/temp/appear/$:/TemplateSideBar363622161/block//tiddler-slider">
 <pre></pre>
 </div>
-<div created="20180814055739656" modified="20180814060616991" title="$:/temp/appear/TiddlyFrame363622161/block//tiddler-slider">
+<div created="20180814055739656" modified="20180814095749070" title="$:/temp/appear/TiddlyFrame363622161/block//tiddler-slider">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -14550,13 +14555,13 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 <div created="20180729015820084" modified="20180812031746162" password="admin" tags="$:/User" title="$:/temp/profile" user-name="">
 <pre></pre>
 </div>
-<div created="20180706030257840" modified="20180814075344226" title="$:/temp/search">
+<div created="20180706030257840" modified="20180815003002774" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20180729023451942" modified="20180812022804037" title="$:/temp/verlauf">
 <pre></pre>
 </div>
-<div caption="Contrôles" controle="" created="20180524095302801" modified="20180814092550878" sub.num="2" tags="$:/documentation $:/PanneauControle $:/tags/ControlPanel" title="$:/Template">
+<div caption="Contrôles" controle="" created="20180524095302801" modified="20180815002416833" tags="$:/TiddlyFrame $:/PanneauControle $:/tags/ControlPanel" title="$:/Template">
 <pre>\define lingo-base() $:/language/ControlPanel/Template
 
 &lt;&lt;lingo Hint&gt;&gt;
@@ -14583,7 +14588,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 <div created="20180718000257713" menu-title="" modified="20180718000310404" title="$:/template/StoreMenu">
 <pre></pre>
 </div>
-<div caption="Contrôle Admin." controle="09" created="20180812015317723" modified="20180814071732102" sub.num="28" tags="$:/documentation $:/Administration $:/tags/ControlPanel/Template" title="$:/TemplateAdmin">
+<div caption="Contrôle Admin." controle="09" created="20180812015317723" modified="20180815002917777" tags="$:/TiddlyFrame $:/Administration $:/tags/ControlPanel/Template" title="$:/TemplateAdmin">
 <pre>!{{$:/TemplateAdmin!!caption}}
 
 | Description | Actions | Aide |h
@@ -14618,7 +14623,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 &lt;$button class=&quot;bttn-fill bttn-sm bttn-primary&quot; message=&quot;tm-open-window&quot; param=&quot;$:/Interface&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Documentation&lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="Contrôle LeftBar" controle="02" created="20180703033414160" modified="20180814071624743" sub.num="21" tags="$:/documentation $:/LeftBar $:/tags/ControlPanel/Template" title="$:/TemplateLeftBar">
+<div caption="Contrôle LeftBar" controle="02" created="20180703033414160" modified="20180815002548105" tags="$:/TiddlyFrame $:/LeftBar $:/tags/ControlPanel/Template" title="$:/TemplateLeftBar">
 <pre>!{{$:/TemplateLeftBar!!caption}}
 
 
@@ -14640,7 +14645,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/LeftBar&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Documentation&lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="Contrôle Menu" controle="08" created="20180710070716057" modified="20180814091202948" sub.num="27" tags="$:/documentation $:/Menus $:/tags/ControlPanel/Template" title="$:/TemplateMenu">
+<div caption="Contrôle Menu" controle="08" created="20180710070716057" modified="20180815002839744" tags="$:/TiddlyFrame $:/Menus $:/tags/ControlPanel/Template" title="$:/TemplateMenu">
 <pre>!{{$:/TemplateMenu!!caption}}
 
 &lt;$details summary=&quot;À propos du Plugin Widget Details&quot;&gt;
@@ -14650,7 +14655,8 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 &lt;/$details&gt;
 
 | Paramètres | Statut | Aide |h
-|[[Couleur de lfond des menus Detail|$:/detail/css]]|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/detail/css' field='background' type=&quot;color&quot; tag=&quot;input&quot;/&gt;|  &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-028&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+|[[Couleur du titre de menu Detail|$:/detail/css]]|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/detail/css' field='background-container' type=&quot;color&quot; tag=&quot;input&quot;/&gt;|  &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-028&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
+|[[Couleur de fond du menu Detail|$:/detail/css]]|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/detail/css' field='background' type=&quot;color&quot; tag=&quot;input&quot;/&gt;|~|
 |&lt;$button&gt;&lt;$action-setfield $tiddler=&quot;$:/plugins/telmiger/details/details.css&quot; text=&quot;{{$:/detail/css}}&quot;/&gt;Reset CSS&lt;/$button&gt;|  | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-030&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
 |&lt;$button&gt;&lt;$action-deletetiddler $tiddler=&quot;$:/Frame&quot;/&gt;Supprimer le menu Frame&lt;/$button&gt;|  | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-017&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
 |&lt;$button&gt;&lt;$action-deletetiddler $tiddler=&quot;$:/Outils&quot;/&gt;Supprimer le menu Outils&lt;/$button&gt;|  | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-019&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
@@ -14661,7 +14667,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 &lt;$button class=&quot;bttn-fill bttn-sm bttn-primary&quot; message=&quot;tm-open-window&quot; param=&quot;$:/Menus&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Documentation&lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="Contrôle NavBar" created="20180124041832507" modified="20180814092458870" sub.num="20" tags="$:/documentation $:/NavBar $:/tags/ControlPanel/Template" title="$:/TemplateNavBar">
+<div caption="Contrôle NavBar" created="20180124041832507" modified="20180815002455530" tags="$:/TiddlyFrame $:/NavBar $:/tags/ControlPanel/Template" title="$:/TemplateNavBar">
 <pre>!{{$:/TemplateNavBar!!caption}}
 
 {{$:/navbar/button}} &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-001&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;
@@ -14681,7 +14687,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/NavBar&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Documentation&lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="Contrôle ~SideBar" controle="03" created="20180124041424375" modified="20180814071637330" sub.num="22" tags="$:/documentation $:/SideBar $:/tags/ControlPanel/Template" title="$:/TemplateSideBar">
+<div caption="Contrôle ~SideBar" controle="03" created="20180124041424375" modified="20180815002647697" tags="$:/TiddlyFrame $:/SideBar $:/tags/ControlPanel/Template" title="$:/TemplateSideBar">
 <pre>\define lingo-base() $:/language/ThemeTweaks/
 
 &lt;div class=&quot;tw-admin-content&quot;&gt;
@@ -14781,7 +14787,7 @@ body.tc-body .tw-admin-content svg {
 }
 &lt;/style&gt;</pre>
 </div>
-<div caption="Contrôle Surface" controle="07" created="20141207055904982" modified="20180814071717294" sub.num="26" subtitle="Paramètres de surface" tags="$:/documentation $:/Surface $:/tags/ControlPanel/Template" title="$:/TemplateWidth">
+<div caption="Contrôle Surface" controle="07" created="20141207055904982" modified="20180815002806824" subtitle="Paramètres de surface" tags="$:/TiddlyFrame $:/Surface $:/tags/ControlPanel/Template" title="$:/TemplateWidth">
 <pre>!{{$:/TemplateWidth!!caption}}
 
 | Surface occupée | Surface de lecture |h
@@ -15031,10 +15037,10 @@ body .tc-tiddler-preview-preview {
     }
 }</pre>
 </div>
-<div created="20180706030000500" modified="20180814093302945" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
+<div created="20180706030000500" modified="20180814110741794" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
 <pre>0px</pre>
 </div>
-<div created="20180706030000501" modified="20180814093302945" title="$:/themes/tiddlywiki/vanilla/metrics/storyright">
+<div created="20180706030000501" modified="20180814110741794" title="$:/themes/tiddlywiki/vanilla/metrics/storyright">
 <pre>770px</pre>
 </div>
 <div created="20180706024915494" modified="20180802063908192" title="$:/themes/tiddlywiki/vanilla/metrics/storytop">
@@ -15142,7 +15148,7 @@ body.tc-body .tc-tiddler-frame .tc-tiddler-body ul, body.tc-body .tc-tiddler-fra
 &lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="TiddlyFrame" created="20180811050029839" modified="20180814092548100" sub.num="1" tags="$:/documentation" title="TiddlyFrame">
+<div caption="TiddlyFrame" created="20180811050029839" modified="20180815002331451" tags="$:/TiddlyFrame" title="TiddlyFrame">
 <pre>&lt;div align=&quot;center&quot;&gt;
 
 !Frame your website as you like !
