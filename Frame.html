@@ -423,6 +423,8 @@ Error message and password prompt
 
 <li>$:/plugins/TWaddle/LeftBar/Stylesheet</li>
 
+<li>$:/plugins/TWaddle/LeftBar/temp</li>
+
 <li>$:/plugins/TWaddle/tw-admin/button</li>
 
 <li>$:/plugins/TWaddle/tw-admin/content</li>
@@ -474,6 +476,8 @@ Error message and password prompt
 <li>$:/state/toc/Menu-$:/documentation-1340183292</li>
 
 <li>$:/state/toc/Menu-$:/documentation-334395172</li>
+
+<li>$:/state/toc/Menu-$:/Index Documentation--487511571</li>
 
 <li>$:/state/toc/Menu-$:/Index Documentation-1340183292</li>
 
@@ -9746,16 +9750,14 @@ body.tc-body .tc-site-subtitle { display: {{!!site-subtitle}}; } </pre>
 <pre>&lt;$macrocall $name=&quot;timeline&quot; format={{$:/language/RecentChanges/DateFormat}}/&gt;
 </pre>
 </div>
-<div caption="Menu" created="20180205015846880" list-before="$:/core/ui/MoreSideBar/Recent" modified="20180726085743789" tags="$:/tags/SideBar" title="$:/core/ui/SideBar/TableOfContents">
+<div caption="Menu" created="20180205015846880" list-before="$:/core/ui/MoreSideBar/Recent" modified="20180823020130906" tags="$:/tags/SideBar" title="$:/core/ui/SideBar/TableOfContents">
 <pre>{{$:/ButtonNewMenu}}
 
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;tc-table-of-contents&quot;&gt;
-&lt;&lt;toc-expandable &quot;Menu&quot; &quot;sort[sub.num]&quot;&gt;&gt;
-&lt;/div&gt;</pre>
+</pre>
 </div>
 <div caption="{{$:/language/SideBar/Tools/Caption}}" created="20180709095124939" modified="20180715125139876" tags="" title="$:/core/ui/SideBar/Tools">
 <pre>\define lingo-base() $:/language/ControlPanel/
@@ -10888,7 +10890,7 @@ A partir du moment où le Tiddler ne possède plus ce Tag, il n'apparaîtra plus
 
 </pre>
 </div>
-<div caption="Documentation" created="20180707021031182" list-after="$:/core/ui/MoreSideBar/All" modified="20180814102615221" sub.num="01" title="$:/documentation">
+<div caption="Documentation" created="20180707021031182" list-after="$:/core/ui/MoreSideBar/All" modified="20180822231348805" sub.num="01" title="$:/documentation">
 <pre>&lt;div class=&quot;att&quot;&gt;
 &lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt; Sujet tagué &quot;&lt;&lt;tag $:/documentation&gt;&gt;&quot; comprenant {{{[tag[$:/documentation]count[]]}}}  articles (tiddlers)
 &lt;/div&gt;
@@ -10921,7 +10923,7 @@ Vous pouvez également visualiser l'aide en ligne en consultant l'index ci-desso
 &lt;$action-deletetiddler $filter=&quot;[tag[$:/documentation]]&quot;/&gt;
 Supprimer la documentation
 &lt;/$button&gt;
-__''Attention ! Cette action est définitibe''__
+__''Attention ! Cette action est définitive''__
 
 
 
@@ -13416,7 +13418,7 @@ Votre navigateur peut vous demander d'accepter le téléchargement avant de l'ex
 &lt;&lt;&lt;
 </pre>
 </div>
-<div caption="Index Documentation" created="20180728130615654" data="Yes" description="Ici, c'est le champ caption et non title qui est affiché" modified="20180814030022298" tags="Menu" title="$:/Index Documentation">
+<div caption="Index Documentation" created="20180728130615654" data="Yes" description="Ici, c'est le champ caption et non title qui est affiché" modified="20180823014615069" tags="TableOfContents" title="$:/Index Documentation">
 <pre>&lt;table&gt;
 &lt;thead&gt;&lt;tr&gt;&lt;td&gt;Tiddler&lt;/td&gt;&lt;td&gt;Ordre&lt;/td&gt;&lt;/tr&gt;&lt;/thead&gt;
 &lt;$list filter=&quot;[tag[$:/documentation]] [tag[]] +[sort[sub.num]]&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;$link to={{!!title}}&gt; (O) &lt;/$link&gt;
@@ -13596,12 +13598,12 @@ Le bouton &quot;[[Nouveau Menu|$:/ButtonNewMenu]]&quot; vous permet :
 *Le tiddler $:/plugins/TWaddle/LeftBar/temp est maquant dans le wiki cassé et il contient des valeurs.
 *Quand je le copie, il est importé puis est supprimé à la première manip</pre>
 </div>
-<div caption="Menu de la LeftBar" created="20180708105621259" modified="20180812032753247" sub.num="08.03" tags="$:/LeftBar" title="$:/LeftBarContent">
-<pre>{{$:/core/ui/SideBar/TableOfContents}}
+<div caption="Menu de la LeftBar" created="20180708105621259" modified="20180823020155205" sub.num="08.03" tags="$:/LeftBar" title="$:/LeftBarContent">
+<pre>{{$:/Administration}}
 
-
-
-{{$:/Administration}}
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
+&lt;/div&gt;
 
 &lt;$button class=&quot;bttn-fill bttn-sm bttn-primary&quot; message=&quot;tm-open-window&quot; param=&quot;$:/leftbar-system-help&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Assistance&lt;/$button&gt;</pre>
 </div>
@@ -13722,7 +13724,7 @@ Modifier cet assistant $:/Menus
 <div created="20180708101142986" modified="20180715122630421" title="$:/myTempState">
 <pre></pre>
 </div>
-<div caption="Read Me Contrôle ~NavBar" created="20180702035239287" modified="20180814085428642" sub.num="200" tags="$:/documentation $:/NavBar" title="$:/NavBar">
+<div caption="Read Me Contrôle ~NavBar" created="20180702035239287" modified="20180823015544449" sub.num="20" tags="$:/documentation $:/NavBar" title="$:/NavBar">
 <pre>!{{!!caption}}
 
 &lt;div class=&quot;att&quot;&gt;
@@ -13892,7 +13894,7 @@ Modifié le &lt;$list filter=&quot;[!is[system]!has[draft.of]!sort[modified]limi
 <div created="20180706083704205" modified="20180731050611182" title="$:/palette">
 <pre>$:/palettes/Vanilla</pre>
 </div>
-<div caption="Read Me Panneau de Contrôle" created="20180713035954590" modified="20180814092606950" sub.num="2." tags="$:/documentation" title="$:/PanneauControle">
+<div caption="Read Me Panneau de Contrôle" created="20180713035954590" modified="20180823015556749" sub.num="2" tags="$:/documentation" title="$:/PanneauControle">
 <pre>!{{!!caption}}
 &lt;div class=&quot;att&quot;&gt;
 [[Modifier l'assistant $:/PanneauControle|$:/PanneauControle]]
@@ -14181,6 +14183,9 @@ La documentation complète de ce wiki est accessible sous le menu Documentation 
 &lt;/pre&gt;
 </pre>
 </div>
+<div created="20180823020135373" modified="20180823020135374" storyleft="0px" storyright="770px" title="$:/plugins/TWaddle/LeftBar/temp">
+<pre></pre>
+</div>
 <div caption="Bouton de paramétrage libre" created="20170402140426027" creator="Mat von TWaddle" description="Ouvrir un popup de paramétrage libre" modified="20180725040435578" modifier="Mat von TWaddle" sub.num="05.02.06" tags="$:/SideBar $:/tags/PageControls" title="$:/plugins/TWaddle/tw-admin/button">
 <pre>&lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt; tooltip={{$:/plugins/TWaddle/tw-admin/button!!caption}} aria-label={{$:/plugins/TWaddle/tw-admin/button!!description}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
    &lt;$action-sendmessage $message=&quot;tm-open-window&quot; 
@@ -14351,8 +14356,8 @@ Modifier cet assistant $:/SideBar
 <div created="20180810084920310" modified="20180810091304375" title="$:/SiteTitle">
 <pre>~TiddlyFrame</pre>
 </div>
-<div created="20180706030000501" modified="20180814110741795" sub.num="05.01.06" tags="$:/LeftBar" title="$:/state/LeftBar">
-<pre>hide</pre>
+<div created="20180706030000501" modified="20180823020135375" sub.num="05.01.06" tags="$:/LeftBar" title="$:/state/LeftBar">
+<pre>show</pre>
 </div>
 <div created="20180814010556576" modified="20180814010600135" title="$:/state/navbar">
 <pre>show</pre>
@@ -14360,7 +14365,7 @@ Modifier cet assistant $:/SideBar
 <div created="20180814013436498" modified="20180814014002640" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20180814005753984" modified="20180815002339339" title="$:/state/sidebar">
+<div created="20180814005753984" modified="20180822230615522" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20180814111315096" modified="20180814111319608" title="$:/state/tab--1498284803">
@@ -14375,8 +14380,8 @@ Modifier cet assistant $:/SideBar
 <div created="20180814022423911" modified="20180814025310963" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20180814022421935" modified="20180814095854855" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20180814022421935" modified="20180823015234937" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/TableOfContents</pre>
 </div>
 <div created="20180814012946332" modified="20180814104656110" title="$:/state/tab1-146947848">
 <pre>$:/TemplateNavBar</pre>
@@ -14393,13 +14398,16 @@ Modifier cet assistant $:/SideBar
 <div created="20180814022453182" modified="20180814025113663" title="$:/state/toc/Menu-$:/documentation-334395172">
 <pre>close</pre>
 </div>
+<div created="20180822230728956" modified="20180822234149607" title="$:/state/toc/Menu-$:/Index Documentation--487511571">
+<pre>close</pre>
+</div>
 <div created="20180814031359293" modified="20180814031400618" title="$:/state/toc/Menu-$:/Index Documentation-1340183292">
 <pre>close</pre>
 </div>
 <div created="20180814025444925" modified="20180814025444925" title="$:/state/toc/Menu-$:/Index Documentation-334395172">
 <pre>open</pre>
 </div>
-<div list="TiddlyFrame [[$:/Index Documentation]]" title="$:/StoryList">
+<div list="" title="$:/StoryList">
 <pre></pre>
 </div>
 <div caption="Read Me Contrôle Surface occupée" created="20180417043744046" icone="&lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;" modified="20180814085630339" sub.num="260" tags="$:/documentation $:/Surface" title="$:/Surface">
@@ -14453,7 +14461,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 
 Ã vos réglages !</pre>
 </div>
-<div created="20180706030259776" modified="20180815003002773" title="$:/temp/advancedsearch">
+<div created="20180706030259776" modified="20180822230630257" title="$:/temp/advancedsearch">
 <pre>$:/documentation</pre>
 </div>
 <div created="20180814062450687" modified="20180814062458717" title="$:/temp/appear/$:/doc-user-001363622161/block//tiddler-slider">
@@ -14480,7 +14488,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 <div created="20180814025608285" modified="20180814055901143" title="$:/temp/appear/$:/documentation363622161/block//tiddler-slider">
 <pre></pre>
 </div>
-<div created="20180814090051574" modified="20180814090103654" title="$:/temp/appear/$:/PanneauControle363622161/block//tiddler-slider">
+<div created="20180814090051574" modified="20180822231407871" title="$:/temp/appear/$:/PanneauControle363622161/block//tiddler-slider">
 <pre></pre>
 </div>
 <div created="20180814033150326" modified="20180815002354288" title="$:/temp/appear/$:/Template363622161/block//tiddler-slider">
@@ -14555,7 +14563,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 <div created="20180729015820084" modified="20180812031746162" password="admin" tags="$:/User" title="$:/temp/profile" user-name="">
 <pre></pre>
 </div>
-<div created="20180706030257840" modified="20180815003002774" title="$:/temp/search">
+<div created="20180706030257840" modified="20180822230630258" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20180729023451942" modified="20180812022804037" title="$:/temp/verlauf">
@@ -15037,11 +15045,11 @@ body .tc-tiddler-preview-preview {
     }
 }</pre>
 </div>
-<div created="20180706030000500" modified="20180814110741794" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
-<pre>0px</pre>
+<div created="20180706030000500" modified="20180823020135374" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
+<pre>/*LeftBar*/ calc({{$:/plugins/TWaddle/LeftBar/Stylesheet!!width}} + {{$:/plugins/TWaddle/LeftBar/temp!!storyleft}})</pre>
 </div>
-<div created="20180706030000501" modified="20180814110741794" title="$:/themes/tiddlywiki/vanilla/metrics/storyright">
-<pre>770px</pre>
+<div created="20180706030000501" modified="20180823020135374" title="$:/themes/tiddlywiki/vanilla/metrics/storyright">
+<pre>/*LeftBar*/ calc({{$:/plugins/TWaddle/LeftBar/temp!!storyright}} + {{$:/themes/tiddlywiki/vanilla/metrics/storyleft}})</pre>
 </div>
 <div created="20180706024915494" modified="20180802063908192" title="$:/themes/tiddlywiki/vanilla/metrics/storytop">
 <pre>30px</pre>
@@ -15148,7 +15156,7 @@ body.tc-body .tc-tiddler-frame .tc-tiddler-body ul, body.tc-body .tc-tiddler-fra
 &lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="TiddlyFrame" created="20180811050029839" modified="20180815002331451" tags="$:/TiddlyFrame" title="TiddlyFrame">
+<div caption="TiddlyFrame" created="20180811050029839" modified="20180823020553595" tags="$:/TiddlyFrame" title="TiddlyFrame">
 <pre>&lt;div align=&quot;center&quot;&gt;
 
 !Frame your website as you like !
@@ -15202,11 +15210,13 @@ Cette version inclus la pré-installation :
 &lt;/div&gt;
 &lt;/div&gt;
 
-![[Introduction|$:/À Propos de ce Wiki]]
+&lt;$details summary=&quot;Introduction&quot;&gt;
 {{$:/À Propos de ce Wiki}}
+&lt;/$details&gt;
 
-!La Documentation
-{{$:/documentation}}</pre>
+&lt;$details summary=&quot;La Documentation&quot;&gt;
+{{$:/documentation}}
+&lt;/$details&gt;</pre>
 </div>
 
 </div>
