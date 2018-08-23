@@ -423,7 +423,7 @@ Error message and password prompt
 
 <li>$:/plugins/TWaddle/LeftBar/Stylesheet</li>
 
-<li>$:/plugins/TWaddle/LeftBar/temp</li>
+<li>$:/plugins/TWaddle/LeftBar/Toggle</li>
 
 <li>$:/plugins/TWaddle/tw-admin/button</li>
 
@@ -638,7 +638,7 @@ exports.startup = function() {
 <div caption="Image d'illustration" created="20180611110823168" modified="20180713101551881" sub.num="07.06" tags="$:/Surface" title="$:/600px-4.png" type="image/png">
 <pre>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</pre>
 </div>
-<div caption="À Propos de ce Wiki" created="20180713033525768" modified="20180812073426024" sub.num="01.01" tags="$:/Introduction" title="$:/À Propos de ce Wiki">
+<div caption="À Propos de ce Wiki" created="20180713033525768" modified="20180823045554637" sub.num="01.01" tags="$:/Introduction" title="$:/À Propos de ce Wiki">
 <pre>''~TiddlyFrame'' fournis les outils nécessaires à l'obtention d'un cadre visuel général dépassant la seule barre de menu de gauche (~SideBar} disponible sur la version standard de Tiddlywiki.
 
 &lt;$details summary=&quot;Plus de détails&quot;&gt;
@@ -835,7 +835,7 @@ border-radius: 15px;
 border: 1px solid #ccc;
 }</pre>
 </div>
-<div created="20170920203909691" description="Passe en mode Web" list-after="$:/core/ui/Buttons/close-all" modified="20180812022834203" tags="$:/Login $:/tags/PageControls" title="$:/admin/Buttons/mode-web">
+<div created="20170920203909691" description="Passe en mode Web" list-after="$:/core/ui/Buttons/close-all" modified="20180823045501022" tags="$:/Login $:/tags/PageControls" title="$:/admin/Buttons/mode-web">
 <pre>\define visibility(tiddler) $:/config/ViewToolbarButtons/Visibility/$tiddler$
 
 \define admin()
@@ -1024,7 +1024,7 @@ border: 1px solid #ccc;
 &lt;/div&gt;
 &lt;/div&gt;</pre>
 </div>
-<div bag="default" created="20150210103821886" modified="20180812022834197" revision="1" tags="$:/Login" title="$:/admin/switch" type="text/vnd.tiddlywiki">
+<div bag="default" created="20150210103821886" modified="20180823045501015" revision="1" tags="$:/Login" title="$:/admin/switch" type="text/vnd.tiddlywiki">
 <pre>admin</pre>
 </div>
 <div contenu="[[Connexion|admin]]&lt;br/&gt;[[Déconnexion|$:/Déconnexion]]&lt;br/&gt;[[Utilisateur|$:/admin/module/profile]]" created="20180727043704106" menu-title="Administration" modified="20180811031437241" rank="1" tags="$:/Detail" title="$:/Administration">
@@ -1129,19 +1129,19 @@ body.tc-body .tc-site-subtitle { display: {{!!site-subtitle}}; } </pre>
 <div created="20180728125937632" modified="20180809001508475" title="$:/config/RelinkOnRename">
 <pre>no</pre>
 </div>
-<div created="20180729023124670" modified="20180812022834200" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close">
+<div created="20180729023124670" modified="20180823045501017" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close">
 <pre>show</pre>
 </div>
-<div created="20180709074924171" modified="20180812022834199" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit">
+<div created="20180709074924171" modified="20180823045501016" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit">
 <pre>show</pre>
 </div>
-<div created="20180729023124670" modified="20180812022834199" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/more-tiddler-actions">
+<div created="20180729023124670" modified="20180823045501016" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/more-tiddler-actions">
 <pre>show</pre>
 </div>
-<div created="20180729023124670" modified="20180812022834200" title="$:/config/ViewToolbarButtons/Visibility/$:/plugins/ajh/favorites/template">
+<div created="20180729023124670" modified="20180823045501018" title="$:/config/ViewToolbarButtons/Visibility/$:/plugins/ajh/favorites/template">
 <pre>show</pre>
 </div>
-<div created="20180729023124670" modified="20180812022834200" title="$:/config/ViewToolbarButtons/Visibility/$:/plugins/danielo/encryptTiddler/crypt-button">
+<div created="20180729023124670" modified="20180823045501017" title="$:/config/ViewToolbarButtons/Visibility/$:/plugins/danielo/encryptTiddler/crypt-button">
 <pre>show</pre>
 </div>
 <div caption="&lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;  Contrôles des paramètres" created="20180711082933183" modified="20180811001423985" sub.num="C02-S01" tags="$:/Paramétrages" title="$:/Contrôles">
@@ -9683,7 +9683,7 @@ body.tc-body .tc-site-subtitle { display: {{!!site-subtitle}}; } </pre>
     }
 }</pre>
 </div>
-<div caption="{{$:/core/images/close-all-button}} {{$:/language/Buttons/CloseAll/Caption}}" description="{{$:/language/Buttons/CloseAll/Hint}}" modified="20180812022834203" tags="$:/tags/PageControls" title="$:/core/ui/Buttons/close-all">
+<div caption="{{$:/core/images/close-all-button}} {{$:/language/Buttons/CloseAll/Caption}}" description="{{$:/language/Buttons/CloseAll/Hint}}" modified="20180823045501021" tags="$:/tags/PageControls" title="$:/core/ui/Buttons/close-all">
 <pre>&lt;$button message=&quot;tm-close-all-tiddlers&quot; tooltip={{$:/language/Buttons/CloseAll/Hint}} aria-label={{$:/language/Buttons/CloseAll/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
 &lt;$list filter=&quot;[&lt;tv-config-toolbar-icons&gt;prefix[yes]]&quot;&gt;
 {{$:/core/images/close-all-button}}
@@ -9790,7 +9790,7 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 &lt;/$set&gt;
 </pre>
 </div>
-<div created="20180709095643262" modified="20180812022834202" tags="$:/tags/TopRightBar" title="$:/core/ui/TopBar/menu">
+<div created="20180709095643262" modified="20180823045501020" tags="$:/tags/TopRightBar" title="$:/core/ui/TopBar/menu">
 <pre>&lt;$reveal state=&quot;$:/state/sidebar&quot; type=&quot;nomatch&quot; text=&quot;no&quot;&gt;
 &lt;$button set=&quot;$:/state/sidebar&quot; setTo=&quot;no&quot; tooltip={{$:/language/Buttons/HideSideBar/Hint}} aria-label={{$:/language/Buttons/HideSideBar/Caption}} class=&quot;tc-btn-invisible&quot;&gt;{{$:/core/images/chevron-right}}&lt;/$button&gt;
 &lt;/$reveal&gt;
@@ -13770,7 +13770,7 @@ Modifier cet assistant $:/Menus
 [[ Afficher/Supprimer la barre de navigation|$:/navbar/button]]
 &lt;/$reveal&gt;</pre>
 </div>
-<div created="20161026162820170" modified="20180814010600135" sub.num="05.02.07" tags="$:/NavBar $:/tags/Stylesheet" title="$:/navbar/css" type="text/vnd.tiddlywiki">
+<div created="20161026162820170" modified="20180823045501020" sub.num="05.02.07" tags="$:/NavBar $:/tags/Stylesheet" title="$:/navbar/css" type="text/vnd.tiddlywiki">
 <pre>.tc-topbar-left {
 
 top: 0; 
@@ -13819,7 +13819,7 @@ Espace entre les menus: {{!!navbar-menuspace}}
 <div created="20180709082820833" modified="20180814010832936" sub.num="06.05" tags="$:/NavBar" title="$:/navbar/menu">
 <pre>&lt;$checkbox tiddler='$:/NavBarContent' tag='$:/tags/TopLeftBar' checked='$:/tags/SideBar' unchecked=none/&gt; [[Afficher/Supprimer le menu de la barre de navigation|$:/NavBarContent]]</pre>
 </div>
-<div caption="$:/NavBarMenu" created="20180726064842984" list="" modified="20180813013446030" tags="$:/NavBarMenu $:/Detail $:/tags/TopLeftBar" title="$:/NavBarContent">
+<div caption="$:/NavBarMenu" created="20180726064842984" list="" modified="20180823045501021" tags="$:/NavBarMenu $:/Detail $:/tags/TopLeftBar" title="$:/NavBarContent">
 <pre>&lt;div class='btn'&gt;&lt;$list filter=&quot;[has[rank]] +[sort[rank]]&quot;&gt;&lt;nav&gt;&lt;ul&gt;&lt;li&gt;{{!!text}}&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;&lt;/$list&gt;&lt;/div&gt;
 </pre>
 </div>
@@ -14183,8 +14183,50 @@ La documentation complète de ce wiki est accessible sous le menu Documentation 
 &lt;/pre&gt;
 </pre>
 </div>
-<div created="20180823020135373" modified="20180823020135374" storyleft="0px" storyright="770px" title="$:/plugins/TWaddle/LeftBar/temp">
-<pre></pre>
+<div modified="20180823045501018" tags="$:/tags/PageTemplate" title="$:/plugins/TWaddle/LeftBar/Toggle">
+<pre>\define leftbar-content()
+&lt;div class=&quot;leftbar-content&quot;&gt;
+
+{{$:/plugins/TWaddle/LeftBar/Menu}}
+&lt;/div&gt;
+\end
+
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;$:/state/LeftBar&quot; text=&quot;show&quot;&gt;
+&lt;$button set=&quot;$:/state/LeftBar&quot; setTo=&quot;show&quot; class=&quot;tc-btn-invisible tc-image-button leftbar-toggle&quot;&gt;
+	{{$:/core/images/menu-button}}
+	&lt;$action-setfield $tiddler=&quot;$:/plugins/TWaddle/LeftBar/temp&quot;
+		$field=&quot;storyleft&quot;
+		$value={{$:/themes/tiddlywiki/vanilla/metrics/storyleft}}/&gt;
+	&lt;$action-setfield $tiddler=&quot;$:/plugins/TWaddle/LeftBar/temp&quot; 
+		$field=&quot;storyright&quot;
+		$value={{$:/themes/tiddlywiki/vanilla/metrics/storyright}}/&gt;
+	&lt;$action-setfield $tiddler=&quot;$:/themes/tiddlywiki/vanilla/metrics/storyleft&quot; 
+		text=&quot;/*LeftBar*/ calc({{$:/plugins/TWaddle/LeftBar/Stylesheet!!width}} + {{$:/plugins/TWaddle/LeftBar/temp!!storyleft}})&quot; /&gt;
+	&lt;$action-setfield $tiddler=&quot;$:/themes/tiddlywiki/vanilla/metrics/storyright&quot;
+		text=&quot;/*LeftBar*/ calc({{$:/plugins/TWaddle/LeftBar/temp!!storyright}} + {{$:/themes/tiddlywiki/vanilla/metrics/storyleft}})&quot;/&gt;
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+
+&lt;$reveal type=&quot;match&quot; state=&quot;$:/state/LeftBar&quot; text=&quot;show&quot;&gt;
+&lt;$button set=&quot;$:/state/LeftBar&quot; setTo=&quot;hide&quot; class=&quot;tc-btn-invisible tc-image-button leftbar-toggle&quot;&gt;
+	{{$:/core/images/chevron-left}}
+	&lt;$action-setfield $tiddler=&quot;$:/themes/tiddlywiki/vanilla/metrics/storyleft&quot; 
+		text={{$:/plugins/TWaddle/LeftBar/temp!!storyleft}} /&gt;
+	&lt;$action-setfield $tiddler=&quot;$:/themes/tiddlywiki/vanilla/metrics/storyright&quot; 
+		text={{$:/plugins/TWaddle/LeftBar/temp!!storyright}} /&gt;
+	&lt;$action-deletetiddler $tiddler=&quot;$:/plugins/TWaddle/LeftBar/temp&quot;/&gt;
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+
+&lt;$reveal state=&quot;$:/state/LeftBar&quot; type=&quot;match&quot; text=&quot;show&quot; retain=&quot;yes&quot;&gt;
+	&lt;&lt;leftbar-content&gt;&gt;
+&lt;/$reveal&gt;
+&lt;$reveal state=&quot;$:/state/LeftBar&quot; type=&quot;nomatch&quot; text=&quot;show&quot; retain=&quot;yes&quot;&gt;
+	&lt;div class=&quot;leftbar-togglezone&quot;&gt;
+		&lt;&lt;leftbar-content&gt;&gt;
+	&lt;/div&gt;
+&lt;/$reveal&gt;
+</pre>
 </div>
 <div caption="Bouton de paramétrage libre" created="20170402140426027" creator="Mat von TWaddle" description="Ouvrir un popup de paramétrage libre" modified="20180725040435578" modifier="Mat von TWaddle" sub.num="05.02.06" tags="$:/SideBar $:/tags/PageControls" title="$:/plugins/TWaddle/tw-admin/button">
 <pre>&lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt; tooltip={{$:/plugins/TWaddle/tw-admin/button!!caption}} aria-label={{$:/plugins/TWaddle/tw-admin/button!!description}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
@@ -14356,8 +14398,8 @@ Modifier cet assistant $:/SideBar
 <div created="20180810084920310" modified="20180810091304375" title="$:/SiteTitle">
 <pre>~TiddlyFrame</pre>
 </div>
-<div created="20180706030000501" modified="20180823020135375" sub.num="05.01.06" tags="$:/LeftBar" title="$:/state/LeftBar">
-<pre>show</pre>
+<div created="20180706030000501" modified="20180823045732089" sub.num="05.01.06" tags="$:/LeftBar" title="$:/state/LeftBar">
+<pre>hide</pre>
 </div>
 <div created="20180814010556576" modified="20180814010600135" title="$:/state/navbar">
 <pre>show</pre>
@@ -14365,7 +14407,7 @@ Modifier cet assistant $:/SideBar
 <div created="20180814013436498" modified="20180814014002640" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20180814005753984" modified="20180822230615522" title="$:/state/sidebar">
+<div created="20180814005753984" modified="20180823045501019" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20180814111315096" modified="20180814111319608" title="$:/state/tab--1498284803">
@@ -14407,7 +14449,7 @@ Modifier cet assistant $:/SideBar
 <div created="20180814025444925" modified="20180814025444925" title="$:/state/toc/Menu-$:/Index Documentation-334395172">
 <pre>open</pre>
 </div>
-<div list="TiddlyFrame" title="$:/StoryList">
+<div list="[[$:/À Propos de ce Wiki]] TiddlyFrame" title="$:/StoryList">
 <pre></pre>
 </div>
 <div caption="Read Me Contrôle Surface occupée" created="20180417043744046" icone="&lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;" modified="20180814085630339" sub.num="260" tags="$:/documentation $:/Surface" title="$:/Surface">
@@ -14461,8 +14503,8 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 
 Ã vos réglages !</pre>
 </div>
-<div created="20180706030259776" modified="20180822230630257" title="$:/temp/advancedsearch">
-<pre>$:/documentation</pre>
+<div created="20180706030259776" modified="20180823045534821" title="$:/temp/advancedsearch">
+<pre>$:/À</pre>
 </div>
 <div created="20180814062450687" modified="20180814062458717" title="$:/temp/appear/$:/doc-user-001363622161/block//tiddler-slider">
 <pre></pre>
@@ -14560,13 +14602,13 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
     }
 }</pre>
 </div>
-<div created="20180729015820084" modified="20180812031746162" password="admin" tags="$:/User" title="$:/temp/profile" user-name="">
+<div created="20180729015820084" modified="20180823045501023" password="" tags="$:/User" title="$:/temp/profile" user-name="">
 <pre></pre>
 </div>
-<div created="20180706030257840" modified="20180822230630258" title="$:/temp/search">
+<div created="20180706030257840" modified="20180823045534822" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20180729023451942" modified="20180812022804037" title="$:/temp/verlauf">
+<div created="20180729023451942" modified="20180823045324961" title="$:/temp/verlauf">
 <pre></pre>
 </div>
 <div caption="Contrôles" controle="" created="20180524095302801" modified="20180815002416833" tags="$:/TiddlyFrame $:/PanneauControle $:/tags/ControlPanel" title="$:/Template">
@@ -15045,11 +15087,11 @@ body .tc-tiddler-preview-preview {
     }
 }</pre>
 </div>
-<div created="20180706030000500" modified="20180823020135374" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
-<pre>/*LeftBar*/ calc({{$:/plugins/TWaddle/LeftBar/Stylesheet!!width}} + {{$:/plugins/TWaddle/LeftBar/temp!!storyleft}})</pre>
+<div created="20180706030000500" modified="20180823045732086" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
+<pre>0px</pre>
 </div>
-<div created="20180706030000501" modified="20180823020135374" title="$:/themes/tiddlywiki/vanilla/metrics/storyright">
-<pre>/*LeftBar*/ calc({{$:/plugins/TWaddle/LeftBar/temp!!storyright}} + {{$:/themes/tiddlywiki/vanilla/metrics/storyleft}})</pre>
+<div created="20180706030000501" modified="20180823045732088" title="$:/themes/tiddlywiki/vanilla/metrics/storyright">
+<pre>770px</pre>
 </div>
 <div created="20180706024915494" modified="20180802063908192" title="$:/themes/tiddlywiki/vanilla/metrics/storytop">
 <pre>30px</pre>
@@ -15156,7 +15198,7 @@ body.tc-body .tc-tiddler-frame .tc-tiddler-body ul, body.tc-body .tc-tiddler-fra
 &lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="TiddlyFrame" created="20180811050029839" modified="20180823021307639" tags="$:/TiddlyFrame" title="TiddlyFrame">
+<div caption="TiddlyFrame" created="20180811050029839" modified="20180823045715982" tags="$:/TiddlyFrame" title="TiddlyFrame">
 <pre>&lt;div align=&quot;center&quot;&gt;
 
 !Frame your website as you like !
@@ -15211,11 +15253,15 @@ Cette version inclus la pré-installation :
 &lt;/div&gt;
 
 &lt;$details summary=&quot;Introduction&quot;&gt;
+
 {{$:/À Propos de ce Wiki}}
+
 &lt;/$details&gt;
 
 &lt;$details summary=&quot;La Documentation&quot;&gt;
+
 {{$:/documentation}}
+
 &lt;/$details&gt;</pre>
 </div>
 
