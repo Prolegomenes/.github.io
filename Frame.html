@@ -437,9 +437,9 @@ Error message and password prompt
 
 <li>$:/plugins/wikilabs/link-to-tabs/config</li>
 
-<li>$:/Polices-Alignements</li>
+<li>$:/Polices</li>
 
-<li>$:/polices-settings-help</li>
+<li>$:/Polices-Alignements</li>
 
 <li>$:/settings/apperance/TiddlerWidthSettings</li>
 
@@ -473,6 +473,10 @@ Error message and password prompt
 
 <li>$:/state/tab1-948663005</li>
 
+<li>$:/state/toc/$:/Detail-$:/Administrateur--2118262175</li>
+
+<li>$:/state/toc/$:/Menus-$:/Detail--2118262175</li>
+
 <li>$:/state/toc/Menu-$:/documentation-1340183292</li>
 
 <li>$:/state/toc/Menu-$:/documentation-334395172</li>
@@ -483,23 +487,35 @@ Error message and password prompt
 
 <li>$:/state/toc/Menu-$:/Index Documentation-334395172</li>
 
+<li>$:/state/toc/TableOfContents-$:/documentation--296257833</li>
+
 <li>$:/state/toc/TableOfContents-$:/documentation-334395172</li>
 
 <li>$:/state/toc/TableOfContents-$:/documentation-858706842</li>
 
 <li>$:/state/toc/TableOfContents/$:/documentation-$:/Administration-334395172</li>
 
+<li>$:/state/toc/TableOfContents/$:/documentation-$:/Administration-858706842</li>
+
 <li>$:/state/toc/TableOfContents/$:/documentation-$:/Interface-334395172</li>
 
+<li>$:/state/toc/TableOfContents/$:/documentation-$:/Interface-858706842</li>
+
 <li>$:/state/toc/TableOfContents/$:/documentation-$:/LeftBar-334395172</li>
+
+<li>$:/state/toc/TableOfContents/$:/documentation-$:/Menus-334395172</li>
 
 <li>$:/state/toc/TableOfContents/$:/documentation-$:/NavBar-334395172</li>
 
 <li>$:/state/toc/TableOfContents/$:/documentation-$:/PanneauControle-334395172</li>
 
+<li>$:/state/toc/TableOfContents/$:/documentation-$:/Polices-334395172</li>
+
 <li>$:/state/toc/TableOfContents/$:/documentation-$:/SideBar-334395172</li>
 
 <li>$:/state/toc/TableOfContents/$:/documentation-$:/Surface-334395172</li>
+
+<li>$:/state/toc/TableOfContents/$:/documentation-$:/Tiddlers-334395172</li>
 
 <li>$:/StoryList</li>
 
@@ -1062,11 +1078,11 @@ border: 1px solid #ccc;
 
 </pre>
 </div>
-<div caption="Read Me Contrôle Admin." created="20180814070434865" modified="20180824021448991" sub.num="10" tags="$:/documentation $:/Administration" title="$:/Administration">
+<div caption="Read Me Contrôle Admin." created="20180814070434865" modified="20180824080646159" sub.num="11" tags="$:/documentation $:/Administration" title="$:/Administration">
 <pre>!{{!!caption}}
 
-&lt;div class=&quot;att&quot;&gt;
-[[Modifier l'assistant $:/ReadMeAdmin|$:/ReadMeAdmin]]
+&lt;div class=&quot;note&quot;&gt;
+[[Modifier l'assistant $:/ReadMeAdmin|$:/Administration]]
 &lt;/div&gt;
 
 Gestion du login, Mot de passe et de la gestion Utilisateur
@@ -1077,7 +1093,10 @@ Sujet tagué &quot;&lt;&lt;tag $:/Administration&gt;&gt;&quot; comprenant {{{[ta
 &lt;/div&gt;
 
 | Éléments | Description |h
-|&lt;&lt;list-links filter:&quot;[tag[$:/Administration]]&quot;&gt;&gt;|
+|$:/Administration|Documentation Contrôle Admin Read-Me|
+|$:/TemplateAdmin|Panneau de contrôle Administration|
+|$:/doc-user-022|Documentation &quot;{{$:/doc-user-022!!caption}}&quot;|
+|$:/doc-user-023|Documentation &quot;{{$:/doc-user-023!!caption}}&quot;|
 </pre>
 </div>
 <div caption="&lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;  Assistants" created="20180711085233913" modified="20180711085459893" sub.num="C02-S04" tags="$:/Paramétrages" title="$:/Assistants">
@@ -10039,7 +10058,7 @@ transition: all .2s ease-in-out;
 transform: scale(1.4);
 }</pre>
 </div>
-<div created="20180720075327960" modified="20180720124604681" tags="$:/tags/Stylesheet" title="$:/cssH1H5">
+<div created="20180720075327960" modified="20180824061240051" tags="$:/Polices $:/tags/Stylesheet" title="$:/cssH1H5">
 <pre>body.tc-body h1 {
 font-family: {{$:/user/config!!font-family-h1}};
 font-size: {{$:/user/config!!font-size-h1}};
@@ -10129,12 +10148,12 @@ tr:nth-child(odd) td {background-color:#e9e9e9;padding: 8px 5px}</pre>
 <div created="20180811050615952" modified="20180812013736616" title="$:/DefaultTiddlers">
 <pre>TiddlyFrame</pre>
 </div>
-<div caption="&lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;  Code" created="20180727102716039" modified="20180727110200979" sub.num="08.02" tags="$:/Menus" title="$:/Detail">
+<div caption="Code" created="20180727102716039" modified="20180824074601997" sub.num="08.02" title="$:/Detail">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
-&lt;&lt;toc-expandable &quot;$:/Detail&quot; &quot;sort[sub.num]&quot;&gt;&gt;
+&lt;&lt;toc-selective-expandable &quot;$:/Detail&quot; &quot;sort[sub.num]&quot;&gt;&gt;
 &lt;/div&gt;</pre>
 </div>
-<div background="#ffffff" background-container="#f5f5f5" caption="CSS Menu" color="" created="20180710064814612" modified="20180814014047235" sub.num="08.02" tags="$:/Menus" title="$:/detail/css">
+<div background="#ffffff" background-container="#f5f5f5" caption="CSS Menu" color="" created="20180710064814612" modified="20180824074525270" sub.num="08.02" tags="$:/Detail" title="$:/detail/css">
 <pre>/* details and summary */
 
 details {
@@ -10975,7 +10994,7 @@ __''Attention ! Cette action est définitive''__
 <div created="20180725042654839" modified="20180725042658480" title="$:/favicon.ico" type="image/x-icon">
 <pre>AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAA7EZz/OxGc/ykguQApILkAOxGc/zsRnP87EZz/OxGc/zsRnP87EZz/OxGc/zsRnP8pILkAKSC5ADsRnP87EZz/OxGc/zsRnP8pILkAKSC5ADsRnP87EZz/OxGc/zsRnP87EZz/OxGc/zsRnP87EZz/KSC5ACkguQA7EZz/OxGc/zsRnP87EZz/KSC5ACkguQA7EZz/OxGc/zsRnP87EZz/OxGc/zsRnP87EZz/OxGc/ykguQApILkAOxGc/zsRnP87EZz/OxGc/ykguQApILkAOxGc/zsRnP87EZz/OxGc/zsRnP87EZz/OxGc/zsRnP8pILkAKSC5ADsRnP87EZz/OxGc/zsRnP8pILkAKSC5ADsRnP87EZz/OxGc/zsRnP87EZz/OxGc/zsRnP87EZz/KSC5ACkguQA7EZz/OxGc/zsRnP87EZz/KSC5ACkguQA7EZz/OxGc/zsRnP87EZz/OxGc/zsRnP87EZz/OxGc/ykguQApILkAOxGc/zsRnP87EZz/OxGc/ykguQApILkAOxGc/zsRnP87EZz/OxGc/zsRnP87EZz/OxGc/zsRnP8pILkAKSC5ADsRnP87EZz/OxGc/zsRnP8pILkAKSC5ADsRnP87EZz/OxGc/zsRnP87EZz/OxGc/zsRnP87EZz/KSC5ACkguQA7EZz/OxGc/zsRnP87EZz/KSC5ACkguQA7EZz/OxGc/zsRnP87EZz/OxGc/zsRnP87EZz/OxGc/ykguQApILkAOxGc/zsRnP87EZz/OxGc/ykguQApILkAOxGc/zsRnP87EZz/OxGc/zsRnP87EZz/OxGc/zsRnP8pILkAKSC5ADsRnP87EZz/OxGc/zsRnP8pILkAKSC5ADsRnP87EZz/OxGc/zsRnP87EZz/OxGc/zsRnP87EZz/KSC5ACkguQA7EZz/OxGc/zsRnP87EZz/KSC5ACkguQA7EZz/OxGc/zsRnP87EZz/OxGc/zsRnP87EZz/OxGc/ykguQApILkAOxGc/zsRnP87EZz/OxGc/ykguQApILkAOxGc/zsRnP87EZz/OxGc/zsRnP87EZz/OxGc/zsRnP8pILkAKSC5ADsRnP87EZz/OxGc/zsRnP8pILkAKSC5ADsRnP87EZz/OxGc/zsRnP87EZz/OxGc/zsRnP87EZz/KSC5ACkguQA7EZz/OxGc/zsRnP87EZz/KSC5ACkguQA7EZz/OxGc/zsRnP87EZz/OxGc/zsRnP87EZz/OxGc/ykguQApILkAOxGc/zsRnP87EZz/OxGc/ykguQApILkAOxGc/zsRnP87EZz/OxGc/zsRnP87EZz/OxGc/zsRnP8pILkAKSC5ADsRnP87EZz/MAwAADAMAAAwDAAAMAwAADAMAAAwDAAAMAwAADAMAAAwDAAAMAwAADAMAAAwDAAAMAwAADAMAAAwDAAAMAwAAA==</pre>
 </div>
-<div caption="Police FontAwsome" created="20161026085628057" modified="20180812051130675" sub.num="03.04" tags="$:/Fonts $:/tags/Stylesheet" title="$:/fonts/FontAwesome" type="">
+<div caption="Police FontAwsome" created="20161026085628057" modified="20180824061404299" sub.num="03.04" tags="$:/Polices $:/tags/Stylesheet" title="$:/fonts/FontAwesome" type="">
 <pre>/*!
  * FontAwesome 4.7.0 pour TiddlyWiki préparé par @naudinsylvain le 26/10/2016
  * http://sylvain.naud.in
@@ -13319,7 +13338,7 @@ src: url(data:application/font-woff;base64,d09GRgABAAAAAX7oAA0AAAAChqwABAAHAAAAA
 }
 </pre>
 </div>
-<div caption="Police leckerlioneregular" created="20150308214320006" modified="20180812023005429" sub.num="08" tags="$:/Fonts $:/tags/Stylesheet $:/n0d1/tw" title="$:/fonts/leckerlioneregular" type="text/plain">
+<div caption="Police leckerlioneregular" created="20150308214320006" modified="20180824061442889" sub.num="08" tags="$:/Polices $:/tags/Stylesheet $:/n0d1/tw" title="$:/fonts/leckerlioneregular" type="text/plain">
 <pre>/* Generated by Font Squirrel (http://www.fontsquirrel.com) on March 8, 2015 */
 
 @font-face {
@@ -13331,7 +13350,7 @@ src: url(data:application/font-woff;base64,d09GRgABAAAAAX7oAA0AAAAChqwABAAHAAAAA
 
 }</pre>
 </div>
-<div caption="Police open_sansbold" created="20160824073322834" modified="20180812023023493" sub.num="09" tags="$:/Fonts $:/tags/Stylesheet $:/n0d1/tw" title="$:/fonts/open_sansbold" type="text/plain">
+<div caption="Police open_sansbold" created="20160824073322834" modified="20180824061505880" sub.num="09" tags="$:/Polices $:/tags/Stylesheet $:/n0d1/tw" title="$:/fonts/open_sansbold" type="text/plain">
 <pre>/* Generated by Font Squirrel (https://www.fontsquirrel.com) on August 24, 2016 */
 
 @font-face {
@@ -13344,7 +13363,7 @@ src: url(data:application/font-woff;base64,d09GRgABAAAAAX7oAA0AAAAChqwABAAHAAAAA
 }
 </pre>
 </div>
-<div caption="Police open_sansextrabold" created="20160824073630398" modified="20180812023040133" sub.num="10" tags="$:/Fonts $:/tags/Stylesheet $:/n0d1/tw" title="$:/fonts/open_sansextrabold" type="text/plain">
+<div caption="Police open_sansextrabold" created="20160824073630398" modified="20180824061529871" sub.num="10" tags="$:/Polices $:/tags/Stylesheet $:/n0d1/tw" title="$:/fonts/open_sansextrabold" type="text/plain">
 <pre>/* Generated by Font Squirrel (https://www.fontsquirrel.com) on August 24, 2016 */
 
 @font-face {
@@ -13356,7 +13375,7 @@ src: url(data:application/font-woff;base64,d09GRgABAAAAAX7oAA0AAAAChqwABAAHAAAAA
 
 }</pre>
 </div>
-<div caption="Police open_sanslight" created="20160824073557150" modified="20180812023059325" sub.num="11" tags="$:/Fonts $:/tags/Stylesheet $:/n0d1/tw" title="$:/fonts/open_sanslight" type="text/plain">
+<div caption="Police open_sanslight" created="20160824073557150" modified="20180824061552120" sub.num="11" tags="$:/Polices $:/tags/Stylesheet $:/n0d1/tw" title="$:/fonts/open_sanslight" type="text/plain">
 <pre>/* Generated by Font Squirrel (https://www.fontsquirrel.com) on August 24, 2016 */
 
 @font-face {
@@ -13369,7 +13388,7 @@ src: url(data:application/font-woff;base64,d09GRgABAAAAAX7oAA0AAAAChqwABAAHAAAAA
 }
 </pre>
 </div>
-<div caption="Police open_sansregular" created="20160824073236074" modified="20180812023127610" sub.num="12" tags="$:/Fonts $:/tags/Stylesheet $:/n0d1/tw" title="$:/fonts/open_sansregular" type="text/plain">
+<div caption="Police open_sansregular" created="20160824073236074" modified="20180824061621920" sub.num="12" tags="$:/Polices $:/tags/Stylesheet $:/n0d1/tw" title="$:/fonts/open_sansregular" type="text/plain">
 <pre>/* Generated by Font Squirrel (https://www.fontsquirrel.com) on August 24, 2016 */
 
 @font-face {
@@ -13382,7 +13401,7 @@ src: url(data:application/font-woff;base64,d09GRgABAAAAAX7oAA0AAAAChqwABAAHAAAAA
 }
 </pre>
 </div>
-<div caption="Police open_sanssemibold" created="20160824073423477" modified="20180812023154203" sub.num="13" tags="$:/Fonts $:/tags/Stylesheet $:/n0d1/tw" title="$:/fonts/open_sanssemibold" type="text/plain">
+<div caption="Police open_sanssemibold" created="20160824073423477" modified="20180824061645131" sub.num="13" tags="$:/Polices $:/tags/Stylesheet $:/n0d1/tw" title="$:/fonts/open_sanssemibold" type="text/plain">
 <pre>/* Generated by Font Squirrel (https://www.fontsquirrel.com) on August 24, 2016 */
 
 @font-face {
@@ -13395,7 +13414,7 @@ src: url(data:application/font-woff;base64,d09GRgABAAAAAX7oAA0AAAAChqwABAAHAAAAA
 }
 </pre>
 </div>
-<div caption="Police titilliumregular" created="20171218073715309" modified="20180812023223092" sub.num="14" tags="$:/Fonts $:/tags/Stylesheet" title="$:/fonts/titilliumregular" type="text/plain">
+<div caption="Police titilliumregular" created="20171218073715309" modified="20180824061709769" sub.num="14" tags="$:/Polices $:/tags/Stylesheet" title="$:/fonts/titilliumregular" type="text/plain">
 <pre>/*! Generated by Font Squirrel (https://www.fontsquirrel.com) on December 18, 2017 */
 
 
@@ -13409,7 +13428,7 @@ src: url(data:application/font-woff;base64,d09GRgABAAAAAX7oAA0AAAAChqwABAAHAAAAA
 
 }</pre>
 </div>
-<div caption="Police titilliumthin" created="20171218065634421" modified="20180812023241011" sub.num="15" tags="$:/Fonts $:/tags/Stylesheet" title="$:/fonts/titilliumthin" type="text/plain">
+<div caption="Police titilliumthin" created="20171218065634421" modified="20180824061729354" sub.num="15" tags="$:/Polices $:/tags/Stylesheet" title="$:/fonts/titilliumthin" type="text/plain">
 <pre>/*! Generated by Font Squirrel (https://www.fontsquirrel.com) on December 18, 2017 */
 
 
@@ -13460,7 +13479,7 @@ Votre navigateur peut vous demander d'accepter le téléchargement avant de l'ex
 &lt;&lt;&lt;
 </pre>
 </div>
-<div caption="Index Documentation" created="20180728130615654" description="Ici, c'est le champ caption et non title qui est affiché" modified="20180824025642532" sub.num="01" tags="$:/documentation" title="$:/Index Documentation">
+<div caption="Index Documentation" created="20180728130615654" description="Ici, c'est le champ caption et non title qui est affiché" modified="20180824080409671" sub.num="01" tags="$:/documentation" title="$:/Index Documentation">
 <pre>Vous pouvez ici réorganiser l'ordre des tiddlers d'aide.
 
 &lt;table&gt;
@@ -13473,42 +13492,55 @@ Votre navigateur peut vous demander d'accepter le téléchargement avant de l'ex
 
 </pre>
 </div>
-<div caption="Read Me Contrôle Interface" created="20180713045341730" modified="20180824021343357" sub.num="05" tags="$:/documentation $:/Interface" title="$:/Interface">
+<div caption="Read Me Contrôle Interface" created="20180713045341730" modified="20180824080337190" sub.num="06" tags="$:/documentation $:/Interface" title="$:/Interface">
 <pre>!{{!!caption}}
+
+&lt;div class=&quot;note&quot;&gt;
+[[Modifier cet assistant $:/Interface|$:/Interface]]
+&lt;/div&gt;
 
 &lt;div class=&quot;att&quot;&gt;
 &lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt; Sujet tagué &quot;&lt;&lt;tag $:/Interface&gt;&gt;&quot; comprenant {{{[tag[$:/Interface]count[]]}}}  articles (tiddlers)
 &lt;/div&gt;
 
-
+👉 Cet écran concerne les paramètres généraux du wiki.
 
 
 | Éléments | Description |h
-|$:/Interface|
-|$:/centralisation/css|
-|$:/TemplateInterface|
-|$:/centraliser|
-|$:/PageFooter|
-|$:/cssFooter|
-
-C'est le Tiddler $:/centraliser qui gère cette fonction.
+|$:/Interface|{{$:/Interface!!caption}}|
+|$:/centralisation/css|Contrôle CSS Montrer/Cacher titre et sous-titre du wiki|
+|$:/TemplateInterface|Panneau de contrôle Interface|
+|$:/centraliser|CSS de centrage. La story River ne recouvre pas les barres latérales|
+|$:/PageFooter|Pied de page affiché ou non|
+|$:/cssFooter|CSS du pied de page|
+|$:/doc-user-031|Documentation &quot;{{$:/doc-user-031!!caption}}&quot;|
+|$:/doc-user-032|Documentation &quot;{{$:/doc-user-032!!caption}}&quot;|
+|$:/doc-user-033|Documentation &quot;{{$:/doc-user-033!!caption}}&quot;|
+|$:/doc-user-034|Documentation &quot;{{$:/doc-user-034!!caption}}&quot;|
+|$:/doc-user-035|Documentation &quot;{{$:/doc-user-035!!caption}}&quot;|
+|$:/doc-user-036|Documentation &quot;{{$:/doc-user-036!!caption}}&quot;|
 
 Il y a encore un point à régler : la couleur du bouton de retour en haut de page ne prend pas la couleur.
 
-&lt;div class=&quot;note&quot;&gt;
-[[Modifier cet assistant $:/Interface|$:/Interface]]
-&lt;/div&gt;</pre>
+</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div caption="Read Me Contrôle LeftBar" created="20180703004838109" modified="20180824021300360" sub.num="03" tags="$:/documentation $:/LeftBar $:/Paramétrages" title="$:/LeftBar" url="$:/plugins/TWaddle/LeftBar/Toggle">
-<pre>&lt;div class=&quot;att&quot;&gt;
+<div caption="Read Me Contrôle LeftBar" created="20180703004838109" modified="20180824080347223" sub.num="04" tags="$:/documentation $:/LeftBar $:/Paramétrages" title="$:/LeftBar" url="$:/plugins/TWaddle/LeftBar/Toggle">
+<pre>!{{!!caption}}
+
+&lt;div class=&quot;note&quot;&gt;
+Modifier cet assistant $:/LeftBar
+&lt;/div&gt;
+
+
+&lt;div class=&quot;att&quot;&gt;
 &lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt; Sujet tagué &quot;&lt;&lt;tag $:/LeftBar&gt;&gt;&quot; comprenant {{{[tag[$:/LeftBar]count[]]}}}  articles (tiddlers)
 &lt;/div&gt;
 
-!{{!!caption}}
 
+👉 Cet écran concerne le paramétrage de la barre latérale gauche.
 
 &lt;$details summary=&quot;À propos du plugin source LeftBar&quot;&gt;
 
@@ -13533,6 +13565,8 @@ Son contenu est totalement libre.
 |$:/plugins/TWaddle/LeftBar/icon|L'icone Bouton Hamburger.|
 |$:/state/LeftBar|Tiddler temporaire indiquant show si la barre est ouverte et hide si la barre est fermée (cachée). Présent à l'installation du plugin.|
 |$:/plugins/TWaddle/LeftBar/temp|Tiddler temporaire. ''Créé'' à l'ouverture de la barre (montrée) et ''supprimé'' à la fermeture de la barre (cachée). Ce n'est pas un state tiddler à proprement parler. Présent à l'installation du plugin. Ne supprimez pas ce tiddler!|
+
+
 
 &lt;/div&gt;
 
@@ -13559,10 +13593,14 @@ body.tc-body .tw-admin-content svg {
 |$:/css/LeftBar|CSS Principal alimenté par le CSS de contrôle|
 |$:/LeftBar|Read-me|
 |$:/LeftBarCode|Le code et ses subtilités|
-|$:/LeftBarSource|Les Tiddlers du source|
 |$:/state/LeftBar|Ne pas supprimer|
 |$:/TemplateLeftBar|Le panneau de contrôle de LeftBar|
 |$:/LeftBarContent|Votre contenu|
+|$:/doc-user-006|Documentation &quot;{{$:/doc-user-006!!caption}}&quot;|
+|$:/doc-user-007|Documentation &quot;{{$:/doc-user-007!!caption}}&quot;|
+|$:/doc-user-008|Documentation &quot;Comportement de la barre de menu gauche&quot;|
+|$:/doc-user-009|Documentation &quot;{{$:/doc-user-009!!caption}}&quot;|
+|$:/doc-user-029|Documentation &quot;{{$:/doc-user-029!!caption}}&quot;|
 
 
 1- Les barres latérales de menus peuvent les positions visible ou cachée.
@@ -13575,11 +13613,7 @@ Pour ce faire on utilise les deux boutons chevrons en haut de page à droite pou
 
 En standard, les barres latérales sont couvertes par la Story River, c'est à dire que lorsque vous cachez les barres latérales, la Story River prend leur place.
 
-
-
-&lt;div class=&quot;note&quot;&gt;
-Modifier cet assistant $:/LeftBar
-&lt;/div&gt;</pre>
+</pre>
 </div>
 <div caption="Assistant Menu LeftBar" created="20180418014128598" modified="20180814102558781" sub.num="08.13" tags="$:/Menus" title="$:/leftbar-system-help">
 <pre>!~LeftBar et Contenu
@@ -13642,11 +13676,11 @@ Le bouton &quot;[[Nouveau Menu|$:/ButtonNewMenu]]&quot; vous permet :
 *Le tiddler $:/plugins/TWaddle/LeftBar/temp est maquant dans le wiki cassé et il contient des valeurs.
 *Quand je le copie, il est importé puis est supprimé à la première manip</pre>
 </div>
-<div caption="Menu de la LeftBar" created="20180708105621259" modified="20180824021156387" sub.num="08.03" tags="$:/LeftBar" title="$:/LeftBarContent">
+<div caption="Menu de la LeftBar" created="20180708105621259" modified="20180824064518541" sub.num="08.03" tags="$:/LeftBar" title="$:/LeftBarContent">
 <pre>{{$:/Administrateur}}
 
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
-&lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
+&lt;&lt;toc-selective-expandable 'TableOfContents' &quot;sort[sub.num]&quot;&gt;&gt;
 &lt;/div&gt;
 
 &lt;$button class=&quot;bttn-fill bttn-sm bttn-primary&quot; message=&quot;tm-open-window&quot; param=&quot;$:/leftbar-system-help&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Assistance&lt;/$button&gt;</pre>
@@ -13654,13 +13688,28 @@ Le bouton &quot;[[Nouveau Menu|$:/ButtonNewMenu]]&quot; vous permet :
 <div created="20180809001547781" modified="20180809001735625" tags="$:/LeftBarMenu" title="$:/LeftBarMenu">
 <pre>Gestion d'un menu dans la LeftBar</pre>
 </div>
-<div caption="Read Me Contrôle Menus" created="20180710070716057" modified="20180824021441101" sub.num="09" tags="$:/documentation $:/Menus" title="$:/Menus">
+<div caption="Read Me Contrôle Menus" created="20180710070716057" modified="20180824080244527" sub.num="10" tags="$:/documentation $:/Menus" title="$:/Menus">
 <pre>!{{!!caption}}
+
+&lt;div class=&quot;note&quot;&gt;
+Modifier cet assistant $:/Menus
+&lt;/div&gt;
 
 
 &lt;div class=&quot;att&quot;&gt;
 &lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt; Sujet tagué &quot;&lt;&lt;tag $:/Menus&gt;&gt;&quot; comprenant {{{[tag[$:/Menus]count[]]}}}  articles (tiddlers)
 &lt;/div&gt;
+
+| Éléments | Description |h
+|$:/Menus|Documentation Menu Read-Me|
+|$:/TemplateMenu|Panneau de contrôle Menu|
+|$:/leftbar-system-help|Assistant contenu de la barre de menu gauche|
+|$:/doc-user-017|Documentation &quot;{{$:/doc-user-017!!caption}}&quot;|
+|$:/doc-user-019|Documentation &quot;{{$:/doc-user-019!!caption}}&quot;|
+|$:/doc-user-020|Documentation &quot;{{$:/doc-user-020!!caption}}&quot;|
+|$:/doc-user-028|Documentation &quot;{{$:/doc-user-028!!caption}}&quot;|
+|$:/doc-user-030|Documentation &quot;{{$:/doc-user-030!!caption}}&quot;|
+
 
 &lt;$details summary=&quot;À propos des Plugins LeftBar et Details&quot;&gt;
 
@@ -13691,18 +13740,16 @@ Deux méthodes peuvent être utilisées:
 ```
 Chaque ligne de menu peut comporter des sous-menus sans limitation, mais ils resteront classés par ordre alphabétique.
 
-Pource faire les tiddlers de chaque ligne de menu de premier rang (racine) doivent être tagué &quot;''~TableOfContents''&quot;. C'est ce tag qui permet de choisir cette option de paramétrage.
+Pource faire les tiddlers de chaque ligne de menu de premier rang (racine) doivent être tagué &quot;''~TableOfContents''&quot;.
 
 !!Classement des titres contrôlé
 
 ```
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
-&lt;&lt;toc-expandable &quot;Menu&quot; &quot;sort[sub.num]&quot;&gt;&gt;
+&lt;&lt;toc-expandable &quot;TableOfContents&quot; &quot;sort[sub.num]&quot;&gt;&gt;
 &lt;/div&gt;
 ```
 Chaque ligne de menu peut comporter des sous-menus sans limitation. Le premier niveau c'est à dire le niveau racine affiche ce que vous voyez à l'écran à l'ouverture du wiki. Vous pouvez les afficher dans l'ordre qui vous convient,
-
-Pour ce faire les tiddlers de chaque ligne de menu de premier rang (racine) doivent être tagué &quot;''Menu''&quot; (avec un M majuscule). C'est ce tag qui permet de choisir cette option de paramétrage.
 
 De plus, chaque Tiddler se verra attribuer un ordre d’apparition via le champ `sub.num` des tiddlers concernés.
 
@@ -13734,10 +13781,10 @@ Chaque menu créé est indépendant de l'emplacement qui lui sera attribué  (Ha
 Le principe de placement d'un menu personnalisé est donc le suivant:
 
 *👉 Un menu personnalisé créé sous quelque forme que ce soit sera tout entier contenu dans un tiddler. Ce tiddler prendra le nom qui lui a été attribué dans le tiddler de création.
-*👉 Prenons pour exemple le menu $:/Administration
-*👉 Si je veux mettre mon tiddler [[$:/Administration]] dans la barre de navigation, je n'ai rien à faire puisqu'il y est automatiquement placé.
-*👉 Si je veux mettre mon tiddler [[$:/Administration]] dans la barre latérale gauche, je vais le transclure dans le tiddler [[$:/LeftBarMenu]] (1)
-*👉 Si je veux mettre mon tiddler [[$:/Administration]] dans la SideBar, je vais le taguer [[$:/tags/SideBar]] (1)
+*👉 Prenons pour exemple le menu $:/Administrateur
+*👉 Si je veux mettre mon tiddler [[$:/Administrateur]] dans la barre de navigation, je n'ai rien à faire puisqu'il y est automatiquement placé.
+*👉 Si je veux mettre mon tiddler [[$:/Administrateur]] dans la barre latérale gauche, je vais le transclure dans le tiddler [[$:/LeftBarMenu]] (1)
+*👉 Si je veux mettre mon tiddler [[$:/Administrateur]] dans la SideBar, je vais le taguer [[$:/tags/SideBar]] (1)
 
 (1) ces deux dernières opérations seront automatisées dans la prochaine version de ~TiddltFrame
 
@@ -13745,37 +13792,31 @@ Le principe de placement d'un menu personnalisé est donc le suivant:
 
 
 
-
-
-
-
-
+&lt;$details summary=&quot;Comment la gestion du menu NavBar a été développée&quot;&gt;
 
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
-&lt;&lt;toc-expandable &quot;$:/Menus&quot; &quot;sort[sub.num]&quot;&gt;&gt;
+&lt;&lt;toc-selective-expandable &quot;$:/Detail&quot; &quot;sort[sub.num]&quot;&gt;&gt;
 &lt;/div&gt;
 
-!À propos de details
-&lt;div class=&quot;tc-table-of-contents&quot;&gt;
-&lt;&lt;toc-expandable &quot;$:/Detail&quot; &quot;sort[sub.num]&quot;&gt;&gt;
-&lt;/div&gt;
-
-
-&lt;div class=&quot;note&quot;&gt;
-Modifier cet assistant $:/Menus
-&lt;/div&gt;</pre>
+&lt;/$details&gt;
+</pre>
 </div>
 <div created="20180708101142986" modified="20180715122630421" title="$:/myTempState">
 <pre></pre>
 </div>
-<div caption="Read Me Contrôle ~NavBar" created="20180702035239287" modified="20180824021252615" sub.num="02" tags="$:/documentation $:/NavBar" title="$:/NavBar">
+<div caption="Read Me Contrôle ~NavBar" created="20180702035239287" modified="20180824080602300" sub.num="03" tags="$:/documentation $:/NavBar" title="$:/NavBar">
 <pre>!{{!!caption}}
+
+&lt;div class=&quot;note&quot;&gt;
+[[Modifier cet assistant $:/NavBar|$:/NavBar]]
+&lt;/div&gt;
+
 
 &lt;div class=&quot;att&quot;&gt;
 &lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt; Sujet tagué &quot;&lt;&lt;tag $:/NavBar&gt;&gt;&quot; comprenant {{{[tag[$:/NavBar]count[]]}}}  articles (tiddlers)
 &lt;/div&gt;
 
-👉 Cet écran concerne le paramétrage de la barre de menu (~NavBar) et permet de faire apparaître ou non son contenu.
+👉 Cet écran concerne le paramétrage de la barre de menu appelée également ~NavBar et permet de faire apparaître ou non son contenu.
 
 👉 Pour la gestion du menu lui-même, voir [[Contrôle Menu|$:/TemplateMenu]]
 
@@ -13788,11 +13829,12 @@ Modifier cet assistant $:/Menus
 |$:/NavBar|Gestion de la barre de navigation : ''Read-me''|
 |$:/state/navbar|State tiddler de position. Barre cachée ou affichée|
 |$:/TemplateNavBar|Panneau de contrôle de la barre de navigation|
-
-
-&lt;div class=&quot;note&quot;&gt;
-[[Modifier cet assistant $:/NavBar|$:/NavBar]]
-&lt;/div&gt;</pre>
+|$:/doc-user-001|Documentation &quot;{{$:/doc-user-001!!caption}}&quot;|
+|$:/doc-user-002|Documentation &quot;{{$:/doc-user-002!!caption}}&quot;|
+|$:/doc-user-003|Documentation &quot;{{$:/doc-user-003!!caption}}&quot;|
+|$:/doc-user-004|Documentation &quot;{{$:/doc-user-004!!caption}}&quot;|
+|$:/doc-user-005|Documentation &quot;{{$:/doc-user-005!!caption}}&quot;|
+</pre>
 </div>
 <div created="20170916125228483" description="Ne pas laisser d'espace entre les lignes de code." modified="20180729054339913" sub.num="06.04" tags="$:/NavBar" title="$:/navbar/button">
 <pre>&lt;$reveal type=&quot;match&quot; state=&quot;$:/state/navbar&quot; text=&quot;show&quot;&gt;
@@ -13938,11 +13980,22 @@ Modifié le &lt;$list filter=&quot;[!is[system]!has[draft.of]!sort[modified]limi
 <div created="20180706083704205" modified="20180731050611182" title="$:/palette">
 <pre>$:/palettes/Vanilla</pre>
 </div>
-<div caption="Read Me Panneau de Contrôle" created="20180713035954590" modified="20180824015936078" sub.num="2" tags="$:/Template" title="$:/PanneauControle">
+<div caption="Read Me Contrôles" created="20180713035954590" modified="20180824082214428" sub.num="02" tags="$:/PanneauControle $:/documentation" title="$:/PanneauControle">
 <pre>!{{!!caption}}
-&lt;div class=&quot;att&quot;&gt;
+
+&lt;div class=&quot;note&quot;&gt;
 [[Modifier l'assistant $:/PanneauControle|$:/PanneauControle]]
 &lt;/div&gt;
+
+
+&lt;div class=&quot;att&quot;&gt;
+&lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt; Sujet tagué &quot;&lt;&lt;tag $:/PanneauControle&gt;&gt;&quot; comprenant {{{[tag[$:/PanneauControle]count[]]}}}  articles (tiddlers)
+&lt;/div&gt;
+
+
+| Éléments | Description |h
+|$:/PanneauControle|Panneau de contrôle général|
+|$:/Template|Documentation Panneau de contrôle général Read-Me|
 
 Mettre en place un ''gestionnaire de template'' consiste à gérer trois notions distinctes :
 
@@ -14340,7 +14393,49 @@ There are 2 fields, which are used by [[$:/plugins/wikilabs/link-to-tabs/styles]
 * show-single-link: {{!!show-single-link}}
 </pre>
 </div>
-<div caption="Contrôle H1...H5" controle="06" created="20180124041723053" modified="20180815002730262" tags="$:/TiddlyFrame $:/tags/ControlPanel/Template" title="$:/Polices-Alignements">
+<div caption="Read Me Contrôle H1..H5" created="20180417055119428" modified="20180824080327997" sub.num="08" tags="$:/Polices $:/documentation" title="$:/Polices">
+<pre>!{{!!caption}}
+
+&lt;div class=&quot;note&quot;&gt;
+[[Modifier l'assistant $:/polices|$:/polices]]
+&lt;/div&gt;
+
+
+&lt;div class=&quot;att&quot;&gt;
+&lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt;
+Le Tag &lt;&lt;tag $:/Polices&gt;&gt; comprend {{{[tag[$:/Polices]count[]]}}}  articles (Tiddlers)
+&lt;/div&gt;
+
+👉 Cet écran concerne le paramétrage des balises de titre H1 à H5 et de vos contenus. Vous y indiquerez les choix opérés en ce qui concerne la police la taille et la couleur.
+
+
+| Éléments | Description |h
+|$:/Polices|Documentation Read-Me Contrôles H1...H5|
+|$:/cssH1H5|CSS de paramétrage des polices|
+|$:/Polices-Alignements|Panneau de contrôle despolices|
+|$:/user/config|CSS Choix utilisateur|
+|$:/fonts/FontAwesome|{{$:/fonts/FontAwesome!!caption}}|
+|$:/fonts/leckerlioneregular|{{$:/fonts/leckerlioneregular!!caption}}|
+|$:/fonts/open_sansbold|{{$:/fonts/open_sansbold!!caption}}|
+|$:/fonts/open_sansextrabold|{{$:/fonts/open_sansextrabold!!caption}}|
+|$:/fonts/open_sanslight|{{$:/fonts/open_sanslight!!caption}}|
+|$:/fonts/open_sansregular|{{$:/fonts/open_sansregular!!caption}}|
+|$:/fonts/open_sanssemibold|{{$:/fonts/open_sanssemibold!!caption}}|
+|$:/fonts/titilliumregular|{{$:/fonts/titilliumregular!!caption}}|
+|$:/fonts/titilliumthin|{{$:/fonts/titilliumthin!!caption}}|
+
+
+;Voici le résultat de vos paramètresactuels :
+!Test H1
+!!Test H2
+!!!Test H3
+!!!!Test H4
+!!!!!Test H5
+
+
+</pre>
+</div>
+<div caption="Contrôle H1...H5" controle="06" created="20180124041723053" modified="20180824074927490" tags="$:/Polices $:/tags/ControlPanel/Template" title="$:/Polices-Alignements">
 <pre>&lt;$set name=&quot;currentTiddler&quot; value={{$:/fonts}}&gt;
 
 !{{$:/Polices-Alignements!!caption}}
@@ -14361,62 +14456,42 @@ There are 2 fields, which are used by [[$:/plugins/wikilabs/link-to-tabs/styles]
 
 </pre>
 </div>
-<div caption="Read Me Contrôle H1..H5" created="20180417055119428" modified="20180824021419188" sub.num="07" tags="$:/documentation" title="$:/polices-settings-help">
-<pre>!{{!!caption}}
-
-*Pour le CSS général voir $:/cssH1H5
-*Pour le CSS User Voir $:/user/config
-
-
-;Polices de caractères disponibles :
-
-&lt;div class=&quot;att&quot;&gt;
-&lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt;
-Le Tag &lt;&lt;tag $:/Fonts&gt;&gt; comprend {{{[tag[$:/Fonts]count[]]}}}  polices de caractères
-&lt;/div&gt;
-
-
-
-;Voici le résultat de vos paramètresactuels :
-!Test H1
-!!Test H2
-!!!Test H3
-!!!!Test H4
-!!!!!Test H5
-
-&lt;div class=&quot;att&quot;&gt;
-[[Modifier l'assistant $:/polices-settings-help|$:/polices-settings-help]]
-&lt;/div&gt;
-</pre>
-</div>
 <div created="20180709044802871" modified="20180709044812854" title="$:/settings/apperance/TiddlerWidthSettings" width_option="100%">
 <pre></pre>
 </div>
-<div caption="Read Me Contrôle SideBar" created="20180713094532667" modified="20180824021320089" sub.num="04" tags="$:/documentation" title="$:/SideBar">
+<div caption="Read Me Contrôle SideBar" created="20180713094532667" modified="20180824080342035" sub.num="05" tags="$:/SideBar $:/documentation" title="$:/SideBar">
 <pre>!{{!!caption}}
+
+&lt;div class=&quot;note&quot;&gt;
+Modifier cet assistant $:/SideBar
+&lt;/div&gt;
+
 
 &lt;div class=&quot;att&quot;&gt;
 &lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt; Sujet tagué &quot;&lt;&lt;tag $:/SideBar&gt;&gt;&quot; comprenant {{{[tag[$:/SideBar]count[]]}}}  articles (tiddlers)
 &lt;/div&gt;
 
 
+👉 Cet écran concerne le paramétrage de la barre latérale droite également appelée ~SideBar
 
 
 
-
-| Éléments | Description | Aide |h
-|[[$:/TemplateSideBar]]|Contrôle ~SideBar| [[💬|$:/TemplateSideBar]] |
-|$:/.tb/modules/startup/hide-sidebar.js|Module JS| [[💬|$:/doc-user-014]] |
-|$:/config/HideSidebarOnStartup|Cacher, Valeur attribuée| [[💬|$:/doc-user-014]] |
-|$:/plugins/TWaddle/tw-admin/icon|Icon emplacement libre de configuration| [[💬|$:/doc-user-025]] |
-|$:/plugins/TWaddle/tw-admin/button|Ouverture emplacement libre en popup| [[💬|$:/doc-user-025]] |
-|$:/plugins/TWaddle/tw-admin/content|Emplacement physique libre| [[💬|$:/doc-user-025]] |
-
-
-
-&lt;div class=&quot;note&quot;&gt;
-Modifier cet assistant $:/SideBar
-&lt;/div&gt;</pre>
+| Éléments | Description |h
+|$:/SideBar|Read-Me ~SideBar|
+|[[$:/TemplateSideBar]]|Panneau de contrôle Contrôle ~SideBar|
+|$:/.tb/modules/startup/hide-sidebar.js|Module JS|
+|$:/config/HideSidebarOnStartup|Cacher, Valeur attribuée|
+|$:/plugins/TWaddle/tw-admin/icon|Icon emplacement libre de configuration|
+|$:/plugins/TWaddle/tw-admin/button|Ouverture emplacement libre en popup|
+|$:/plugins/TWaddle/tw-admin/content|Emplacement physique libre|
+|$:/doc-user-013|Documentation &quot;{{$:/doc-user-013!!caption}}&quot;|
+|$:/doc-user-014|Documentation &quot;{{$:/doc-user-014!!caption}}&quot;|
+|$:/doc-user-015|Documentation &quot;{{$:/doc-user-015!!caption}}&quot;|
+|$:/doc-user-016|Documentation &quot;{{$:/doc-user-016!!caption}}&quot;|
+|$:/doc-user-021|Documentation &quot;{{$:/doc-user-021!!caption}}&quot;|
+|$:/doc-user-025|Documentation &quot;{{$:/doc-user-025!!caption}}&quot;|
+|$:/doc-user-026|Documentation &quot;{{$:/doc-user-026!!caption}}&quot;|
+</pre>
 </div>
 <div created="20180810085129989" modified="20180810234910410" title="$:/SiteSubtitle">
 <pre>Frame your website as you like !</pre>
@@ -14424,19 +14499,19 @@ Modifier cet assistant $:/SideBar
 <div created="20180810084920310" modified="20180810091304375" title="$:/SiteTitle">
 <pre>~TiddlyFrame</pre>
 </div>
-<div created="20180706030000501" modified="20180824040457853" sub.num="05.01.06" tags="$:/LeftBar" title="$:/state/LeftBar">
+<div created="20180706030000501" modified="20180824082346743" sub.num="05.01.06" tags="$:/LeftBar" title="$:/state/LeftBar">
 <pre>hide</pre>
 </div>
-<div created="20180814010556576" modified="20180814010600135" title="$:/state/navbar">
+<div created="20180814010556576" modified="20180824041851252" tags="$:/NavBar" title="$:/state/navbar">
 <pre>show</pre>
 </div>
 <div created="20180814013436498" modified="20180814014002640" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20180814005753984" modified="20180824040503376" title="$:/state/sidebar">
+<div created="20180814005753984" modified="20180824052551313" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20180814111315096" modified="20180824025717594" title="$:/state/tab--1498284803">
+<div created="20180814111315096" modified="20180824064245587" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20180814013433355" modified="20180814013433355" title="$:/state/tab--1963855381">
@@ -14445,20 +14520,26 @@ Modifier cet assistant $:/SideBar
 <div created="20180813081045228" modified="20180823055905973" title="$:/state/tab-1749438307">
 <pre>$:/Template</pre>
 </div>
-<div created="20180814022423911" modified="20180824030027713" title="$:/state/tab/moresidebar-401116514">
-<pre>$:/core/ui/MoreSideBar/System</pre>
+<div created="20180814022423911" modified="20180824074819331" title="$:/state/tab/moresidebar-401116514">
+<pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20180814022421935" modified="20180824030127792" title="$:/state/tab/sidebar--1835078512">
+<div created="20180814022421935" modified="20180824074849045" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/TableOfContents</pre>
 </div>
-<div created="20180814012946332" modified="20180824015042411" title="$:/state/tab1-146947848">
-<pre>$:/TemplateAdmin</pre>
+<div created="20180814012946332" modified="20180824080620769" title="$:/state/tab1-146947848">
+<pre>$:/TemplateSideBar</pre>
 </div>
 <div created="20180814010325439" modified="20180823055616942" title="$:/state/tab1-339259501">
 <pre>$:/TemplateAdmin</pre>
 </div>
 <div created="20180814090630660" modified="20180823104051966" title="$:/state/tab1-948663005">
 <pre>$:/TemplateTiddler</pre>
+</div>
+<div created="20180824070627962" modified="20180824073811239" title="$:/state/toc/$:/Detail-$:/Administrateur--2118262175">
+<pre>close</pre>
+</div>
+<div created="20180824071208316" modified="20180824071219053" title="$:/state/toc/$:/Menus-$:/Detail--2118262175">
+<pre>close</pre>
 </div>
 <div created="20180814024034354" modified="20180814024255370" title="$:/state/toc/Menu-$:/documentation-1340183292">
 <pre>close</pre>
@@ -14475,47 +14556,76 @@ Modifier cet assistant $:/SideBar
 <div created="20180814025444925" modified="20180814025444925" title="$:/state/toc/Menu-$:/Index Documentation-334395172">
 <pre>open</pre>
 </div>
-<div created="20180824005331746" modified="20180824013921009" title="$:/state/toc/TableOfContents-$:/documentation-334395172">
-<pre>open</pre>
-</div>
-<div created="20180824014628373" modified="20180824040455272" title="$:/state/toc/TableOfContents-$:/documentation-858706842">
+<div created="20180824064415986" modified="20180824064528141" title="$:/state/toc/TableOfContents-$:/documentation--296257833">
 <pre>close</pre>
 </div>
-<div created="20180824021023009" modified="20180824021024873" title="$:/state/toc/TableOfContents/$:/documentation-$:/Administration-334395172">
+<div created="20180824005331746" modified="20180824074850866" title="$:/state/toc/TableOfContents-$:/documentation-334395172">
+<pre>open</pre>
+</div>
+<div created="20180824014628373" modified="20180824074812082" title="$:/state/toc/TableOfContents-$:/documentation-858706842">
+<pre>close</pre>
+</div>
+<div created="20180824021023009" modified="20180824065221417" title="$:/state/toc/TableOfContents/$:/documentation-$:/Administration-334395172">
+<pre>close</pre>
+</div>
+<div created="20180824040856591" modified="20180824040858646" title="$:/state/toc/TableOfContents/$:/documentation-$:/Administration-858706842">
 <pre>close</pre>
 </div>
 <div created="20180824005357786" modified="20180824005359415" title="$:/state/toc/TableOfContents/$:/documentation-$:/Interface-334395172">
 <pre>close</pre>
 </div>
-<div created="20180824013106024" modified="20180824030613737" title="$:/state/toc/TableOfContents/$:/documentation-$:/LeftBar-334395172">
+<div created="20180824040901279" modified="20180824040902934" title="$:/state/toc/TableOfContents/$:/documentation-$:/Interface-858706842">
 <pre>close</pre>
 </div>
-<div created="20180824011142606" modified="20180824030242736" title="$:/state/toc/TableOfContents/$:/documentation-$:/NavBar-334395172">
+<div created="20180824013106024" modified="20180824044603374" title="$:/state/toc/TableOfContents/$:/documentation-$:/LeftBar-334395172">
 <pre>close</pre>
 </div>
-<div created="20180824010911386" modified="20180824015540944" title="$:/state/toc/TableOfContents/$:/documentation-$:/PanneauControle-334395172">
-<pre>open</pre>
-</div>
-<div created="20180824014125474" modified="20180824014213706" title="$:/state/toc/TableOfContents/$:/documentation-$:/SideBar-334395172">
+<div created="20180824074732550" modified="20180824074738835" title="$:/state/toc/TableOfContents/$:/documentation-$:/Menus-334395172">
 <pre>close</pre>
 </div>
-<div created="20180824014715957" modified="20180824014723132" title="$:/state/toc/TableOfContents/$:/documentation-$:/Surface-334395172">
+<div created="20180824011142606" modified="20180824042505993" title="$:/state/toc/TableOfContents/$:/documentation-$:/NavBar-334395172">
 <pre>close</pre>
 </div>
-<div list="TiddlyFrame" title="$:/StoryList">
+<div created="20180824010911386" modified="20180824082228322" title="$:/state/toc/TableOfContents/$:/documentation-$:/PanneauControle-334395172">
+<pre>close</pre>
+</div>
+<div created="20180824062107006" modified="20180824064148196" title="$:/state/toc/TableOfContents/$:/documentation-$:/Polices-334395172">
+<pre>close</pre>
+</div>
+<div created="20180824014125474" modified="20180824052537988" title="$:/state/toc/TableOfContents/$:/documentation-$:/SideBar-334395172">
+<pre>close</pre>
+</div>
+<div created="20180824014715957" modified="20180824070459091" title="$:/state/toc/TableOfContents/$:/documentation-$:/Surface-334395172">
+<pre>close</pre>
+</div>
+<div created="20180824070518672" modified="20180824070523984" title="$:/state/toc/TableOfContents/$:/documentation-$:/Tiddlers-334395172">
+<pre>close</pre>
+</div>
+<div list="" title="$:/StoryList">
 <pre></pre>
 </div>
-<div caption="Read Me Contrôle Surface occupée" created="20180417043744046" icone="&lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;" modified="20180824021427700" sub.num="08" tags="$:/documentation $:/Surface" title="$:/Surface">
+<div caption="Read Me Contrôle Surface occupée" created="20180417043744046" icone="&lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;" modified="20180824080253653" sub.num="09" tags="$:/documentation $:/Surface" title="$:/Surface">
 <pre>!Contrôle ocupation espace
-&lt;div class=&quot;att&quot;&gt;
+&lt;div class=&quot;note&quot;&gt;
 Pour modifier le contenu de ce Tiddler, voir  $:/Surface
 &lt;/div&gt;
 
 
-&lt;div class=&quot;tc-table-of-contents&quot;&gt;
-&lt;&lt;toc-expandable &quot;$:/Surface&quot; &quot;sort[sub.num]&quot;&gt;&gt;
+&lt;div class=&quot;att&quot;&gt;
+&lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt;
+Sujet tagué &quot;&lt;&lt;tag $:/Surface&gt;&gt;&quot; comprenant {{{[tag[$:/Surface]count[]]}}}  articles (tiddlers)
 &lt;/div&gt;
 
+
+| Éléments | Description |h
+|$:/Surface|Documentation Contrôle surface Read-me|
+|$:/TemplateWidth|Panneau de Contrôle Surface|
+|$:/600px-1.png|Documentation &quot;{{$:/600px-1.png!!caption}}&quot;|
+|$:/600px-2.png|Documentation &quot;{{$:/600px-2.png!!caption}}&quot;|
+|$:/600px-3.png|Documentation &quot;{{$:/600px-3.png!!caption}}&quot;|
+|$:/600px-4.png|Documentation &quot;{{$:/600px-4.png!!caption}}&quot;|
+|$:/width/css|CSS de paramétrage de la surface|
+|$:/width/css/user|Tiddler de stockage du choix de la surface|
 
 C'est ici un point de paramétrage important concernant la ''qualité visuelle'' de votre wiki.
 
@@ -14556,8 +14666,8 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 
 Ã vos réglages !</pre>
 </div>
-<div created="20180706030259776" modified="20180824025710315" title="$:/temp/advancedsearch">
-<pre>data</pre>
+<div created="20180706030259776" modified="20180824070955229" title="$:/temp/advancedsearch">
+<pre>$:/</pre>
 </div>
 <div created="20180814062450687" modified="20180814062458717" title="$:/temp/appear/$:/doc-user-001363622161/block//tiddler-slider">
 <pre></pre>
@@ -14667,13 +14777,13 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 <div created="20180729015820084" modified="20180823060159234" password="" tags="$:/User" title="$:/temp/profile" user-name="">
 <pre></pre>
 </div>
-<div created="20180706030257840" modified="20180824025710315" title="$:/temp/search">
+<div created="20180706030257840" modified="20180824070955230" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20180729023451942" modified="20180823060051199" title="$:/temp/verlauf">
 <pre></pre>
 </div>
-<div caption="Contrôles" controle="" created="20180524095302801" modified="20180824015853022" tags="$:/Template $:/TiddlyFrame $:/tags/ControlPanel" title="$:/Template">
+<div caption="Contrôles" controle="" created="20180524095302801" modified="20180824082108676" tags="$:/PanneauControle $:/tags/ControlPanel" title="$:/Template">
 <pre>\define lingo-base() $:/language/ControlPanel/Template
 
 &lt;&lt;lingo Hint&gt;&gt;
@@ -14700,7 +14810,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 <div created="20180718000257713" menu-title="" modified="20180718000310404" title="$:/template/StoreMenu">
 <pre></pre>
 </div>
-<div caption="Contrôle Admin." controle="09" created="20180812015317723" modified="20180815002917777" tags="$:/TiddlyFrame $:/Administration $:/tags/ControlPanel/Template" title="$:/TemplateAdmin">
+<div caption="Contrôle Admin." controle="09" created="20180812015317723" modified="20180824075117171" tags="$:/Administration $:/tags/ControlPanel/Template" title="$:/TemplateAdmin">
 <pre>!{{$:/TemplateAdmin!!caption}}
 
 | Description | Actions | Aide |h
@@ -14735,7 +14845,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 &lt;$button class=&quot;bttn-fill bttn-sm bttn-primary&quot; message=&quot;tm-open-window&quot; param=&quot;$:/Interface&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Documentation&lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="Contrôle LeftBar" controle="02" created="20180703033414160" modified="20180824010720729" tags="$:/TiddlyFrame $:/LeftBar $:/tags/ControlPanel/Template" title="$:/TemplateLeftBar">
+<div caption="Contrôle LeftBar" controle="02" created="20180703033414160" modified="20180824075132042" tags="$:/LeftBar $:/tags/ControlPanel/Template" title="$:/TemplateLeftBar">
 <pre>!{{$:/TemplateLeftBar!!caption}}
 
 
@@ -14757,7 +14867,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/LeftBar&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Documentation&lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="Contrôle Menu" controle="08" created="20180710070716057" modified="20180815002839744" tags="$:/TiddlyFrame $:/Menus $:/tags/ControlPanel/Template" title="$:/TemplateMenu">
+<div caption="Contrôle Menu" controle="08" created="20180710070716057" modified="20180824075146314" tags="$:/Menus $:/tags/ControlPanel/Template" title="$:/TemplateMenu">
 <pre>!{{$:/TemplateMenu!!caption}}
 
 &lt;$details summary=&quot;À propos du Plugin Widget Details&quot;&gt;
@@ -14779,7 +14889,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 &lt;$button class=&quot;bttn-fill bttn-sm bttn-primary&quot; message=&quot;tm-open-window&quot; param=&quot;$:/Menus&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Documentation&lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="Contrôle NavBar" created="20180124041832507" modified="20180824010731229" tags="$:/TiddlyFrame $:/NavBar $:/tags/ControlPanel/Template" title="$:/TemplateNavBar">
+<div caption="Contrôle NavBar" created="20180124041832507" modified="20180824075203066" tags="$:/NavBar $:/tags/ControlPanel/Template" title="$:/TemplateNavBar">
 <pre>!{{$:/TemplateNavBar!!caption}}
 
 {{$:/navbar/button}} &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-001&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;
@@ -14799,7 +14909,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/NavBar&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Documentation&lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="Contrôle ~SideBar" controle="03" created="20180124041424375" modified="20180824010854064" tags="$:/TiddlyFrame $:/SideBar $:/tags/ControlPanel/Template" title="$:/TemplateSideBar">
+<div caption="Contrôle ~SideBar" controle="03" created="20180124041424375" modified="20180824075217008" tags="$:/SideBar $:/tags/ControlPanel/Template" title="$:/TemplateSideBar">
 <pre>\define lingo-base() $:/language/ThemeTweaks/
 
 &lt;div class=&quot;tw-admin-content&quot;&gt;
@@ -14899,7 +15009,7 @@ body.tc-body .tw-admin-content svg {
 }
 &lt;/style&gt;</pre>
 </div>
-<div caption="Contrôle Surface" controle="07" created="20141207055904982" modified="20180815002806824" subtitle="Paramètres de surface" tags="$:/TiddlyFrame $:/Surface $:/tags/ControlPanel/Template" title="$:/TemplateWidth">
+<div caption="Contrôle Surface" controle="07" created="20141207055904982" modified="20180824075229330" subtitle="Paramètres de surface" tags="$:/Surface $:/tags/ControlPanel/Template" title="$:/TemplateWidth">
 <pre>!{{$:/TemplateWidth!!caption}}
 
 | Surface occupée | Surface de lecture |h
@@ -15149,10 +15259,10 @@ body .tc-tiddler-preview-preview {
     }
 }</pre>
 </div>
-<div created="20180706030000500" modified="20180824040457851" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
+<div created="20180706030000500" modified="20180824082346740" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
 <pre>0px</pre>
 </div>
-<div created="20180706030000501" modified="20180824040457851" title="$:/themes/tiddlywiki/vanilla/metrics/storyright">
+<div created="20180706030000501" modified="20180824082346742" title="$:/themes/tiddlywiki/vanilla/metrics/storyright">
 <pre>770px</pre>
 </div>
 <div created="20180706024915494" modified="20180802063908192" title="$:/themes/tiddlywiki/vanilla/metrics/storytop">
@@ -15164,8 +15274,12 @@ body .tc-tiddler-preview-preview {
 <div created="20180713112052866" modified="20180713112059427" title="$:/themes/tiddlywiki/vanilla/settings/backgroundimage">
 <pre></pre>
 </div>
-<div caption="Read Me Contrôle Tiddlers" created="20180810085538415" modified="20180824021409517" sub.num="06" tags="$:/documentation $:/Tiddlers" title="$:/Tiddlers">
+<div caption="Read Me Contrôle Tiddlers" created="20180810085538415" modified="20180824080332466" sub.num="07" tags="$:/documentation $:/Tiddlers" title="$:/Tiddlers">
 <pre>!{{!!caption}}
+
+&lt;div class=&quot;note&quot;&gt;
+[[Modifier cet assistant $:/Tiddlers|$:/Tiddlers]]
+&lt;/div&gt;
 
 &lt;div class=&quot;att&quot;&gt;
 &lt;i class=&quot;fa fa-desktop fa-lg&quot; aria-hidden=&quot;true&quot; style=&quot;color:#2C3E50&quot;&gt;&lt;/i&gt; Sujet tagué &quot;&lt;&lt;tag $:/Tiddlers&gt;&gt;&quot; comprenant {{{[tag[$:/Tiddlers]count[]]}}}  articles (tiddlers)
@@ -15174,18 +15288,18 @@ body .tc-tiddler-preview-preview {
 
 
 
-| Éléments | Description | Aide |h
-|$:/core/ui/Buttons/Menu|Bouton d'accès au Menu| [[💬|$:/doc-user-027]] |
-|$:/core/ui/ViewTemplate/blackline|Template du trait de séparation| [[💬|$:/doc-user-024]] |
+| Éléments | Description |h
+|$:/core/ui/Buttons/Menu|Bouton d'accès au Menu|
+|$:/core/ui/ViewTemplate/blackline|Template du trait de séparation|
 |$:/TemplateTiddler|Le panneau de contrôle Tiddlers|
 |$:/Tiddlers|Documentation Tiddlers Read-Me|
+|$:/doc-user-010|Documentation &quot;{{$:/doc-user-010!!caption}}&quot;|
+|$:/doc-user-024|Documentation &quot;{{$:/doc-user-024!!caption}}&quot;|
+|$:/doc-user-027|Documentation &quot;{{$:/doc-user-027!!caption}}&quot;|
 
-
-&lt;div class=&quot;note&quot;&gt;
-[[Modifier cet assistant $:/Tiddlers|$:/Tiddlers]]
-&lt;/div&gt;</pre>
+</pre>
 </div>
-<div color="#ffffff" created="20170927130601570" font-color="#000000" font-color-h1="#0080c0" font-color-h2="#ff8000" font-color-h3="#800080" font-color-kbd="#ff0000" font-color-titre="#000000" font-family-h1="open_sansextrabold" font-family-h2="open_sanssemibold" font-family-h3="open_sansbold" font-family-h4="open_sanslight" font-family-h5="open_sansregular" font-family-title="titilliumthin" font-size="14px" font-size-h1="27px" font-size-h2="25px" font-size-h3="20px" font-size-h4="15px" font-size-h5="10px" font-size-kbd="14px" font-size-title="3em" font-size-titre="30px" modified="20180810053655572" navbar-border="solid" navbar-bordercolor="#808080" navbar-borderheight="3px" navbar-color="#faeed7" navbar-hauteur="40px" navbar-height="20px" navbar-menuspace="80px" show-sidebar="yes" site-subtitle="yes" site-title="yes" site-title-foreground="#ff8080" text-align="left" title="$:/user/config">
+<div color="#ffffff" created="20170927130601570" font-color="#000000" font-color-h1="#0080c0" font-color-h2="#ff8000" font-color-h3="#800080" font-color-kbd="#ff0000" font-color-titre="#000000" font-family-h1="open_sansextrabold" font-family-h2="open_sanssemibold" font-family-h3="open_sansbold" font-family-h4="open_sanslight" font-family-h5="open_sansregular" font-family-title="titilliumthin" font-size="14px" font-size-h1="27px" font-size-h2="25px" font-size-h3="20px" font-size-h4="15px" font-size-h5="10px" font-size-kbd="14px" font-size-title="3em" font-size-titre="30px" modified="20180824061307739" navbar-border="solid" navbar-bordercolor="#808080" navbar-borderheight="3px" navbar-color="#faeed7" navbar-hauteur="40px" navbar-height="20px" navbar-menuspace="80px" show-sidebar="yes" site-subtitle="yes" site-title="yes" site-title-foreground="#ff8080" tags="$:/Polices" text-align="left" title="$:/user/config">
 <pre>!!!Configuration des polices
 
 
@@ -15260,7 +15374,7 @@ body.tc-body .tc-tiddler-frame .tc-tiddler-body ul, body.tc-body .tc-tiddler-fra
 &lt;/$button&gt;
 &lt;/div&gt;</pre>
 </div>
-<div caption="TiddlyFrame" created="20180811050029839" modified="20180823050047634" tags="$:/TiddlyFrame" title="TiddlyFrame">
+<div caption="TiddlyFrame" created="20180811050029839" modified="20180824075017425" title="TiddlyFrame">
 <pre>&lt;div align=&quot;center&quot;&gt;
 
 !Frame your website as you like !
