@@ -377,8 +377,6 @@ Error message and password prompt
 
 <li>$:/LeftBarContent</li>
 
-<li>$:/LeftBarMenu</li>
-
 <li>$:/Menus</li>
 
 <li>$:/myTempState</li>
@@ -394,8 +392,6 @@ Error message and password prompt
 <li>$:/navbar/menu</li>
 
 <li>$:/NavBarContent</li>
-
-<li>$:/NavBarContenu</li>
 
 <li>$:/NavBarDev</li>
 
@@ -666,8 +662,8 @@ exports.startup = function() {
 
 })();</pre>
 </div>
-<div caption="À Propos de ce Wiki" created="20180713033525768" modified="20180824115159092" sub.num="01.01" tags="$:/Introduction" title="$:/À Propos de ce Wiki">
-<pre>''~TiddlyFrame'' fournis les outils nécessaires à l'obtention d'un cadre visuel général dépassant la seule barre de menu de drite (~SideBar} disponible sur la version standard de Tiddlywiki.
+<div caption="À Propos de ce Wiki" created="20180713033525768" modified="20180824115920969" sub.num="01.01" tags="$:/Introduction" title="$:/À Propos de ce Wiki">
+<pre>''~TiddlyFrame'' fournis les outils nécessaires à l'obtention d'un cadre visuel général dépassant la seule barre de menu de droite (~SideBar} disponible sur la version standard de Tiddlywiki.
 
 &lt;$details summary=&quot;Plus de détails&quot;&gt;
 
@@ -13487,7 +13483,7 @@ src: url(data:application/font-woff;base64,d09GRgABAAAAAX7oAA0AAAAChqwABAAHAAAAA
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/plugins/tobibeer/appear]]</pre>
+# [[$:/NavBarContenu]]</pre>
 </div>
 <div created="20170910022838162" data="Yes" modified="20180812064958316" title="$:/Importer ce TiddlyWiki">
 <pre>En copiant le code suivant dans le wiki que vous voulez télécharger (et dans le cas ou ce bouton de téléchargement n'est pas déjà proposé)
@@ -13688,10 +13684,7 @@ En standard, les barres latérales sont couvertes par la Story River, c'est à d
 
 &lt;$button class=&quot;bttn-fill bttn-sm bttn-primary&quot; message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-038&quot; tooltip=&quot;Plus d'informations&quot; aria-label=&quot;Help&quot;&gt;Assistance&lt;/$button&gt;</pre>
 </div>
-<div created="20180809001547781" modified="20180809001735625" tags="$:/LeftBarMenu" title="$:/LeftBarMenu">
-<pre>Gestion d'un menu dans la LeftBar</pre>
-</div>
-<div caption="Read Me Contrôle Menus" created="20180710070716057" modified="20180824103124380" sub.num="10" tags="$:/documentation $:/Menus" title="$:/Menus">
+<div caption="Read Me Contrôle Menus" created="20180710070716057" modified="20180826030720726" sub.num="10" tags="$:/documentation $:/Menus" title="$:/Menus">
 <pre>!{{!!caption}}
 
 &lt;div class=&quot;note&quot;&gt;
@@ -13706,7 +13699,7 @@ Modifier cet assistant $:/Menus
 | Éléments | Description |h
 |$:/Menus|Documentation Menu Read-Me|
 |$:/TemplateMenu|Panneau de contrôle Menu|
-|$:/ldoc-user-038|Documentation &quot;{{$:/doc-user-038!!caption}}&quot;|
+|$:/doc-user-038|Documentation &quot;{{$:/doc-user-038!!caption}}&quot;|
 |$:/doc-user-017|Documentation &quot;{{$:/doc-user-017!!caption}}&quot;|
 |$:/doc-user-019|Documentation &quot;{{$:/doc-user-019!!caption}}&quot;|
 |$:/doc-user-020|Documentation &quot;{{$:/doc-user-020!!caption}}&quot;|
@@ -13807,7 +13800,7 @@ Le principe de placement d'un menu personnalisé est donc le suivant:
 <div created="20180708101142986" modified="20180715122630421" title="$:/myTempState">
 <pre></pre>
 </div>
-<div caption="Read Me Contrôle ~NavBar" created="20180702035239287" modified="20180824080602300" sub.num="03" tags="$:/documentation $:/NavBar" title="$:/NavBar">
+<div caption="Read Me Contrôle ~NavBar" created="20180702035239287" modified="20180825104941312" sub.num="03" tags="$:/documentation $:/NavBar" title="$:/NavBar">
 <pre>!{{!!caption}}
 
 &lt;div class=&quot;note&quot;&gt;
@@ -13837,6 +13830,24 @@ Le principe de placement d'un menu personnalisé est donc le suivant:
 |$:/doc-user-003|Documentation &quot;{{$:/doc-user-003!!caption}}&quot;|
 |$:/doc-user-004|Documentation &quot;{{$:/doc-user-004!!caption}}&quot;|
 |$:/doc-user-005|Documentation &quot;{{$:/doc-user-005!!caption}}&quot;|
+
+
+Pour que la navbar soit crée ET visible il faut trois éléments:
+
+#un Tiddler CSS de configuration générale qui doit être tagué `$:/tags/Stylesheet` et que je nomme $:/navbar/css
+#Un tiddler de configuration pour l'utilisateur qui n'a pas besoin de tag et dont le contenu sera intégré par transclusion au tiddler de configuration générale et que je nomme $:/navbar/css/user
+#Un tiddler qui contiendra le contenu de la barre de navigation et qui doit être tagué `$:/tags/TopLeftBar` Si la barre de navigation ne contient aucune données elle existe mais demeure invisible et que je nomme $:/NavBarMenu
+
+Plus les tiddlers pour afficher ou cacher la barre de navigation :
+
+*$:/navbar/button
+*$:/state/navbar
+
+
+Plus les éléments du générateur de template: 
+
+*$:/TemplateNavBar
+
 </pre>
 </div>
 <div created="20170916125228483" description="Ne pas laisser d'espace entre les lignes de code." modified="20180729054339913" sub.num="06.04" tags="$:/NavBar" title="$:/navbar/button">
@@ -13887,7 +13898,7 @@ border-bottom: {{$:/navbar/css/user!!navbar-borderheight}} {{$:/navbar/css/user!
 
 </pre>
 </div>
-<div background-color="#f5f5f5" created="20170927130601570" font-color="#000000" font-size="14px" modified="20180814014025105" navbar-border="solid" navbar-bordercolor="#808080" navbar-borderheight="3px" navbar-color="" navbar-hauteur="40px" navbar-menuspace="80px" sub.num="05.02.08" tags="$:/NavBar" text-align="left" title="$:/navbar/css/user">
+<div background-color="#f5f5f5" created="20170927130601570" font-color="#000000" font-size="14px" modified="20180824120315345" navbar-border="solid" navbar-bordercolor="#808080" navbar-borderheight="3px" navbar-color="" navbar-hauteur="40px" navbar-menuspace="80px" sub.num="05.02.08" tags="$:/NavBar" text-align="left" title="$:/navbar/css/user">
 <pre>Alignement du texte: {{!!text-align}}
 
 !!!Configuration de la barre de navigation
@@ -13911,9 +13922,6 @@ Espace entre les menus: {{!!navbar-menuspace}}
 <div caption="$:/NavBarMenu" created="20180726064842984" list="" modified="20180824083612065" tags="$:/NavBarMenu $:/Detail $:/tags/TopLeftBar" title="$:/NavBarContent">
 <pre>&lt;div class='btn'&gt;&lt;$list filter=&quot;[has[rank]] +[sort[rank]]&quot;&gt;&lt;nav&gt;&lt;ul&gt;&lt;li&gt;{{!!text}}&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;&lt;/$list&gt;&lt;/div&gt;
 </pre>
-</div>
-<div created="20180808094725871" modified="20180808094727067" tags="" title="$:/NavBarContenu">
-<pre></pre>
 </div>
 <div created="20180802065318792" modified="20180809081927079" tags="" title="$:/NavBarDev">
 <pre>!Contrôle ~NavBar : Informations développeurs
@@ -14501,20 +14509,20 @@ Modifier cet assistant $:/SideBar
 <div created="20180810084920310" modified="20180810091304375" title="$:/SiteTitle">
 <pre>~TiddlyFrame</pre>
 </div>
-<div created="20180706030000501" modified="20180824115416217" sub.num="05.01.06" tags="$:/LeftBar" title="$:/state/LeftBar">
+<div created="20180706030000501" modified="20180826043455945" sub.num="05.01.06" tags="$:/LeftBar" title="$:/state/LeftBar">
 <pre>hide</pre>
 </div>
-<div created="20180814010556576" modified="20180824041851252" tags="$:/NavBar" title="$:/state/navbar">
+<div caption="Indicateur de position de la NavBar" created="20180814010556576" modified="20180825101810552" tags="$:/NavBar" title="$:/state/navbar">
 <pre>show</pre>
 </div>
 <div created="20180814013436498" modified="20180814014002640" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20180814005753984" modified="20180824114224695" title="$:/state/sidebar">
+<div created="20180814005753984" modified="20180826015032706" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20180814111315096" modified="20180824064245587" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/System</pre>
+<div created="20180814111315096" modified="20180826040638781" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Filter</pre>
 </div>
 <div created="20180814013433355" modified="20180814013433355" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Palette</pre>
@@ -14525,17 +14533,17 @@ Modifier cet assistant $:/SideBar
 <div created="20180814022423911" modified="20180824092647754" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20180814022421935" modified="20180824105422862" title="$:/state/tab/sidebar--1835078512">
+<div created="20180814022421935" modified="20180826043501360" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/TableOfContents</pre>
 </div>
-<div created="20180814012946332" modified="20180824104051381" title="$:/state/tab1-146947848">
-<pre>$:/TemplateSideBar</pre>
+<div created="20180814012946332" modified="20180825103204239" title="$:/state/tab1-146947848">
+<pre>$:/TemplateNavBar</pre>
 </div>
-<div created="20180814010325439" modified="20180823055616942" title="$:/state/tab1-339259501">
-<pre>$:/TemplateAdmin</pre>
+<div created="20180814010325439" modified="20180824120232861" title="$:/state/tab1-339259501">
+<pre>$:/TemplateNavBar</pre>
 </div>
-<div created="20180814090630660" modified="20180823104051966" title="$:/state/tab1-948663005">
-<pre>$:/TemplateTiddler</pre>
+<div created="20180814090630660" modified="20180824120045078" title="$:/state/tab1-948663005">
+<pre>$:/TemplateNavBar</pre>
 </div>
 <div created="20180824070627962" modified="20180824073811239" title="$:/state/toc/$:/Detail-$:/Administrateur--2118262175">
 <pre>close</pre>
@@ -14561,46 +14569,46 @@ Modifier cet assistant $:/SideBar
 <div created="20180824064415986" modified="20180824103847846" title="$:/state/toc/TableOfContents-$:/documentation--296257833">
 <pre>close</pre>
 </div>
-<div created="20180824005331746" modified="20180824115413929" title="$:/state/toc/TableOfContents-$:/documentation-334395172">
+<div created="20180824005331746" modified="20180826043459128" title="$:/state/toc/TableOfContents-$:/documentation-334395172">
 <pre>close</pre>
 </div>
 <div created="20180824014628373" modified="20180824115335337" title="$:/state/toc/TableOfContents-$:/documentation-858706842">
 <pre>close</pre>
 </div>
-<div created="20180824021023009" modified="20180824065221417" title="$:/state/toc/TableOfContents/$:/documentation-$:/Administration-334395172">
+<div created="20180824021023009" modified="20180826041137947" title="$:/state/toc/TableOfContents/$:/documentation-$:/Administration-334395172">
 <pre>close</pre>
 </div>
 <div created="20180824040856591" modified="20180824040858646" title="$:/state/toc/TableOfContents/$:/documentation-$:/Administration-858706842">
 <pre>close</pre>
 </div>
-<div created="20180824005357786" modified="20180824005359415" title="$:/state/toc/TableOfContents/$:/documentation-$:/Interface-334395172">
+<div created="20180824005357786" modified="20180826021644332" title="$:/state/toc/TableOfContents/$:/documentation-$:/Interface-334395172">
 <pre>close</pre>
 </div>
 <div created="20180824040901279" modified="20180824040902934" title="$:/state/toc/TableOfContents/$:/documentation-$:/Interface-858706842">
 <pre>close</pre>
 </div>
-<div created="20180824013106024" modified="20180824044603374" title="$:/state/toc/TableOfContents/$:/documentation-$:/LeftBar-334395172">
+<div created="20180824013106024" modified="20180826015044321" title="$:/state/toc/TableOfContents/$:/documentation-$:/LeftBar-334395172">
 <pre>close</pre>
 </div>
-<div created="20180824074732550" modified="20180824074738835" title="$:/state/toc/TableOfContents/$:/documentation-$:/Menus-334395172">
+<div created="20180824074732550" modified="20180826040731438" title="$:/state/toc/TableOfContents/$:/documentation-$:/Menus-334395172">
 <pre>close</pre>
 </div>
-<div created="20180824011142606" modified="20180824092641129" title="$:/state/toc/TableOfContents/$:/documentation-$:/NavBar-334395172">
+<div created="20180824011142606" modified="20180825105923437" title="$:/state/toc/TableOfContents/$:/documentation-$:/NavBar-334395172">
 <pre>close</pre>
 </div>
-<div created="20180824010911386" modified="20180824092613738" title="$:/state/toc/TableOfContents/$:/documentation-$:/PanneauControle-334395172">
+<div created="20180824010911386" modified="20180825092245345" title="$:/state/toc/TableOfContents/$:/documentation-$:/PanneauControle-334395172">
 <pre>close</pre>
 </div>
 <div created="20180824062107006" modified="20180824064148196" title="$:/state/toc/TableOfContents/$:/documentation-$:/Polices-334395172">
 <pre>close</pre>
 </div>
-<div created="20180824014125474" modified="20180824052537988" title="$:/state/toc/TableOfContents/$:/documentation-$:/SideBar-334395172">
+<div created="20180824014125474" modified="20180826020817972" title="$:/state/toc/TableOfContents/$:/documentation-$:/SideBar-334395172">
 <pre>close</pre>
 </div>
 <div created="20180824014715957" modified="20180824070459091" title="$:/state/toc/TableOfContents/$:/documentation-$:/Surface-334395172">
 <pre>close</pre>
 </div>
-<div created="20180824070518672" modified="20180824070523984" title="$:/state/toc/TableOfContents/$:/documentation-$:/Tiddlers-334395172">
+<div created="20180824070518672" modified="20180826022602866" title="$:/state/toc/TableOfContents/$:/documentation-$:/Tiddlers-334395172">
 <pre>close</pre>
 </div>
 <div list="" title="$:/StoryList">
@@ -14668,8 +14676,8 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 
 Ã vos réglages !</pre>
 </div>
-<div created="20180706030259776" modified="20180824114304159" title="$:/temp/advancedsearch">
-<pre>$:/Intro</pre>
+<div created="20180706030259776" modified="20180826040634102" title="$:/temp/advancedsearch">
+<pre>$:/Peuplement</pre>
 </div>
 <div created="20180814062450687" modified="20180814062458717" title="$:/temp/appear/$:/doc-user-001363622161/block//tiddler-slider">
 <pre></pre>
@@ -14779,7 +14787,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 <div created="20180729015820084" modified="20180824083612066" password="" tags="$:/User" title="$:/temp/profile" user-name="">
 <pre></pre>
 </div>
-<div created="20180706030257840" modified="20180824114304160" title="$:/temp/search">
+<div created="20180706030257840" modified="20180826040634102" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20180729023451942" modified="20180824083453686" title="$:/temp/verlauf">
@@ -15261,10 +15269,10 @@ body .tc-tiddler-preview-preview {
     }
 }</pre>
 </div>
-<div created="20180706030000500" modified="20180824115416217" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
+<div created="20180706030000500" modified="20180826043455941" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft">
 <pre>0px</pre>
 </div>
-<div created="20180706030000501" modified="20180824115416217" title="$:/themes/tiddlywiki/vanilla/metrics/storyright">
+<div created="20180706030000501" modified="20180826043455943" title="$:/themes/tiddlywiki/vanilla/metrics/storyright">
 <pre>770px</pre>
 </div>
 <div created="20180706024915494" modified="20180802063908192" title="$:/themes/tiddlywiki/vanilla/metrics/storytop">
