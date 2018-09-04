@@ -243,6 +243,8 @@ Error message and password prompt
 
 <li>$:/cssAtt</li>
 
+<li>$:/cssEditeur</li>
+
 <li>$:/cssFlexCenter</li>
 
 <li>$:/cssFooter</li>
@@ -252,8 +254,6 @@ Error message and password prompt
 <li>$:/cssNavBarMenu</li>
 
 <li>$:/cssTableaux</li>
-
-<li>$:/cssTextArea</li>
 
 <li>$:/Déconnexion</li>
 
@@ -10008,6 +10008,15 @@ background: #ffff99;
 border-radius: 15px;
 border: 1px solid #ccc; }</pre>
 </div>
+<div background-color="#faeed7" background-color-textarea="#faeed7" created="20180904001828680" font-family="Calibri" font-size="17px" line-height="1.5em" modified="20180904024242920" tags="$:/tags/Stylesheet" text-color="#400040" title="$:/cssEditeur">
+<pre>&lt;!-- Le CSS &quot;.tc-tiddler-edit-frame textarea&quot; fonctionne mais uniquement pour la famille de police, sa taille et sa couleur--&gt;
+
+/*couleur de fond destextArea : barre de recherche (visu et édition), Champs en mode édition */
+textarea, input[type=text], input[type=search], input[type=&quot;&quot;], input:not([type]) { color: #000; background: {{!!background-color-textarea}}; }
+
+/*Éditeur couleur de fond, police, taille, bordures*/
+.tc-tiddler-frame textarea.tc-edit-texteditor, .tc-tiddler-frame iframe.tc-edit-texteditor { border: 0px solid #ccc; background-color: {{!!background-color}}; line-height: {{!!line-height}}; font-family: {{!!font-family}}; color: {{!!text-color}}; font-size: {{!!font-size}}; }</pre>
+</div>
 <div created="20180720031642481" modified="20180730011138725" tags="$:/tags/Stylesheet" title="$:/cssFlexCenter">
 <pre>.container {
   max-width: 800px;
@@ -10137,13 +10146,6 @@ table th {background-color:#333333;color:#f6f6f6;font-weight:900;padding: 5px 5p
 tr:nth-child(even) td {background-color:#f6f6f6;padding: 8px 5px}
 
 tr:nth-child(odd) td {background-color:#e9e9e9;padding: 8px 5px}</pre>
-</div>
-<div created="20180902111935515" font-family="Verdana" font-size="15px" modified="20180903035051697" tags="$:/tags/Stylesheet" text-color="#004080" title="$:/cssTextArea">
-<pre>.tc-tiddler-edit-frame textarea {
-font-size: {{!!font-size}};
-font-family: {{!!font-family}};
-color: {{!!text-color}};
-}</pre>
 </div>
 <div created="20180201065245108" description="Pour modifier ce Tiddler, voir $:/admin" list="" modified="20180812022722429" tags="$:/Login $:/tags/AdminConfig" title="$:/Déconnexion">
 <pre>&lt;div style=&quot;text-align:center&quot;&gt;
@@ -14523,7 +14525,7 @@ Modifier cet assistant $:/SideBar
 <div created="20180814013436498" modified="20180814014002640" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20180814005753984" modified="20180903040439487" title="$:/state/sidebar">
+<div created="20180814005753984" modified="20180904001045340" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20180814111315096" modified="20180827015808754" title="$:/state/tab--1498284803">
@@ -14550,7 +14552,7 @@ Modifier cet assistant $:/SideBar
 <div created="20180827042626618" modified="20180827042626618" title="$:/state/tab1--1973765384">
 <pre>$:/TemplateNavBar</pre>
 </div>
-<div created="20180814012946332" modified="20180903041049468" title="$:/state/tab1-146947848">
+<div created="20180814012946332" modified="20180904023623805" title="$:/state/tab1-146947848">
 <pre>$:/TemplateTiddler</pre>
 </div>
 <div created="20180827020954885" modified="20180827020956253" title="$:/state/tab1-1951699172">
@@ -14696,8 +14698,8 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 
 Ã vos réglages !</pre>
 </div>
-<div created="20180706030259776" modified="20180827043201798" title="$:/temp/advancedsearch">
-<pre>$:/Menus</pre>
+<div created="20180706030259776" modified="20180904014024095" title="$:/temp/advancedsearch">
+<pre>$:/cssTextArea</pre>
 </div>
 <div created="20180814062450687" modified="20180814062458717" title="$:/temp/appear/$:/doc-user-001363622161/block//tiddler-slider">
 <pre></pre>
@@ -14810,7 +14812,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 <div created="20180729015820084" modified="20180903040259143" password="" tags="$:/User" title="$:/temp/profile" user-name="">
 <pre></pre>
 </div>
-<div created="20180706030257840" modified="20180827043201799" title="$:/temp/search">
+<div created="20180706030257840" modified="20180904023902620" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20180729023451942" modified="20180824083453686" title="$:/temp/verlauf">
@@ -14999,7 +15001,7 @@ body.tc-body .tw-admin-content svg {
 }
 &lt;/style&gt;</pre>
 </div>
-<div caption="Contrôle Tiddlers" controle="05" created="20180319024141158" description="Actions et choix concernant les tiddlers" modified="20180903030015074" sub.num="24" tags="$:/Tiddlers $:/tags/ControlPanel/Template" tiddler-title="none" title="$:/TemplateTiddler">
+<div caption="Contrôle Tiddlers" controle="05" created="20180319024141158" description="Actions et choix concernant les tiddlers" modified="20180904024204015" sub.num="24" tags="$:/Tiddlers $:/tags/ControlPanel/Template" tiddler-title="none" title="$:/TemplateTiddler">
 <pre>&lt;div class=&quot;tw-admin-content&quot;&gt;
 
 
@@ -15020,12 +15022,12 @@ body.tc-body .tw-admin-content svg {
 
 
 !!Tiddlers en mode édition
-|Taille police|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/cssTextArea' field='font-size'/&gt;|
-|Nom de la police|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/cssTextArea' field='font-family'/&gt;|
-|Couleur de la police|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/cssTextArea' field='text-color' type='color'/&gt;|
-
-
-
+|Taille police|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/cssEditeur' field='font-size'/&gt;|
+|Nom de la police|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/cssEditeur' field='font-family'/&gt;|
+|Couleur de la police|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/cssEditeur' field='text-color' type='color'/&gt;|
+|Couleur de fond éditeur|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/cssEditeur' field='background-color' type='color'/&gt;|
+|Espacement des lignes|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/cssEditeur' field='line-height'/&gt;|
+|Couleur de fond search/champs|&lt;$edit-text class='tc-edit-texteditor' tiddler='$:/cssEditeur' field='background-color-textarea' type='color'/&gt;|
 
 &lt;/div&gt;
 
