@@ -199,6 +199,8 @@ Error message and password prompt
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/plugins/danielo/encryptTiddler/crypt-button</li>
 
+<li>$:/config/Whitespace/Spacious</li>
+
 <li>$:/Contrôles</li>
 
 <li>$:/core</li>
@@ -242,6 +244,8 @@ Error message and password prompt
 <li>$:/css/NoteAstuceAttentionInfo</li>
 
 <li>$:/cssAtt</li>
+
+<li>$:/cssButtonsOnHover</li>
 
 <li>$:/cssEditeur</li>
 
@@ -338,6 +342,8 @@ Error message and password prompt
 <li>$:/doc-user-037</li>
 
 <li>$:/doc-user-038</li>
+
+<li>$:/doc-user-039</li>
 
 <li>$:/documentation</li>
 
@@ -478,6 +484,8 @@ Error message and password prompt
 <li>$:/state/tab1-339259501</li>
 
 <li>$:/state/tab1-948663005</li>
+
+<li>$:/state/tabs/controlpanel/toolbars-1345989671</li>
 
 <li>$:/state/toc/$:/Detail-$:/Administrateur--2118262175</li>
 
@@ -1202,6 +1210,9 @@ body.tc-body .tc-site-subtitle { display: {{!!site-subtitle}}; } </pre>
 </div>
 <div created="20180729023124670" modified="20180903040259139" title="$:/config/ViewToolbarButtons/Visibility/$:/plugins/danielo/encryptTiddler/crypt-button">
 <pre>show</pre>
+</div>
+<div created="20180904075925972" modified="20180904080512018" title="$:/config/Whitespace/Spacious">
+<pre>no</pre>
 </div>
 <div caption="&lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;  Contrôles des paramètres" created="20180711082933183" modified="20180811001423985" sub.num="C02-S01" tags="$:/Paramétrages" title="$:/Contrôles">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
@@ -10008,6 +10019,34 @@ background: #ffff99;
 border-radius: 15px;
 border: 1px solid #ccc; }</pre>
 </div>
+<div created="20180904073707983" creator="JD" modified="20180904074601623" modifier="jd" tags="$:/tags/Stylesheet" title="$:/cssButtonsOnHover">
+<pre>\define wsconfig(name) $:/config/Whitespace/$name$
+
+
+.jd-sidebar-column-header &gt; .tc-btn-invisible {
+    color: &lt;&lt;colour foreground&gt;&gt;;
+    margin-top: -3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+&lt;$reveal state=&lt;&lt;wsconfig Spacious&gt;&gt; type=&quot;match&quot; text=&quot;yes&quot; default=&quot;yes&quot;&gt;
+.tc-tiddler-view-frame .tc-tiddler-controls svg {
+    opacity: 0; 
+    &lt;&lt;transition &quot;opacity 150ms ease-in-out&quot;&gt;&gt;
+}
+
+.tc-tiddler-view-frame .tc-tiddler-controls:hover svg { opacity: 1; }
+&lt;/$reveal&gt;
+
+
+
+
+
+
+</pre>
+</div>
 <div background-color="#faeed7" background-color-textarea="#faeed7" created="20180904001828680" font-family="Calibri" font-size="17px" line-height="1.5em" modified="20180904024242920" tags="$:/tags/Stylesheet" text-color="#400040" title="$:/cssEditeur">
 <pre>&lt;!-- Le CSS &quot;.tc-tiddler-edit-frame textarea&quot; fonctionne mais uniquement pour la famille de police, sa taille et sa couleur--&gt;
 
@@ -10996,6 +11035,21 @@ Le bouton &quot;[[Nouveau Menu|$:/ButtonNewMenu]]&quot; vous permet :
 
 
 
+</pre>
+</div>
+<div caption="Afficher les boutons au survol de la souris" created="20180904080520668" modified="20180904081419765" sub.num="" tags="$:/Tiddlers" title="$:/doc-user-039">
+<pre>!{{!!caption}}
+&lt;div class=&quot;att&quot;&gt;
+[[Modifier l'assistant $:/doc-user-039|$:/doc-user-039]]
+&lt;/div&gt;
+
+
+👉 Les boutons de contrôle Tiddlers (Edit toolbar) peuvent soit rester visibles en permanence (case décochée) ou bien visibles au passage de la souris (case cochée)
+
+&lt;div class=&quot;note&quot;&gt;
+
+Noter que même si ces boutons ne sont pas visibles, ils ne libèrent pas pour autant d'espace supplémentaire destiné au titre du tiddler.
+&lt;/div&gt;
 </pre>
 </div>
 <div caption="Documentation" created="20180707021031182" list-after="$:/core/ui/MoreSideBar/All" modified="20180824114242194" sub.num="01" tags="TableOfContents" title="$:/documentation">
@@ -13506,7 +13560,6 @@ src: url(data:application/font-woff;base64,d09GRgABAAAAAX7oAA0AAAAChqwABAAHAAAAA
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/cssTextArea]]
 # [[$:/TemplateTiddler]]</pre>
 </div>
 <div created="20170910022838162" data="Yes" modified="20180812064958316" title="$:/Importer ce TiddlyWiki">
@@ -14525,22 +14578,22 @@ Modifier cet assistant $:/SideBar
 <div created="20180814013436498" modified="20180814014002640" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20180814005753984" modified="20180904001045340" title="$:/state/sidebar">
+<div created="20180814005753984" modified="20180904081846652" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20180814111315096" modified="20180827015808754" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
-<div created="20180814013433355" modified="20180814013433355" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Palette</pre>
+<div created="20180814013433355" modified="20180904080806487" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
-<div created="20180813081045228" modified="20180827015527324" title="$:/state/tab-1749438307">
-<pre>$:/Template</pre>
+<div created="20180813081045228" modified="20180904080803279" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div created="20180814022423911" modified="20180824092647754" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20180814022421935" modified="20180827043251678" title="$:/state/tab/sidebar--1835078512">
+<div created="20180814022421935" modified="20180904081852793" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20180827015951658" modified="20180827020816989" title="$:/state/tab1--1329476371">
@@ -14563,6 +14616,9 @@ Modifier cet assistant $:/SideBar
 </div>
 <div created="20180814090630660" modified="20180824120045078" title="$:/state/tab1-948663005">
 <pre>$:/TemplateNavBar</pre>
+</div>
+<div created="20180904080809550" modified="20180904080820727" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
 </div>
 <div created="20180824070627962" modified="20180824073811239" title="$:/state/toc/$:/Detail-$:/Administrateur--2118262175">
 <pre>close</pre>
@@ -14591,8 +14647,8 @@ Modifier cet assistant $:/SideBar
 <div created="20180824064415986" modified="20180824103847846" title="$:/state/toc/TableOfContents-$:/documentation--296257833">
 <pre>close</pre>
 </div>
-<div created="20180824005331746" modified="20180827020857784" title="$:/state/toc/TableOfContents-$:/documentation-334395172">
-<pre>close</pre>
+<div created="20180824005331746" modified="20180904080614899" title="$:/state/toc/TableOfContents-$:/documentation-334395172">
+<pre>open</pre>
 </div>
 <div created="20180824014628373" modified="20180824115335337" title="$:/state/toc/TableOfContents-$:/documentation-858706842">
 <pre>close</pre>
@@ -14618,7 +14674,7 @@ Modifier cet assistant $:/SideBar
 <div created="20180824011142606" modified="20180825105923437" title="$:/state/toc/TableOfContents/$:/documentation-$:/NavBar-334395172">
 <pre>close</pre>
 </div>
-<div created="20180824010911386" modified="20180825092245345" title="$:/state/toc/TableOfContents/$:/documentation-$:/PanneauControle-334395172">
+<div created="20180824010911386" modified="20180904080632815" title="$:/state/toc/TableOfContents/$:/documentation-$:/PanneauControle-334395172">
 <pre>close</pre>
 </div>
 <div created="20180824062107006" modified="20180824064148196" title="$:/state/toc/TableOfContents/$:/documentation-$:/Polices-334395172">
@@ -14630,7 +14686,7 @@ Modifier cet assistant $:/SideBar
 <div created="20180824014715957" modified="20180824070459091" title="$:/state/toc/TableOfContents/$:/documentation-$:/Surface-334395172">
 <pre>close</pre>
 </div>
-<div created="20180824070518672" modified="20180826022602866" title="$:/state/toc/TableOfContents/$:/documentation-$:/Tiddlers-334395172">
+<div created="20180824070518672" modified="20180904081850074" title="$:/state/toc/TableOfContents/$:/documentation-$:/Tiddlers-334395172">
 <pre>close</pre>
 </div>
 <div list="" title="$:/StoryList">
@@ -14698,8 +14754,8 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 
 Ã vos réglages !</pre>
 </div>
-<div created="20180706030259776" modified="20180904014024095" title="$:/temp/advancedsearch">
-<pre>$:/cssTextArea</pre>
+<div created="20180706030259776" modified="20180904080448368" title="$:/temp/advancedsearch">
+<pre>$:/doc-user</pre>
 </div>
 <div created="20180814062450687" modified="20180814062458717" title="$:/temp/appear/$:/doc-user-001363622161/block//tiddler-slider">
 <pre></pre>
@@ -14812,7 +14868,7 @@ La barre latérale gauche ne fait que déplacer les tiddlers et la ~SideBar sur 
 <div created="20180729015820084" modified="20180903040259143" password="" tags="$:/User" title="$:/temp/profile" user-name="">
 <pre></pre>
 </div>
-<div created="20180706030257840" modified="20180904023902620" title="$:/temp/search">
+<div created="20180706030257840" modified="20180904080448369" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20180729023451942" modified="20180824083453686" title="$:/temp/verlauf">
@@ -15001,9 +15057,13 @@ body.tc-body .tw-admin-content svg {
 }
 &lt;/style&gt;</pre>
 </div>
-<div caption="Contrôle Tiddlers" controle="05" created="20180319024141158" description="Actions et choix concernant les tiddlers" modified="20180904024204015" sub.num="24" tags="$:/Tiddlers $:/tags/ControlPanel/Template" tiddler-title="none" title="$:/TemplateTiddler">
-<pre>&lt;div class=&quot;tw-admin-content&quot;&gt;
+<div caption="Contrôle Tiddlers" controle="05" created="20180319024141158" description="Actions et choix concernant les tiddlers" modified="20180904081818369" sub.num="24" tags="$:/Tiddlers $:/tags/ControlPanel/Template" tiddler-title="none" title="$:/TemplateTiddler">
+<pre>\define wsconfig(name) $:/config/Whitespace/$name$
+\define drop-actions()
+&lt;$action-listops $tiddler=&quot;$:/tags/SideBar&quot; $subfilter=&quot;+[insertbefore:currentTiddler&lt;actionTiddler&gt;]&quot;/&gt;
+\end
 
+&lt;div class=&quot;tw-admin-content&quot;&gt;
 
 !{{$:/TemplateTiddler!!caption}}
 
@@ -15013,6 +15073,7 @@ body.tc-body .tw-admin-content svg {
 |[[Afficher le sous-titre du tiddler|$:/core/ui/ViewTemplate/subtitle]] | &lt;$checkbox tiddler='$:/core/ui/ViewTemplate/subtitle' tag='$:/tags/ViewTemplate' checked='$:/tags/ViewTemplate' unchecked=none/&gt; | - |
 |[[Afficher une ligne de séparation sous le titre du tiddler|$:/core/ui/ViewTemplate/blackline]]| &lt;$checkbox tiddler='$:/core/ui/ViewTemplate/blackline' tag='$:/tags/ViewTemplate' checked='$:/tags/ViewTemplate' unchecked=none/&gt; | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-024&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
 |[[Afficher les tags du tiddler|$:/core/ui/ViewTemplate/tags]]| &lt;$checkbox tiddler='$:/core/ui/ViewTemplate/tags' tag='$:/tags/ViewTemplate' checked='$:/tags/ViewTemplate' unchecked=none/&gt; | - |
+|Afficher les boutons au survol souris| &lt;$checkbox tiddler=&lt;&lt;wsconfig Spacious&gt;&gt; field=&quot;text&quot; checked=&quot;yes&quot; unchecked=&quot;no&quot; default=&quot;yes&quot;/&gt; | &lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-039&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt; |
 |Afficher{{$:/core/images/edit-button}} le bouton d'édition de la barre d'outils| &lt;$checkbox tiddler='$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit'  field='text' checked='show' unchecked=hide/&gt; | - |
 |[[Afficher le bouton d'encryption de la barre d'outils|$:/plugins/danielo/encryptTiddler/Encrypt-Tiddler]]| &lt;$checkbox tiddler='$:/plugins/danielo/encryptTiddler/crypt-button' tag='$:/tags/ViewToolbar' checked='$:/tags/ViewToolbar' unchecked=none/&gt; | - |
 |[[Ajouter &quot;Créer un nouveau Tiddler&quot; aux boutons de contrôle|$:/core/ui/Buttons/new-tiddler]]| &lt;$checkbox tiddler='$:/core/ui/Buttons/new-tiddler' tag='$:/tags/ViewToolbar' checked='$:/tags/ViewToolbar' unchecked=none/&gt; |&lt;$button message=&quot;tm-open-window&quot; param=&quot;$:/doc-user-027&quot; tooltip=&quot;Documentation&quot; aria-label=&quot;Help&quot;&gt;?&lt;/$button&gt;|
