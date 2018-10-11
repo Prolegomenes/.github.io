@@ -1,5 +1,7 @@
 # Bonjour et bienvenue sur le site Prolégomènes
 
+# Welcome to this Prolégomènes website
+
 Ce site est dédié entièrement à TiddlyWiki, en français.
 
 This website is entirely devoted to TiddlyWiki in french as well as in english.
