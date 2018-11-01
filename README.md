@@ -7,5 +7,5 @@ Apprendre TiddlyWiki et ses plugins en français :
 ## Versions en ligne: 
 
 - Page Accueil -> https://prolegomenes.github.io/learn/
-- Learn Release 2215117 -> https://prolegomenes.github.io/learn/Learn2211517.html
+- Learn Release 2215117 -> https://prolegomenes.github.io/learn/Learn2215117.html
 - TiddlyFrame Release 225117 -> https://prolegomenes.github.io/learn/Frame.html
