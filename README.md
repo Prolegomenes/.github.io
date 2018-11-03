@@ -3,6 +3,7 @@
 Apprendre TiddlyWiki et ses plugins en français :
 
 * Apprendre, étudier, tester  [TiddlyWiki](https://tiddlywiki.com/)
+* Learning, studiyng, testing TiddlyWiki
 
 ## Versions en ligne: 
 
