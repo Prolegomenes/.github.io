@@ -1,17 +1,12 @@
-# Bonjour et bienvenue sur le site Prolégomènes
-
 # Welcome to this Prolégomènes website
 
-Ce site est dédié entièrement à TiddlyWiki, en français.
+This website is full dedicated to TiddlyWiki in french as well as in english.
 
-This website is entirely devoted to TiddlyWiki in french as well as in english.
+## Discover and learn TiddlyWiki:
 
-## Découvrir et apprendre TiddlyWiki:
-
-- [Learn Release 215116](https://prolegomenes.github.io/learn/Learn215116.html)
 - [Learn Release 225117](https://prolegomenes.github.io/learn/Learn225117.html)
 
-Those wikis will be not translated.
+This wiki will bw not translated into english.
 
 ## Wiki TiddlyFrame (Frame it as you like !)
 
@@ -19,6 +14,5 @@ Those wikis will be not translated.
 
 The french version is under translation into english.
 
-Les téléchargements peuvent prendre un peu de temps ...
 Downloads may take a little time...
 
