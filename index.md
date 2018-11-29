@@ -1,6 +1,6 @@
 # Welcome to this Prolégomènes website
 
-This website is full dedicated to TiddlyWiki in french as well as in english.
+This website is entirely dedicated to TiddlyWiki in french as well as in english.
 
 ## Discover and learn TiddlyWiki:
 
