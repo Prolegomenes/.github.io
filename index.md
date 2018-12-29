@@ -4,7 +4,7 @@ This website is entirely dedicated to TiddlyWiki in french as well as in english
 
 ## Discover and learn TiddlyWiki:
 
-- [Learn Release 225117](https://prolegomenes.github.io/learn/Learn225117.html)
+- [Learn Release 221517](https://prolegomenes.github.io/learn/Learn221517.html)
 
 This wiki will bw not translated into english.
 
