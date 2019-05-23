@@ -1,0 +1,31 @@
+caption: (Flexbox) Centrage absolu
+created: 20180416094431598
+description: Feuille de style attachée : $:/cssFlexCenter
+modified: 20181116103238629
+sub.num: 04
+tags: Flexbox
+title: (Flexbox) Centrage absolu
+
+<div class="container">
+  <div class="element">
+Les codes CSS de `.container` et de `.element` sont définis dans le tiddler du CSS [[$:/cssFlexCenter]] et sont applicable à tous les tiddlers contenant `<div class="container">...</div>` et `<div class="element">...</div>` Cet élément est centré. Peu importe sa taille, il restera toujours cebtré horizontalement et verticalenent à l'intérieur de son container.
+<br/>
+<br/>
+Ainsi, Toutce qui se trouve entre les balises:
+<br/>
+`<div class="container">
+<div class="element">
+ET
+</div>
+</div>`
+
+
+
+
+sera entouré
+
+
+
+</div>
+</div>
+

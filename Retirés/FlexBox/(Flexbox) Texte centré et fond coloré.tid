@@ -1,0 +1,56 @@
+caption: (Flexbox) Texte centré et fond coloré
+created: 20171210135806746
+modified: 20181020072008152
+sub.num: 05
+tags: Flexbox
+title: (Flexbox) Texte centré et fond coloré
+
+<style>
+.container {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex10 {
+  -webkit-flex: 1;
+          flex: 1;
+  background-color:;
+  margin:5px;
+  padding:15px;
+}
+
+.flex11 {
+  -webkit-flex: 3;
+          flex: 3;
+  background-color:#ccc;
+  margin:5px;
+  padding:15px;
+}
+
+.flex12 {
+  -webkit-flex: 1;
+          flex: 1;
+  background-color:;
+  margin:5px;
+  padding:15px;
+}
+</style>
+
+
+
+
+
+<div class="container">
+<div class="flex10"></div>
+
+<div class="flex11">
+
+En utilisant Flexbox, le cadre est centré, une colonne à gauche et une à droite sont invisibles et les cadres peuvent posséder une couleur de fond (ici en gris). C'est efficace mais pas très pratique car il faut refaire les paramétrages à chaque nouveau tiddler. Réservé aux Headlines. Ce tiddler est autonome. Tout son CSS y est contenu.Je pense qu'il doit être possible de caser tout cela dams un ''template''. Il faut que j'étudie la question. ~WikiText est bien pris en compte.
+
+
+
+</div>
+
+<div class="flex12"></div>
+
+</div>

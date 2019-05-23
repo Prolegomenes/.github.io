@@ -1,0 +1,26 @@
+caption: Flexbox CSS
+created: 20181020062524489
+fr-title: Flexbox CSS
+modified: 20190517085718315
+sub.num: 05
+tags: CSS
+title: Flexbox
+
+<div align="center">
+<$button to="Flexbox" class="tc-summary-button">
+<i class="fa fa-thumb-tack" style="color:#E74C3C"></i>&nbsp;&nbsp; Il y a <$count filter="[tag[Flexbox]]"/> Tiddlers tagués <<tag "Flexbox">>
+</$button>
+</div>
+<$details summary="Résumé"></$details>
+<table>
+ <tr>
+  <th align="center">Article (Tiddler)</th>
+ <th align="center">&nbsp;&nbsp;Date&nbsp;de&nbsp;création&nbsp;&nbsp;</th>
+  <th align="center">Numéro d'ordre</th>
+ </tr>
+<$list filter="[tag[Flexbox]] [tag[]] +[sort[sub.num]]">
+<tr><td><$link to={{!!title}}><$text text={{!!caption}}/></$link></td>
+<td align="right"><$view field="created" format="date" template="DD MMM YYYY"/></td>
+ <td><$edit field="sub.num" class="tc-edit-texteditor"/></td></tr>
+ </$list>
+</table>
