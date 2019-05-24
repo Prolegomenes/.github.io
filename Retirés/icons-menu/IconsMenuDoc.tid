@@ -1,0 +1,28 @@
+caption: Documentation Plugin Icons Menu
+created: 20181207023146393
+fr-title: Documentation Plugin Icons Menu
+modified: 20181217140520368
+sub.num: 01
+tags: IconsMenu
+title: IconsMenuDoc
+
+Il est étonnant de voir combien ce plugin s'intègre bien sur ce wiki. Il constitue une alternative à la gestion du template déjà en place.
+
+Il n'y a pas de combinaisons possibles, c'est à dire qu'il faut faire le choix entre adopter la gestion des contrôles de template ~TiddlyFrame ou adopter le menu en icônes.
+
+~TiddlyFrame n'a pas besoin d'être désactivé. Le menu en icônes viendra le remplacer. En revanche le menu en icônes doit être activé ou désactivé suivant besoin.
+
+Le menu en icônes ne permet pas de créer et de placer vos propres menus comme le permet ~TiddlyFrame. L'onglet Menus de la SideBar est retiré en conséquence.
+
+La gestion des menus est assurée via le Tiddler [[$:/plugins/inmysocks/iconmenus/Icon Menu Settings]], avec petite modification du code pour obtenir les onglets settings en position verticale plutôt qu'en position horizontale comme proposé dans le code source:
+
+
+```
+<<tabs "[[$:/plugins/inmysocks/iconmenus/Top Bar Settings]] [[$:/plugins/inmysocks/iconmenus/Left Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Right Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Top Left Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Top Middle Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Top Right Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Bottom Bar Settings]] [[$:/plugins/inmysocks/iconmenus/Bottom Left Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Bottom Middle Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Bottom Right Menu Settings]] " [[$:/plugins/inmysocks/iconmenus/Top Bar Settings]] """tc-vertical">>
+
+```
+Remarquez l'ajout `"""tc-vertical"` en fin de code.
+
+La gestion du Template Icônes se fait via le panneau de contrôle, onglet "Icons template"
+
+On pourra regrouper les deux templates maintenant disponibles sous l'onglet "Templates" avec "~TiddlyFrame" et "Icons"

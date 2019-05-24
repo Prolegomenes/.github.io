@@ -1,0 +1,128 @@
+caption: Procédure pour désactiver le plugin via un bouton personnalisé
+created: 20181217134803739
+modified: 20181222043819364
+sub.num: 02
+tags: IconsMenu
+title: IconsMenuDésactivation
+
+<div class="attention">
+Attention:<br/>
+Pour une raison dont j'ignore tout actuellement, la sauvegarde automatique faite lors du changement de template ne sauvegarde pas les données saisies sur le wiki entre deux changement de templates. Une sauvegarde semble bien être faite, mais elle ne concerne que les templates. Tout ce qui a été saisi en dehors n'est pas sauvegardé !
+</div>
+
+!!Activation/Désactivation du menu Icônes
+
+Le champ texte Tiddler [[$:/config/Plugins/Disabled/$:/plugins/inmysocks/IconMenus]] reçoit la valeur "@@color:crimson;yes@@" pour la ''désactivation'' et "@@color:crimson;no@@" pour ''l'activation''.
+
+Il convient de sortir du wiki via faire une sauvegarde, puis de le relancer pour que l'activation ou la désactivation du plugin soit prise en compte. 
+
+Barre d'outil de la page, rafraîchir (refresh). Nous disposons du `WidgetMessage: tm-browser-refresh`, c'est à dire {{$:/language/Buttons/Refresh/Caption}}
+
+Donc le code doit aussi prévoir la sauvegarde puis la relance du wiki.
+
+Les séquences suivantes sont correctement codées :
+
+
+```
+<$button>Déactiver le plugin icons
+<$action-setfield 
+ $tiddler="$:/config/Plugins/Disabled/$:/plugins/inmysocks/IconMenus"
+  text="yes"/>
+<$action-sendmessage $message='tm-save-wiki'/>
+<$action-sendmessage $message='tm-browser-refresh'/>
+</$button>
+```
+
+et :
+
+
+```
+<$button>Activer le plugin icons
+<$action-setfield 
+ $tiddler="$:/config/Plugins/Disabled/$:/plugins/inmysocks/IconMenus"
+  text="no"/>
+<$action-sendmessage $message='tm-save-wiki'/>
+<$action-sendmessage $message='tm-browser-refresh'/>
+</$button>
+```
+
+Mais le rafraîchissement du wiki ne fonctionne pas car ce dernier est relancé alors même que la sauvegarde n'a pas encore eu le temps de s'effectuer sur le disque dur.
+
+L'instruction de rafraîchissement engendre donc un message d'avertissement indiquant que les modifications en cours pourraient ne pas être prises en compte indiquant en fait que l'on relance le wiki sans l'avoir préalablement sauvegardé.
+
+En procédant en deux étapes:
+#Activation/Désactivation et Sauvegarde
+#puis rafraîchissement)
+
+TiddlyWiki réagit correctement aux commandes:
+
+
+<$button>1- Déactiver et sauver
+<$action-setfield 
+ $tiddler="$:/config/Plugins/Disabled/$:/plugins/inmysocks/IconMenus"
+  text="yes"/>
+<$action-sendmessage $message='tm-save-wiki'/>
+</$button>
+<$button>2- Relancer ~TiddlyWiki
+<$action-sendmessage $message='tm-browser-refresh'/>
+</$button>
+
+<$button>1- Activer sauver
+<$action-setfield 
+ $tiddler="$:/config/Plugins/Disabled/$:/plugins/inmysocks/IconMenus"
+  text="no"/>
+<$action-sendmessage $message='tm-save-wiki'/>
+</$button>
+<$button>2- Relancer ~TiddlyWiki
+<$action-sendmessage $message='tm-browser-refresh'/>
+</$button>
+
+{{$:/core/ui/Buttons/refresh}}
+
+Que l'on peut aussi écrire comme suit:
+
+<$button>Déactiver et sauver
+<$action-setfield 
+ $tiddler="$:/config/Plugins/Disabled/$:/plugins/inmysocks/IconMenus"
+  text="yes"/>
+<$action-sendmessage $message='tm-save-wiki'/>
+</$button>
+{{$:/core/ui/Buttons/refresh}}
+
+<$button>Activer sauver
+<$action-setfield 
+ $tiddler="$:/config/Plugins/Disabled/$:/plugins/inmysocks/IconMenus"
+  text="no"/>
+<$action-sendmessage $message='tm-save-wiki'/>
+</$button>
+{{$:/core/ui/Buttons/refresh}}
+
+Ou bien encore comme ceci:
+
+
+
+<table>
+<tr>
+<th align="center">Activer Template Frame</th>
+<th align="center">Activer Template Icons</th>
+<th align="center">Relancer ~TiddlyWiki</th>
+</tr>
+<tr>
+<td align="center"><$button>Activer et relancer
+<$action-setfield 
+ $tiddler="$:/config/Plugins/Disabled/$:/plugins/inmysocks/IconMenus"
+  text="yes"/>
+<$action-sendmessage $message='tm-save-wiki'/>
+</$button></td>
+<td align="center"><$button>Activer et relancer
+<$action-setfield 
+ $tiddler="$:/config/Plugins/Disabled/$:/plugins/inmysocks/IconMenus"
+  text="no"/>
+<$action-sendmessage $message='tm-save-wiki'/>
+</$button></td>
+<td align="center">{{$:/core/ui/Buttons/refresh}}</td>
+</tr>
+<tr>
+<td colspan="3" align="center">({{$:/config/Plugins/Disabled/$:/plugins/inmysocks/IconMenus}})</td>
+</tr>
+</table>

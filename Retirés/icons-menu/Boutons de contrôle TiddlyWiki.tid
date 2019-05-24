@@ -1,0 +1,41 @@
+caption: Boutons de contrôle TiddlyWiki
+created: 20181220010432577
+modified: 20181220033620743
+sub.num: 03
+tags: IconsMenu
+title: Boutons de contrôle TiddlyWiki
+
+Icons Menu récupère la programmation des boutons standards de TiddlyWiki suivants:
+
+|[[$:/plugins/inmysocks/iconmenus/icon/Wiki Title and Subtitle]]|{{$:/SiteTitle}} -- {{$:/SiteSubtitle}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Theme]]|{{$:/core/ui/Buttons/theme}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Tag Manager]]|{{$:/core/ui/Buttons/tag-manager}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Storyview]]|{{$:/core/ui/Buttons/storyview}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Search]]|<$button to='$:/AdvancedSearch' class='tc-btn-invisible'>{{$:/core/ui/Buttons/advanced-search}}</$button>|
+|[[$:/plugins/inmysocks/iconmenus/icon/Advanced Search]]|{{$:/core/ui/Buttons/advanced-search}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Save Wiki]]|{{$:/core/ui/Buttons/save-wiki}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Refresh]]|{{$:/core/ui/Buttons/refresh}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Permaview]]|{{$:/core/ui/Buttons/permaview}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/New Journal]]|{{$:/core/ui/Buttons/new-journal}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Language]]|{{$:/core/ui/Buttons/language}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Import]]|{{$:/core/ui/Buttons/import}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Home]]|{{$:/core/ui/Buttons/home}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Full Screen|{{$:/core/ui/Buttons/full-screen}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Create New Tiddler From Template]]|{{$:/plugins/inmysocks/iconmenus/icon/Create New Tiddler From Template}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Control Panel]]|{{$:/core/ui/Buttons/control-panel}}|
+|[[$:/plugins/inmysocks/iconmenus/icon/Close All]]|{{$:/core/ui/Buttons/close-all}}|
+|[[$:/inmysocks/iconmenus/icon/Old Hide Menu Button]]|{{$:/inmysocks/iconmenus/icon/Old Hide Menu Button}}|
+
+Qui sont ensuite encapsulés dans un gestionnaire de classification
+
+Le positionnement des boutons de contrôle est défini suivant le tag attribué:
+
+
+*$:/tags/LeftMenu
+*$:/tags/RightMenu
+
+*$:/tags/TopLeftMenu
+*$:/tags/TopRightMenu
+*$:/tags/TopMiddleMenu 
+
+*$:/tags/TopRightBar

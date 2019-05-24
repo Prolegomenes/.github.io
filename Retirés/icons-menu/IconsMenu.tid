@@ -1,0 +1,40 @@
+caption: Plugin Icons Menu
+created: 20181217134241955
+fr-title: Plugin Icons Menu
+modified: 20190520104440160
+sub.num: 08
+tags: Applications
+title: IconsMenu
+
+@@text-align:right;
+<div class="column">
+<div class="hero hero-sm bg-dark">
+<div class="hero-body">
+
+!!{{!!caption}}
+<<f-i check-square>>&nbsp;&nbsp; Il y a <$count filter="[tag[IconsMenu]]"/> Tiddlers tagués {{!!title}}
+
+</div>
+</div>
+</div>
+@@
+
+<$details summary="Résumé"></$details>
+<table class="table table-striped table-hover">
+<thead>
+<tr>
+<th align="center">Tiddler</th>
+<th align="center">Date de création</th>
+<th align="center">Numéro d'ordre</th>
+</tr>
+</thead>
+<$list filter="[tag[IconsMenu]] [tag[]] +[sort[sub.num]]">
+<tbody>
+<tr>
+<td><$link to={{!!title}}><$text text={{!!caption}}/></$link> </td>
+<td align="right"><$view field="created" format="date" template="DD MMM YYYY"/></td>
+ <td><$edit field="sub.num" class="form-input"/></td>
+</tr>
+</tbody>
+ </$list>
+</table>
