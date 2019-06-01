@@ -1,0 +1,50 @@
+caption: Index
+created: 20161113200226411
+fr-title: Index Général
+icon: $:/icon/fa/home
+modified: 20190519121501118
+myfield: <$action-setfield $tiddler="$:/SiteTitle" text={{!!title}}/>
+sub.num: 01
+tags: TableOfContents
+title: Index Menu
+
+@@text-align:right;
+<div class="column">
+<div class="hero hero-sm bg-dark">
+<div class="hero-body">
+
+!!{{!!caption}}
+<<f-i check-square>>&nbsp;&nbsp; Il y a <$count filter="[tag[TableOfContents]]"/> Tiddlers tagués ~TableOfContents
+
+</div>
+</div>
+</div>
+@@
+
+<$details summary="Résumé">
+
+*Les Mots clés de cette table sont classés par ordre alphabétique.
+*Le classement des titres de cette TOC - également visible sous l'onglet "[[Sommaire|$:/core/ui/SideBar/TableOfContents]]" de la ~SideBar - est modifiable depuis cette page.
+*Pour la numérotation automatique des rubriques du sommaire, voir [[Gérer la table des matières]].
+*Feuille de style compteur de tags : [[$:/cssSummaryButtons]] Avec le code ajouté: `(<$count filter="[all[current]tagging[]]"/>)`.
+*Feuille de style des liens internes : [[$:/cssTiddlersLinks]].
+*Centrage des titres du tableau : `<th align="center">`
+</$details>
+<table class="table table-striped table-hover">
+<thead>
+<tr>
+<th align="center">Tiddler</th>
+<th align="center">Date de création</th>
+<th align="center">Numéro d'ordre</th>
+</tr>
+</thead>
+<$list filter="[tag[TableOfContents]] [tag[]] +[sort[sub.num]]">
+<tbody>
+<tr>
+<td><$link to={{!!title}}><$text text={{!!caption}}/></$link> (<$count filter="[all[current]tagging[]]"/>)</td>
+<td align="right"><$view field="created" format="date" template="DD MMM YYYY"/></td>
+ <td><$edit field="sub.num" class="form-input"/></td>
+</tr>
+</tbody>
+ </$list>
+</table>
