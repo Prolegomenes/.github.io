@@ -1,0 +1,51 @@
+caption: Menu Accordéon Vertical (plusieurs tables simultanées)
+created: 20180523060808034
+modified: 20190310062407657
+sub.num: 05
+tags: Accordion
+title: Menu Accordéon Vertical (plusieurs tables simultanées)
+
+<div class="accordion vertical">
+    <ul>
+        <li>
+            <input type="checkbox" id="checkbox-1" name="checkbox-accordion" />
+            <label for="checkbox-1">Title&nbsp;One</label>
+            <div class="content">
+                <h3>This is an example accordion item</h3>
+<p>Peut servir aux tiddlers de type FAQ, sauf qu'ici wiki text n'est pas accepté. On se retouve donc dans l'obligation de coder du pur HTML..</p>
+<p>Attention aussi au fait que la hauteur du contenu est limitée. Tout ce qui dépasse la hauteur fixée ne sera pas visible!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin at enim non gravida. Donec feugiat, lorem pretium blandit commodo, eros nunc condimentum ex, fringilla efficitur urna ligula non tellus. Donec nec lectus sed metus auctor dapibus. Quisque nulla sapien, dictum non enim in, suscipit facilisis lacus. Proin sed dui egestas, egestas ligula hendrerit, porttitor erat. Duis posuere tellus vel nunc tristique tempor. Fusce eget imperdiet orci. Aliquam accumsan, lacus et gravida semper, tellus nibh consequat nunc, hendrerit condimentum lorem nunc in velit. Duis tristique gravida risus id rhoncus. Nam at augue at leo semper feugiat. Aliquam lobortis turpis eu augue imperdiet, eu vulputate magna luctus.</p>
+
+
+            </div>
+        </li>
+        <li>
+            <input type="checkbox" id="checkbox-2" name="checkbox-accordion" />
+            <label for="checkbox-2">Title&nbsp;Two</label>
+            <div class="content">
+                <h3>Totally another one right here</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec posuere lorem. Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, euismod congue neque nisi at ipsum. Mauris semper ipsum sit amet metus semper malesuada. Donec vel est justo, ac porta diam.</p>
+                <p>In ut est in orci commodo blandit. Cras rhoncus ultricies augue. Proin quam odio, venenatis ut tempus tristique, aliquet in velit. Pellentesque volutpat facilisis orci, ut congue mi rhoncus at. Nullam vehicula dignissim neque, sed rhoncus magna ultricies et.</p>
+            </div>
+        </li>
+        <li>
+            <input type="checkbox" id="checkbox-3" name="checkbox-accordion" />
+            <label for="checkbox-3">Title&nbsp;Three</label>
+            <div class="content">
+                <h3>I think I can go on forever</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec posuere lorem. Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, euismod congue neque nisi at ipsum. Mauris semper ipsum sit amet metus semper malesuada. Donec vel est justo, ac porta diam.</p>
+                <p>In ut est in orci commodo blandit. Cras rhoncus ultricies augue. Proin quam odio, venenatis ut tempus tristique, aliquet in velit. Pellentesque volutpat facilisis orci, ut congue mi rhoncus at. Nullam vehicula dignissim neque, sed rhoncus magna ultricies et.</p>
+            </div>
+        </li>
+        <li>
+            <input type="checkbox" id="checkbox-4" name="checkbox-accordion" />
+            <label for="checkbox-4">Title&nbsp;Four</label>
+            <div class="content">
+                <h3>I was wrong, I'm done</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec posuere lorem. Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, euismod congue neque nisi at ipsum. Mauris semper ipsum sit amet metus semper malesuada. Donec vel est justo, ac porta diam.</p>
+                <p>In ut est in orci commodo blandit. Cras rhoncus ultricies augue. Proin quam odio, venenatis ut tempus tristique, aliquet in velit. Pellentesque volutpat facilisis orci, ut congue mi rhoncus at. Nullam vehicula dignissim neque, sed rhoncus magna ultricies et.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+

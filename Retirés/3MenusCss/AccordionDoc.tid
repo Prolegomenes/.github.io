@@ -1,0 +1,20 @@
+caption: Documentation
+created: 20180723004405303
+modified: 20190524041436871
+sub.num: 01
+tags: Accordion
+title: AccordionDoc
+url: http://www.mraffaele.com/blog/2011/10/25/css-accordion-no-javascript/
+
+<div class="column col-sm-12">
+<div class="toast toast-warning">
+
+*Auteur:    Michael Raffaele <michael@mraffaele.com>
+*Date:    25th October 2011
+
+</div>
+<br/>
+
+Voici trois menus (deux verticaux et un horizontal) en CSS pur. ''Les hauteurs doivent être définies ce qui les rend peu adaptables''. Je les intègre néanmoins pour la beauté du style.
+
+Pour la feuille CSS attachée, voir [[$:/cssAccordion]]

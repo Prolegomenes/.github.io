@@ -1,0 +1,40 @@
+caption: Trois exemples de Menus en CSS pur
+created: 20181020051055027
+fr-title: Trois exemples de Menus en CSS pur
+modified: 20190524040640066
+sub.num: 04
+tags: CSS
+title: Accordion
+
+@@text-align:right;
+<div class="column">
+<div class="hero hero-sm bg-dark">
+<div class="hero-body">
+
+!!{{!!caption}}
+<<f-i check-square>>&nbsp;&nbsp; Il y a <$count filter="[tag[Accordion]]"/> Tiddlers tagués {{!!title}}
+
+</div>
+</div>
+</div>
+@@
+
+<$details summary="Résumé"></$details>
+<table class="table table-striped table-hover">
+<thead>
+<tr>
+<th align="center">Tiddler</th>
+<th align="center">Date de création</th>
+<th align="center">Numéro d'ordre</th>
+</tr>
+</thead>
+<$list filter="[tag[Accordion]] [tag[]] +[sort[sub.num]]">
+<tbody>
+<tr>
+<td><$link to={{!!title}}><$text text={{!!caption}}/></$link> </td>
+<td align="right"><$view field="created" format="date" template="DD MMM YYYY"/></td>
+ <td><$edit field="sub.num" class="form-input"/></td>
+</tr>
+</tbody>
+ </$list>
+</table>
