@@ -1,0 +1,22 @@
+caption: Bouton gradient, Medium et coloré
+created: 20190316052640398
+modified: 20190316052756840
+sub.num: 03
+tags: ButtonStyleTlbGradient
+title: Bouton gradient, Medium et coloré
+
+<div class="main">
+<div class="styling2 twelve">bttn-simple - bttn-bordered - bttn-minimal - bttn-stretch - bttn-jelly - @@color:#FF0000;👉 bttn-gradient@@ - bttn-fill - bttn-material-circle - bttn-material-flat - bttn-pill - bttn-float - bttn-unite - bttn-slant (Beta)</div>
+<div class="nine">`<button class="bttn-gradient bttn-md bttn-default">gradient, md, default</button>`</div>
+<div class="styling1 three"><button class="bttn-gradient bttn-md bttn-default">gradient, md, default</button></div>
+<div class="nine">`<button class="bttn-gradient bttn-md bttn-primary">gradient, md, primary</button>`</div>
+<div class="styling2 three"><button class="bttn-gradient bttn-md bttn-primary">gradient, md, primary</button></div>
+<div class="nine">`<button class="bttn-gradient bttn-md bttn-warning">gradient, md, warning</button>`</div>
+<div class="styling2 three"><button class="bttn-gradient bttn-md bttn-warning">gradient, md, warning</button></div>
+<div class="nine">`<button class="bttn-gradient bttn-md bttn-success">gradient, md, success</button>`</div>
+<div class="styling2 three"><button class="bttn-gradient bttn-md bttn-success">gradient, md, success</button></div>
+<div class="nine">`<button class="bttn-gradient bttn-md bttn-danger">gradient, md, danger</button>`</div>
+<div class="styling2 three"><button class="bttn-gradient bttn-md bttn-danger">gradient, md, danger</button></div>
+<div class="nine">`<button class="bttn-gradient bttn-md bttn-royal">gradient, md, royal</button>`</div>
+<div class="styling2 three"><button class="bttn-gradient bttn-md bttn-royal">gradient, md, royal</button></div>
+</div>
