@@ -1,0 +1,22 @@
+caption: Bouton Minimal, Médium et coloré
+created: 20190312104952103
+modified: 20190313092134002
+sub.num: 03
+tags: ButtonStyleTlbMinimal
+title: Bouton Minimal, Médium et coloré
+
+<div class="main">
+<div class="styling2 twelve">bttn-simple - bttn-bordered - @@color:#FF0000;👉 bttn-minimal@@ - bttn-stretch - bttn-jelly - bttn-gradient - bttn-fill - bttn-material-circle - bttn-material-flat - bttn-pill - bttn-float - bttn-unite - bttn-slant (Beta)</div>
+<div class="nine">`<button class="bttn-minimal bttn-md bttn-default">minimal, md, default</button>`</div>
+<div class="styling1 three"><button class="bttn-minimal bttn-md bttn-default">minimal, md, default</button></div>
+<div class="nine">`<button class="bttn-minimal bttn-md bttn-primary">minimal, md, primary</button>`</div>
+<div class="styling2 three"><button class="bttn-minimal bttn-md bttn-primary">minimal, md, primary</button></div>
+<div class="nine">`<button class="bttn-minimal bttn-md bttn-warning">minimal, md, warning</button>`</div>
+<div class="styling2 three"><button class="bttn-minimal bttn-md bttn-warning">minimal, md, warning</button></div>
+<div class="nine">`<button class="bttn-minimal bttn-md bttn-success">minimal, md, success</button>`</div>
+<div class="styling2 three"><button class="bttn-minimal bttn-md bttn-success">minimal, md, success</button></div>
+<div class="nine">`<button class="bttn-minimal bttn-md bttn-danger">minimal, md, danger</button>`</div>
+<div class="styling2 three"><button class="bttn-minimal bttn-md bttn-danger">minimal, md, danger</button></div>
+<div class="nine">`<button class="bttn-minimal bttn-md bttn-royal">minimal, md, royal</button>`</div>
+<div class="styling2 three"><button class="bttn-minimal bttn-md bttn-royal">minimal, md, royal</button></div>
+</div>

@@ -1,0 +1,22 @@
+caption: Bouton Minimal, Extra-Small et coloré
+created: 20190312045324066
+modified: 20190313092122437
+sub.num: 01
+tags: ButtonStyleTlbMinimal
+title: Bouton Minimal, Extra-Small et coloré
+
+<div class="main">
+<div class="styling2 twelve">bttn-simple - bttn-bordered - @@color:#FF0000;👉 bttn-minimal@@ - bttn-stretch - bttn-jelly - bttn-gradient - bttn-fill - bttn-material-circle - bttn-material-flat - bttn-pill - bttn-float - bttn-unite - bttn-slant (Beta)</div>
+<div class="nine">`<button class="bttn-minimal bttn-xs bttn-default">minimal, xs, default</button>`</div>
+<div class="styling1 three"><button class="bttn-minimal bttn-xs bttn-default">minimal, xs, default</button></div>
+<div class="nine">`<button class="bttn-minimal bttn-xs bttn-primary">minimal, xs, primary</button>`</div>
+<div class="styling2 three"><button class="bttn-minimal bttn-xs bttn-primary">minimal, xs, primary</button></div>
+<div class="nine">`<button class="bttn-minimal bttn-xs bttn-warning">minimal, xs, warning</button>`</div>
+<div class="styling2 three"><button class="bttn-minimal bttn-xs bttn-warning">minimal, xs, warning</button></div>
+<div class="nine">`<button class="bttn-minimal bttn-xs bttn-success">minimal, xs, success</button>`</div>
+<div class="styling2 three"><button class="bttn-minimal bttn-xs bttn-success">minimal, xs, success</button></div>
+<div class="nine">`<button class="bttn-minimal bttn-xs bttn-danger">minimal, xs, danger</button>`</div>
+<div class="styling2 three"><button class="bttn-minimal bttn-xs bttn-danger">minimal, xs, danger</button></div>
+<div class="nine">`<button class="bttn-minimal bttn-xs bttn-royal">minimal, xs, royal</button>`</div>
+<div class="styling2 three"><button class="bttn-minimal bttn-xs bttn-royal">minimal, xs, royal</button></div>
+</div>
