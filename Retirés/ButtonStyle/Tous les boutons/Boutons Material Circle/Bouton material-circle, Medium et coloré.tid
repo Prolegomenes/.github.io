@@ -1,0 +1,24 @@
+caption: Bouton material-circle, Medium et coloré
+created: 20190313024042055
+modified: 20190313130115706
+sub.num: 03
+tags: ButtonStyleTlbMaterialCircle
+title: Bouton material-circle, Medium et coloré
+
+<div class="main">
+<div class="styling2 twelve">bttn-simple - bttn-bordered - bttn-minimal - bttn-stretch - bttn-jelly - bttn-gradient - bttn-fill - @@color:#FF0000;👉 bttn-material-circle@@ - bttn-material-flat - bttn-pill - bttn-float - bttn-unite - bttn-slant (Beta)</div>
+<div class="nine">`<button class="bttn-material-circle bttn-md bttn-default"><i class="fa fa-trash-o"></i></button>`</div>
+<div class="styling1 three"><button class="bttn-material-circle bttn-md bttn-default"><i class="fa fa-trash-o"></i></button></div>
+<div class="nine">`<button class="bttn-material-circle bttn-md bttn-primary"><i class="fa fa-university"></i></button>`</div>
+<div class="styling2 three"><button class="bttn-material-circle bttn-md bttn-primary"><i class="fa fa-university"></i></button></div>
+<div class="nine">`<button class="bttn-material-circle bttn-md bttn-warning">{{$:/plugins/ajh/tiddlyviewer/icon}}</button>`</div>
+<div class="styling2 three"><button class="bttn-material-circle bttn-md bttn-warning">{{$:/plugins/ajh/tiddlyviewer/icon}}</button></div>
+<div class="nine">`<button class="bttn-material-circle bttn-md bttn-success">{{ChooBird.gif}}</button>`</div>
+<div class="styling2 three"><button class="bttn-material-circle bttn-md bttn-success">{{ChooBird.gif}}</button></div>
+<div class="nine">`<button class="bttn-material-circle bttn-md bttn-danger">1</button>`</div>
+<div class="styling2 three"><button class="bttn-material-circle bttn-md bttn-danger">1</button></div>
+<div class="nine">`<button class="bttn-material-circle bttn-md bttn-royal">A</button>`</div>
+<div class="styling2 three"><button class="bttn-material-circle bttn-md bttn-royal">A</button></div>
+</div>
+
+Comme on peut le voir sur ces exemples, Buttons styles accepte les icônes Font Awsome, les images transclues, par exemple `{{$:/plugins/ajh/tiddlyviewer/icon}}` des GIF animés etc.
