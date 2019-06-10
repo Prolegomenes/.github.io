@@ -1,0 +1,22 @@
+caption: Bouton Material Flat, Extra-Small et coloré
+created: 20190316053302626
+modified: 20190316054856383
+sub.num: 01
+tags: ButtonStyleTlbMaterialFlat
+title: Bouton Material Flat, Extra-Small et coloré
+
+<div class="main">
+<div class="styling2 twelve">bttn-simple - bttn-bordered - bttn-minimal - bttn-stretch - bttn-jelly - bttn-gradient - bttn-fill - bttn-material-circle - @@color:#FF0000;👉 bttn-material-flat@@ - bttn-pill - bttn-float - bttn-unite - bttn-slant (Beta)</div>
+<div class="nine">`<button class="bttn-material-flat bttn-xs bttn-default">material-flat, xs, default</button>`</div>
+<div class="styling1 three"><button class="bttn-material-flat bttn-xs bttn-default">material-flat, xs, default</button></div>
+<div class="nine">`<button class="bttn-material-flat bttn-xs bttn-primary">material-flat, xs, primary</button>`</div>
+<div class="styling2 three"><button class="bttn-material-flat bttn-xs bttn-primary">material-flat, xs, primary</button></div>
+<div class="nine">`<button class="bttn-material-flat bttn-xs bttn-warning">material-flat, xs, warning</button>`</div>
+<div class="styling2 three"><button class="bttn-material-flat bttn-xs bttn-warning">material-flat, xs, warning</button></div>
+<div class="nine">`<button class="bttn-material-flat bttn-xs bttn-success">material-flat, xs, success</button>`</div>
+<div class="styling2 three"><button class="bttn-material-flat bttn-xs bttn-success">material-flat, xs, success</button></div>
+<div class="nine">`<button class="bttn-material-flat bttn-xs bttn-danger">material-flat, xs, danger</button>`</div>
+<div class="styling2 three"><button class="bttn-material-flat bttn-xs bttn-danger">material-flat, xs, danger</button></div>
+<div class="nine">`<button class="bttn-material-flat bttn-xs bttn-royal">material-flat, xs, royal</button>`</div>
+<div class="styling2 three"><button class="bttn-material-flat bttn-xs bttn-royal">material-flat, xs, royal</button></div>
+</div>

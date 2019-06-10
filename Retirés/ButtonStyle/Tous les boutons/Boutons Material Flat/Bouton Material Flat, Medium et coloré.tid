@@ -1,0 +1,22 @@
+caption: Bouton Material Flat, Medium et coloré
+created: 20190316054450953
+modified: 20190316054950542
+sub.num: 03
+tags: ButtonStyleTlbMaterialFlat
+title: Bouton Material Flat, Medium et coloré
+
+<div class="main">
+<div class="styling2 twelve">bttn-simple - bttn-bordered - bttn-minimal - bttn-stretch - bttn-jelly - bttn-gradient - bttn-fill - bttn-material-circle - @@color:#FF0000;👉 bttn-material-flat@@ - bttn-pill - bttn-float - bttn-unite - bttn-slant (Beta)</div>
+<div class="nine">`<button class="bttn-material-flat bttn-md bttn-default">material-flat, md, default</button>`</div>
+<div class="styling1 three"><button class="bttn-material-flat bttn-md bttn-default">material-flat, md, default</button></div>
+<div class="nine">`<button class="bttn-material-flat bttn-md bttn-primary">material-flat, md, primary</button>`</div>
+<div class="styling2 three"><button class="bttn-material-flat bttn-md bttn-primary">material-flat, md, primary</button></div>
+<div class="nine">`<button class="bttn-material-flat bttn-md bttn-warning">material-flat, md, warning</button>`</div>
+<div class="styling2 three"><button class="bttn-material-flat bttn-md bttn-warning">material-flat, md, warning</button></div>
+<div class="nine">`<button class="bttn-material-flat bttn-md bttn-success">material-flat, md, success</button>`</div>
+<div class="styling2 three"><button class="bttn-material-flat bttn-md bttn-success">material-flat, md, success</button></div>
+<div class="nine">`<button class="bttn-material-flat bttn-md bttn-danger">material-flat, md, danger</button>`</div>
+<div class="styling2 three"><button class="bttn-material-flat bttn-md bttn-danger">material-flat, md, danger</button></div>
+<div class="nine">`<button class="bttn-material-flat bttn-md bttn-royal">material-flat, md, royal</button>`</div>
+<div class="styling2 three"><button class="bttn-material-flat bttn-md bttn-royal">material-flat, md, royal</button></div>
+</div>

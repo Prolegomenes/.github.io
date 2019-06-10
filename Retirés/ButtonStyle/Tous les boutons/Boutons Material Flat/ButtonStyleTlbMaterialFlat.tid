@@ -1,0 +1,26 @@
+caption: Boutons Material Flat
+created: 20190315082241644
+modified: 20190315082450045
+sub.num: 09
+tags: ButtonStyleTlb
+title: ButtonStyleTlbMaterialFlat
+
+<<dbadge "Button Style" "Material Flat">> 
+<div align="center">
+<$button to="ButtonStyleTlbMaterialFlat" class="tc-summary-button">
+<i class="fa fa-thumb-tack" style="color:#E74C3C"></i>&nbsp;&nbsp; Il y a <$count filter="[tag[ButtonStyleTlbMaterialFlat]]"/> Tiddlers tagués <<tag "ButtonStyleTlbMaterialFlat">>
+</$button>
+</div>
+<$details summary="Résumé"></$details>
+<table>
+<tr>
+<th align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiddler&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th align="center">&nbsp;&nbsp;Date&nbsp;de&nbsp;création&nbsp;&nbsp;</th>
+<th align="center">Numéro d'ordre</th>
+</tr>
+<$list filter="[tag[ButtonStyleTlbMaterialFlat]] [tag[]] +[sort[sub.num]]">
+<tr><td><$link to={{!!title}}><$text text={{!!caption}}/></$link> </td>
+<td align="right"><$view field="created" format="date" template="DD MMM YYYY"/></td>
+ <td><$edit field="sub.num" class="tc-edit-texteditor"/></td></tr>
+ </$list>
+</table>
