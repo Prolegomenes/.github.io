@@ -1,0 +1,31 @@
+caption: Bouton Simple, Large et coloré
+created: 20190312022953239
+modified: 20190313025825841
+sub.num: 04
+tags: ButtonStyleTlbSimple
+title: Bouton Simple, Large et coloré
+
+<div class="main">
+<div class="styling2 twelve">@@color:#FF0000;👉 bttn-simple@@ - bttn-bordered - bttn-minimal - bttn-stretch - bttn-jelly - bttn-gradient - bttn-fill - bttn-material-circle - bttn-material-flat - bttn-pill - bttn-float - bttn-unite - bttn-slant (Beta)</div>
+<div class="nine">`<button class="bttn-simple bttn-lg bttn-default">Simple, lg, default</button>`</div>
+<div class="styling1 three"><button class="bttn-simple bttn-lg bttn-default">Simple, lg, default</button></div>
+<div class="nine">`<button class="bttn-simple bttn-lg bttn-primary">Simple, lg, primary</button>`</div>
+<div class="styling2 three"><button class="bttn-simple bttn-lg bttn-primary">Simple, lg, primary</button></div>
+<div class="nine">`<button class="bttn-simple bttn-lg bttn-warning">Simple, lg, warning</button>`</div>
+<div class="styling2 three"><button class="bttn-simple bttn-lg bttn-warning">Simple, lg, warning</button></div>
+<div class="nine">`<button class="bttn-simple bttn-lg bttn-success">Simple, lg, success</button>`</div>
+<div class="styling2 three"><button class="bttn-simple bttn-lg bttn-success">Simple, lg, success</button></div>
+<div class="nine">`<button class="bttn-simple bttn-lg bttn-danger">Simple, lg, danger</button>`</div>
+<div class="styling2 three"><button class="bttn-simple bttn-lg bttn-danger">Simple, lg, danger</button></div>
+<div class="nine">`<button class="bttn-simple bttn-lg bttn-royal">Simple, lg, royal</button>`</div>
+<div class="styling2 three"><button class="bttn-simple bttn-lg bttn-royal">Simple, lg, royal</button></div>
+</div>
+
+
+
+
+
+
+
+
+   
