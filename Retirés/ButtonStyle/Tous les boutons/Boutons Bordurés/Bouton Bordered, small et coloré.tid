@@ -1,0 +1,22 @@
+caption: Bouton Bordered, small et coloré
+created: 20190312024200579
+modified: 20190313030721870
+sub.num: 02
+tags: ButtonStyleTlbBordered
+title: Bouton Bordered, small et coloré
+
+<div class="main">
+<div class="styling2 twelve">bttn-simple - @@color:#FF0000;👉 bttn-bordered@@ - bttn-minimal - bttn-stretch - bttn-jelly - bttn-gradient - bttn-fill - bttn-material-circle - bttn-material-flat - bttn-pill - bttn-float - bttn-unite - bttn-slant (Beta)</div>
+<div class="nine">`<button class="bttn-bordered bttn-sm bttn-default">bordered, sm, default</button>`</div>
+<div class="styling1 three"><button class="bttn-bordered bttn-sm bttn-default">bordered, sm, default</button></div>
+<div class="nine">`<button class="bttn-bordered bttn-sm bttn-primary">bordered, sm, primary</button>`</div>
+<div class="styling2 three"><button class="bttn-bordered bttn-sm bttn-primary">bordered, sm, primary</button></div>
+<div class="nine">`<button class="bttn-bordered bttn-sm bttn-warning">bordered, sm, warning</button>`</div>
+<div class="styling2 three"><button class="bttn-bordered bttn-sm bttn-warning">bordered, sm, warning</button></div>
+<div class="nine">`<button class="bttn-bordered bttn-sm bttn-success">bordered, sm, success</button>`</div>
+<div class="styling2 three"><button class="bttn-bordered bttn-sm bttn-success">bordered, sm, success</button></div>
+<div class="nine">`<button class="bttn-bordered bttn-sm bttn-danger">bordered, sm, danger</button>`</div>
+<div class="styling2 three"><button class="bttn-bordered bttn-sm bttn-danger">bordered, sm, danger</button></div>
+<div class="nine">`<button class="bttn-bordered bttn-sm bttn-royal">bordered, sm, royal</button>`</div>
+<div class="styling2 three"><button class="bttn-bordered bttn-sm bttn-royal">bordered, sm, royal</button></div>
+</div>
