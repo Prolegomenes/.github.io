@@ -1,0 +1,26 @@
+caption: Boutons Slant
+created: 20190316060016592
+modified: 20190316060131558
+sub.num: 13
+tags: ButtonStyleTlb
+title: ButtonStyleTlbSlant
+
+<<dbadge "Button Style" "Slant">> 
+<div align="center">
+<$button to="ButtonStyleTlbSlant" class="tc-summary-button">
+<i class="fa fa-thumb-tack" style="color:#E74C3C"></i>&nbsp;&nbsp; Il y a <$count filter="[tag[ButtonStyleTlbSlant]]"/> Tiddlers tagués <<tag "ButtonStyleTlbSlant">>
+</$button>
+</div>
+<$details summary="Résumé"></$details>
+<table>
+<tr>
+<th align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiddler&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th align="center">&nbsp;&nbsp;Date&nbsp;de&nbsp;création&nbsp;&nbsp;</th>
+<th align="center">Numéro d'ordre</th>
+</tr>
+<$list filter="[tag[ButtonStyleTlbSlant]] [tag[]] +[sort[sub.num]]">
+<tr><td><$link to={{!!title}}><$text text={{!!caption}}/></$link> </td>
+<td align="right"><$view field="created" format="date" template="DD MMM YYYY"/></td>
+ <td><$edit field="sub.num" class="tc-edit-texteditor"/></td></tr>
+ </$list>
+</table>
