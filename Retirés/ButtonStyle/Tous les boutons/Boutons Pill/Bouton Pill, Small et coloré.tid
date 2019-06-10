@@ -1,0 +1,22 @@
+caption: Bouton Pill, Small et coloré
+created: 20190316061915116
+modified: 20190316062120286
+sub.num: 02
+tags: ButtonStyleTlbPill
+title: Bouton Pill, Small et coloré
+
+<div class="main">
+<div class="styling2 twelve">bttn-simple - bttn-bordered - bttn-minimal - bttn-stretch - bttn-jelly - bttn-gradient - bttn-fill - bttn-material-circle - bttn-material-flat - @@color:#FF0000;👉 bttn-pill@@ - bttn-float - bttn-unite - bttn-slant (Beta)</div>
+<div class="nine">`<button class="bttn-pill bttn-sm bttn-default">pill, sm, default</button>`</div>
+<div class="styling1 three"><button class="bttn-pill bttn-sm bttn-default">pill, sm, default</button></div>
+<div class="nine">`<button class="bttn-pill bttn-sm bttn-primary">pill, sm, primary</button>`</div>
+<div class="styling2 three"><button class="bttn-pill bttn-sm bttn-primary">pill, sm, primary</button></div>
+<div class="nine">`<button class="bttn-pill bttn-sm bttn-warning">pill, sm, warning</button>`</div>
+<div class="styling2 three"><button class="bttn-pill bttn-sm bttn-warning">pill, sm, warning</button></div>
+<div class="nine">`<button class="bttn-pill bttn-sm bttn-success">pill, sm, success</button>`</div>
+<div class="styling2 three"><button class="bttn-pill bttn-sm bttn-success">pill, sm, success</button></div>
+<div class="nine">`<button class="bttn-pill bttn-sm bttn-danger">pill, sm, danger</button>`</div>
+<div class="styling2 three"><button class="bttn-pill bttn-sm bttn-danger">pill, sm, danger</button></div>
+<div class="nine">`<button class="bttn-pill bttn-sm bttn-royal">pill, sm, royal</button>`</div>
+<div class="styling2 three"><button class="bttn-pill bttn-sm bttn-royal">pill, sm, royal</button></div>
+</div>
