@@ -1,0 +1,102 @@
+caption: Boutons stylés (Assistants)
+created: 20170114114659944
+creator: Riz
+field1: Tutoriel
+modified: 20190610031401353
+modifier: Riz
+sub.num: 01
+tags: ButtonStyle
+title: Boutons stylés (Assistants)
+url: https://ibnishak.github.io/Tesseract/UI/index.html#Sidebar%20Tabs%20Alternate%20Style<br/>https://github.com/ganapativs/bttn.css#button-style-classes
+
+<button class="bttn-minimal bttn-sm bttn-danger">[[Voir CSS correspondant|$:/cssButtonsStyle]]</button>
+
+<$button class="bttn-fill bttn-sm bttn-success" to={{!!field1}} tooltip="...">👉 Titre du bouton
+<!-- Fermeture du tiddler après action -->
+<$action-sendmessage $message='tm-close-tiddler' param='$:/ChoixMenu'/>
+</$button>
+
+```
+<button class="bttn-[classe] bttn-[size] bttn-[color]">Medium</button>
+```
+
+Chaque bouton dispose d'une classe d'une taille et d'une couleur
+
+;Button style classes
+
+*bttn-simple
+*bttn-bordered
+*bttn-minimal
+*bttn-stretch
+*bttn-jelly
+*bttn-gradient
+*bttn-fill
+*bttn-material-circle
+*bttn-material-flat
+*bttn-pill
+*bttn-float
+*bttn-unite
+*bttn-slant (Beta)
+
+;Button sizes
+
+*bttn-xs
+*bttn-sm
+*bttn-md
+*bttn-lg
+
+;Button Colors
+
+*bttn-default
+*bttn-primary
+*bttn-warning
+*bttn-success
+*bttn-danger
+*bttn-royal
+
+;Button helper classes
+
+*bttn-block
+*bttn-no-outline (Don't show outline when navigating with keyboard/interact using mouse or touch)
+
+
+
+
+
+
+```
+<button class="bttn-simple bttn-xs bttn-default">Simple, xs, default</button>
+```
+
+; sans couleur de fond et texte blanc (pas terrible ici:
+
+<button class="bttn-simple bttn-xs bttn-default">Simple, xs, default</button>
+
+
+```
+<button class="bttn-minimal bttn-md bttn-primary">Medium</button>
+```
+
+
+!!Exemples
+
+<button class="bttn-minimal bttn-md bttn-primary">Medium</button>
+
+
+```
+<button class="bttn-fill bttn-md bttn-primary">medium</button>
+```
+
+
+; Soit:
+
+<button class="bttn-fill bttn-md bttn-primary">medium</button>
+
+Voir exemple pratique d'application dans le tiddler [[Remplacer le titre du Tiddler A par celui du Tiddler B]]
+
+
+
+
+
+
+;Démonstration: https://bttn.surge.sh/
