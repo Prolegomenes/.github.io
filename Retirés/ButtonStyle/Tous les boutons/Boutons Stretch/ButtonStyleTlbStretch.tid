@@ -1,0 +1,26 @@
+caption: Boutons Stretch
+created: 20190313124451530
+modified: 20190313124703152
+sub.num: 04
+tags: ButtonStyleTlb
+title: ButtonStyleTlbStretch
+
+<<dbadge "Button Style" "Stretch">> 
+<div align="center">
+<$button to="ButtonStyleTlbStretch" class="tc-summary-button">
+<i class="fa fa-thumb-tack" style="color:#E74C3C"></i>&nbsp;&nbsp; Il y a <$count filter="[tag[ButtonStyleTlbStretch]]"/> Tiddlers tagués <<tag "ButtonStyleTlbStretch">>
+</$button>
+</div>
+<$details summary="Résumé"></$details>
+<table>
+<tr>
+<th align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiddler&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th align="center">&nbsp;&nbsp;Date&nbsp;de&nbsp;création&nbsp;&nbsp;</th>
+<th align="center">Numéro d'ordre</th>
+</tr>
+<$list filter="[tag[ButtonStyleTlbStretch]] [tag[]] +[sort[sub.num]]">
+<tr><td><$link to={{!!title}}><$text text={{!!caption}}/></$link> </td>
+<td align="right"><$view field="created" format="date" template="DD MMM YYYY"/></td>
+ <td><$edit field="sub.num" class="tc-edit-texteditor"/></td></tr>
+ </$list>
+</table>

@@ -1,0 +1,22 @@
+caption: Bouton stretch, Medium et coloré
+created: 20190315063328729
+modified: 20190315063608064
+sub.num: 03
+tags: ButtonStyleTlbStretch
+title: Bouton stretch, Medium et coloré
+
+<div class="main">
+<div class="styling2 twelve">bttn-simple - bttn-bordered - bttn-minimal - @@color:#FF0000;👉 bttn-stretch@@ - bttn-jelly - bttn-gradient - bttn-fill - bttn-material-circle - bttn-material-flat - bttn-pill - bttn-float - bttn-unite - bttn-slant (Beta)</div>
+<div class="nine">`<button class="bttn-stretch bttn-md bttn-default">stretch, md, default</button>`</div>
+<div class="styling1 three"><button class="bttn-stretch bttn-md bttn-default">stretch, md, default</button></div>
+<div class="nine">`<button class="bttn-stretch bttn-md bttn-primary">stretch, md, primary</button>`</div>
+<div class="styling2 three"><button class="bttn-stretch bttn-md bttn-primary">stretch, md, primary</button></div>
+<div class="nine">`<button class="bttn-stretch bttn-md bttn-warning">stretch, md, warning</button>`</div>
+<div class="styling2 three"><button class="bttn-stretch bttn-md bttn-warning">stretch, md, warning</button></div>
+<div class="nine">`<button class="bttn-stretch bttn-md bttn-success">stretch, md, success</button>`</div>
+<div class="styling2 three"><button class="bttn-stretch bttn-md bttn-success">stretch, md, success</button></div>
+<div class="nine">`<button class="bttn-stretch bttn-md bttn-danger">stretch, md, danger</button>`</div>
+<div class="styling2 three"><button class="bttn-stretch bttn-md bttn-danger">stretch, md, danger</button></div>
+<div class="nine">`<button class="bttn-stretch bttn-md bttn-royal">stretch, md, royal</button>`</div>
+<div class="styling2 three"><button class="bttn-stretch bttn-md bttn-royal">stretch, md, royal</button></div>
+</div>
