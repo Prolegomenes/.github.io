@@ -1,0 +1,26 @@
+caption: Boutons Fill
+created: 20190313125205456
+modified: 20190313125353907
+sub.num: 06
+tags: ButtonStyleTlb
+title: ButtonStyleTlbFill
+
+<<dbadge "Button Style" "Fill">> 
+<div align="center">
+<$button to="ButtonStyleTlbFill" class="tc-summary-button">
+<i class="fa fa-thumb-tack" style="color:#E74C3C"></i>&nbsp;&nbsp; Il y a <$count filter="[tag[ButtonStyleTlbFill]]"/> Tiddlers tagués <<tag "ButtonStyleTlbFill">>
+</$button>
+</div>
+<$details summary="Résumé"></$details>
+<table>
+<tr>
+<th align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiddler&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th align="center">&nbsp;&nbsp;Date&nbsp;de&nbsp;création&nbsp;&nbsp;</th>
+<th align="center">Numéro d'ordre</th>
+</tr>
+<$list filter="[tag[ButtonStyleTlbFill]] [tag[]] +[sort[sub.num]]">
+<tr><td><$link to={{!!title}}><$text text={{!!caption}}/></$link> </td>
+<td align="right"><$view field="created" format="date" template="DD MMM YYYY"/></td>
+ <td><$edit field="sub.num" class="tc-edit-texteditor"/></td></tr>
+ </$list>
+</table>

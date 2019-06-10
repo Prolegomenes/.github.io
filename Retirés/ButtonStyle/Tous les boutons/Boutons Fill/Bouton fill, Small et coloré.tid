@@ -1,0 +1,23 @@
+caption: Bouton fill, Small et coloré
+created: 20190316051741455
+modified: 20190316052012981
+sub.num: 02
+tags: ButtonStyleTlbFill
+title: Bouton fill, Small et coloré
+
+<div class="main">
+<div class="styling2 twelve">bttn-simple - bttn-bordered - bttn-minimal - bttn-stretch - bttn-jelly - bttn-gradient - @@color:#FF0000;👉 bttn-fill@@ - bttn-material-circle - bttn-material-flat - bttn-pill - bttn-float - bttn-unite - bttn-slant (Beta)</div>
+<div class="nine">`<button class="bttn-fill bttn-sm bttn-default">fill, sm, default</button>`</div>
+<div class="styling1 three"><button class="bttn-fill bttn-sm bttn-default">fill, sm, default</button></div>
+<div class="nine">`<button class="bttn-fill bttn-sm bttn-primary">fill, sm, primary</button>`</div>
+<div class="styling2 three"><button class="bttn-fill bttn-sm bttn-primary">fill, sm, primary</button></div>
+<div class="nine">`<button class="bttn-fill bttn-sm bttn-warning">fill, sm, warning</button>`</div>
+<div class="styling2 three"><button class="bttn-fill bttn-sm bttn-warning">fill, sm, warning</button></div>
+<div class="nine">`<button class="bttn-fill bttn-sm bttn-success">fill, sm, success</button>`</div>
+<div class="styling2 three"><button class="bttn-fill bttn-sm bttn-success">fill, sm, success</button></div>
+<div class="nine">`<button class="bttn-fill bttn-sm bttn-danger">fill, sm, danger</button>`</div>
+<div class="styling2 three"><button class="bttn-fill bttn-sm bttn-danger">fill, sm, danger</button></div>
+<div class="nine">`<button class="bttn-fill bttn-sm bttn-royal">fill, sm, royal</button>`</div>
+<div class="styling2 three"><button class="bttn-fill bttn-sm bttn-royal">fill, sm, royal</button></div>
+
+</div>
