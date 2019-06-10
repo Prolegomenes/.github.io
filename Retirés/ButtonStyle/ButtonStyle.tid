@@ -1,0 +1,54 @@
+caption: Buttons Styles
+created: 20190310104720847
+modified: 20190609104330429
+sub.num: 06
+tags: CSS
+title: ButtonStyle
+url: https://bttn.surge.sh/
+
+@@text-align:right;
+<div class="column">
+<div class="hero hero-sm bg-dark">
+<div class="hero-body">
+
+!!{{!!caption}}
+<<f-i check-square>>&nbsp;&nbsp; Il y a <$count filter="[tag[ButtonStyle]]"/> Tiddlers tagués {{!!title}}
+
+</div>
+</div>
+</div>
+@@
+
+<$details summary="Résumé">
+
+Il y a deux feuiiles de style associées :
+
+*[[$:/cssButtonsStyle]]
+*[[$:/cssSmartGridExtra]]
+</$details>
+
+<table class="table table-striped table-hover">
+<thead>
+<tr>
+<th align="center">Tiddler</th>
+<th align="center">Date de création</th>
+<th align="center">Numéro d'ordre</th>
+</tr>
+</thead>
+<$list filter="[tag[ButtonStyle]] [tag[]] +[sort[sub.num]]">
+<tbody>
+<tr>
+<td><$link to={{!!title}}><$text text={{!!caption}}/></$link> </td>
+<td align="right"><$view field="created" format="date" template="DD MMM YYYY"/></td>
+ <td><$edit field="sub.num" class="form-input"/></td>
+</tr>
+</tbody>
+ </$list>
+</table>
+
+
+
+
+
+
+
