@@ -1,0 +1,22 @@
+caption: Bouton jelly, Large et coloré
+created: 20190316050651470
+modified: 20190316050912414
+sub.num: 04
+tags: ButtonStyleTlbJelly
+title: Bouton jelly, Large et coloré
+
+<div class="main">
+<div class="styling2 twelve">bttn-simple - bttn-bordered - bttn-minimal - bttn-stretch - @@color:#FF0000;👉 bttn-jelly@@ - bttn-gradient - bttn-fill - bttn-material-circle - bttn-material-flat - bttn-pill - bttn-float - bttn-unite - bttn-slant (Beta)</div>
+<div class="nine">`<button class="bttn-jelly bttn-lg bttn-default">jelly, lg, default</button>`</div>
+<div class="styling1 three"><button class="bttn-jelly bttn-lg bttn-default">jelly, lg, default</button></div>
+<div class="nine">`<button class="bttn-jelly bttn-lg bttn-primary">jelly, lg, primary</button>`</div>
+<div class="styling2 three"><button class="bttn-jelly bttn-lg bttn-primary">jelly, lg, primary</button></div>
+<div class="nine">`<button class="bttn-jelly bttn-lg bttn-warning">jelly, lg, warning</button>`</div>
+<div class="styling2 three"><button class="bttn-jelly bttn-lg bttn-warning">jelly, lg, warning</button></div>
+<div class="nine">`<button class="bttn-jelly bttn-lg bttn-success">jelly, lg, success</button>`</div>
+<div class="styling2 three"><button class="bttn-jelly bttn-lg bttn-success">jelly, lg, success</button></div>
+<div class="nine">`<button class="bttn-jelly bttn-lg bttn-danger">jelly, lg, danger</button>`</div>
+<div class="styling2 three"><button class="bttn-jelly bttn-lg bttn-danger">jelly, lg, danger</button></div>
+<div class="nine">`<button class="bttn-jelly bttn-lg bttn-royal">jelly, lg, royal</button>`</div>
+<div class="styling2 three"><button class="bttn-jelly bttn-lg bttn-royal">jelly, lg, royal</button></div>
+</div>
