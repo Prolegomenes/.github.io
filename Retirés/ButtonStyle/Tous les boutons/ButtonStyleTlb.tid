@@ -1,0 +1,39 @@
+caption: Tous les boutons
+created: 20190312012918675
+modified: 20190609110809147
+sub.num: 02
+tags: ButtonStyle
+title: ButtonStyleTlb
+
+@@text-align:right;
+<div class="column">
+<div class="hero hero-sm bg-dark">
+<div class="hero-body">
+
+!!{{!!caption}}
+<<f-i check-square>>&nbsp;&nbsp; Il y a <$count filter="[tag[ButtonStyleTlb]]"/> Tiddlers tagués {{!!title}}
+
+</div>
+</div>
+</div>
+@@
+
+<$details summary="Résumé"></$details>
+<table class="table table-striped table-hover">
+<thead>
+<tr>
+<th align="center">Tiddler</th>
+<th align="center">Date de création</th>
+<th align="center">Numéro d'ordre</th>
+</tr>
+</thead>
+<$list filter="[tag[ButtonStyleTlb]] [tag[]] +[sort[sub.num]]">
+<tbody>
+<tr>
+<td><$link to={{!!title}}><$text text={{!!caption}}/></$link> </td>
+<td align="right"><$view field="created" format="date" template="DD MMM YYYY"/></td>
+ <td><$edit field="sub.num" class="form-input"/></td>
+</tr>
+</tbody>
+ </$list>
+</table>
