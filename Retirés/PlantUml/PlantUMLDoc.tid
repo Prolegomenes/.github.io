@@ -1,0 +1,38 @@
+caption: Documentation PlantUml
+created: 20190617002341621
+creator: Prolégomènes
+modified: 20190617010557477
+modifier: Prolégomènes
+sub.num: 01
+tags: PlantUml
+title: PlantUMLDoc
+
+PlantUml est un composant qui permet de dessiner rapidement des:
+
+*    diagrammes de séquence
+*    diagrammes de cas d'utilisation
+*    diagrammes de classes
+*    diagrammes d'activité (ici l'ancienne syntaxe)
+*    diagrammes de composant
+*    diagrammes d'état
+*    diagrammes d'objet
+*    diagrammes de déploiement 
+*    diagrammes de temps 
+
+Certains autres diagrammes (hors UML) sont aussi possibles:
+
+*    maquette d'interface graphique
+*    diagrammes Archimate
+*    Specification and Description Language (SDL)
+*    diagrammes Ditaa
+*    diagrammes de Gantt 
+*    diagrammes d'idées 
+*    Work Breakdown Structure diagram 
+*    notation mathématique avec ~AsciiMath ou ~JLaTeXMath
+*    Entity Relationship diagram
+
+Les diagrammes sont définis à l'aide d'un langage simple et intuitif. (voir le guide de référence du langage PlantUml).
+
+Les nouveaux arrivants peuvent lire la page de démarrage rapide. Il y a aussi une Foire Aux Questions. PlantUml peut être utilisé avec de nombreux autres outils.
+
+Les images peuvent être générées au format PNG, SVG ou ~LaTeX. Il est aussi possible d'avoir de l'ASCII art (uniquement pour les diagrammes de séquence). 
