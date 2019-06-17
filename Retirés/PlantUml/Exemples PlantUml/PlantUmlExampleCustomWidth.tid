@@ -1,0 +1,20 @@
+caption: PlantUml Exemple Custom width
+created: 20190617012403609
+creator: Prolégomènes
+modified: 20190617014823531
+modifier: Prolégomènes
+sub.num: 06
+tags: PlantUmlExamples
+title: PlantUmlExampleCustomWidth
+
+<$link to="plantuml" tooltip="open docs">
+[[plantuml width=464 class=pretty [
+Employee -up-|> User
+Client -up-|> User
+Supervisor -up-|> User
+Employee --> (Login)
+Supervisor --> (Login)
+Client ..> (Login) : NO!!!!
+Supervisor --> (Create / Delete User): I am god
+]]]
+</$link>

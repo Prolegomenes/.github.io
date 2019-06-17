@@ -1,0 +1,17 @@
+caption: PlantUml Exemple ToolTip
+created: 20190617012037499
+creator: Prolégomènes
+modified: 20190617014831935
+modifier: Prolégomènes
+sub.num: 03
+tags: PlantUmlExamples
+title: PlantUmlExampleTooltip
+
+[[plantuml tooltip="Is this a nice UI or what?" [
+@startsalt
+{
+  User Name:| "Joe Blogs  "
+  Password: | "****       "
+  [Ok    ]  | [  Close   ]
+}
+@endsalt]]]

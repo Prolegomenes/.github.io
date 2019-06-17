@@ -1,0 +1,15 @@
+caption: PlantUml Exemple Text output
+created: 20190617012138059
+creator: Prolégomènes
+modified: 20190617014829070
+modifier: Prolégomènes
+sub.num: 04
+tags: PlantUmlExamples
+title: PlantUmlExampleTextOutput
+
+[[plantuml output="txt" height="130px" tooltip="a class diagram" [
+class Dwelling {
+  +Int Windows
+  +void Lock()
+}
+]]]

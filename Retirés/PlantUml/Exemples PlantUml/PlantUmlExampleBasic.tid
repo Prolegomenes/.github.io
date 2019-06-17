@@ -1,0 +1,15 @@
+caption: PlantUml Exemple basique
+created: 20190617011440595
+creator: Prolégomènes
+modified: 20190617015146244
+modifier: Prolégomènes
+sub.num: 02
+tags: PlantUmlExamples
+title: PlantUmlExampleBasic
+
+[[plantuml[
+:Me: -left-> (LEFT) 
+:Me: -right-> (RIGHT) 
+:Me: -up-> (UP)
+:Me: -down-> (DOWN)
+]]]

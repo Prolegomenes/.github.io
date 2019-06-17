@@ -1,0 +1,50 @@
+caption: Exemples regroupés
+created: 20190617013754224
+creator: Prolégomènes
+modified: 20190617014836758
+modifier: Prolégomènes
+sub.num: 01
+tags: PlantUmlExamples
+title: PlantUmlExamplesDoc
+
+!! Sources
+
+# the top-menu on [[PlantUML.com|http://plantuml.com]] provides plenty diagrams variants and examples
+# [[PlantText.com|http://www.planttext.com/planttext]] offers a live editor, able to load examples
+
+@@.note
+''Note:'' All of the below examples use the [[wikitext|plantuml-WikiText]] syntax but could have been equally formulated using the [[widget|plantuml-Widget]].
+@@
+
+!! Basic
+
+{{PlantUmlExampleBasic}}
+
+!! Tooltip
+
+{{PlantUmlExampleTooltip}}
+
+!! Text Output
+
+{{PlantUmlExampleTextOutput}}
+
+!! Custom Class
+
+//Uses the class pretty for a nice drop-shadow://
+
+{{PlantUmlExampleCustomClass}}
+
+!! Custom Width
+
+//Using the width attribute, a pretty class and the <<x LinkWidget>> to create a thumbnail://
+
+{{PlantUmlExampleCustomWidth}}
+
+!! Source Output
+
+// Setting the ''output'' attribute to `src` returns the specified markup in a codeblock://
+
+{{PlantUmlExampleSource Output}}
+
+@enduml
+]]]""">>

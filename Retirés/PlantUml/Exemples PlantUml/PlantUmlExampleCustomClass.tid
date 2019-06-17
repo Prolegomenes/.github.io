@@ -1,0 +1,13 @@
+caption: PlantUml Exemple CustomClass
+created: 20190617012243076
+creator: Prolégomènes
+modified: 20190617014826357
+modifier: Prolégomènes
+sub.num: 05
+tags: PlantUmlExamples
+title: PlantUmlExampleCustomClass
+
+[[plantuml class="pretty" [
+Bob -[#red]> Alice : hello
+Alice -[#0000FF]->Bob : ok
+]]]
